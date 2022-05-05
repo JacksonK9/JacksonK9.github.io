@@ -6,7 +6,18 @@
     <description>Recent content in Posts on TIL the END</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Apr 2022 11:38:58 +0900</lastBuildDate><atom:link href="http://JacksonK9.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 May 2022 22:36:41 +0900</lastBuildDate><atom:link href="http://JacksonK9.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Woohyung_Code_Review</title>
+      <link>http://JacksonK9.github.io/posts/woohyung_code_review/</link>
+      <pubDate>Thu, 05 May 2022 22:36:41 +0900</pubDate>
+      
+      <guid>http://JacksonK9.github.io/posts/woohyung_code_review/</guid>
+      
+        <description>우아한형제들 코드 리뷰 Youtube 코드 리뷰의 필요에 대해 고민하는 중, 위와 같은 내용을 확인하고, 정리해보려고 한다.</description>
+      
+    </item>
+    
     <item>
       <title>Clang_atoi</title>
       <link>http://JacksonK9.github.io/posts/clang_atoi/</link>
