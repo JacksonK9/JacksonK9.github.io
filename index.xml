@@ -8,6 +8,17 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 18 Mar 2022 20:12:20 +0900</lastBuildDate><atom:link href="http://JacksonK9.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>AI_for_everyOne</title>
+      <link>http://JacksonK9.github.io/posts/ai_for_everyone/</link>
+      <pubDate>Tue, 10 May 2022 22:02:06 +0900</pubDate>
+      
+      <guid>http://JacksonK9.github.io/posts/ai_for_everyone/</guid>
+      
+        <description>Coursera AI for everyone Table of Contents  Machine Learning   Machine Learning (2022/05/11)  Supervised Learning   A &amp;ndash;&amp;gt; B 와 같은 입력 &amp;ndash;&amp;gt; 출력 사이의 연관 관계를 학습하는 것    입력 출력 Application     E-mail Spam 여부 (Yes/No) 스팸 판독기   음성 파일 인식된 음성 (문자열) 음석 인식   영어 파일 한글 파일 기계 번역기   광고, 사용자 정보 클릭 유무 (Yes/No) 온라인 광고   이미지, 레이더 정보 다른 차량의 위치 자율 주행 차   휴대폰을 찍은 사진 결함 여부 (Yes/No) 결함 판독기      Supervised Learning은 꽤 오래 되었는데, 데이터가 엄청나게 증가함에 따라, 수요 및 성능이 기하 급수적으로 증가</description>
+      
+    </item>
+    
+    <item>
       <title>Woohyung_Code_Review</title>
       <link>http://JacksonK9.github.io/posts/woohyung_code_review/</link>
       <pubDate>Thu, 05 May 2022 22:36:41 +0900</pubDate>
