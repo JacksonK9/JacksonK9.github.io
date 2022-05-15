@@ -14,7 +14,7 @@
       
       <guid>http://JacksonK9.github.io/posts/what_is_coding_interview_and_python_syntax/</guid>
       
-        <description>참고 원본 - 코딩 테스트 출제 경향 분석 및 파이썬 문법 부수기 Table of Contents  코딩 테스트  코딩 테스트 ?</description>
+        <description>참고 원본 - 코딩 테스트 출제 경향 분석 및 파이썬 문법 부수기 Table of Contents  코딩 테스트  코딩 테스트 ? 온라인 저지 코딩 테스트용 언어 개발형 코딩 테스트용 언어 코딩 테스트 준비를 위한 환경 팀 노트 출제 경향 알고리즘 성능 평가 알고리즘 설계 Tip 알고리즘 문제 해결 과정   파이썬 문법  자료형 입출력 조건문 반복문 함수 람다 표현식  유용한 표준 라이브러리    코딩 테스트란?</description>
       
     </item>
     
@@ -36,7 +36,8 @@
       
       <guid>http://JacksonK9.github.io/posts/woohyung_code_review/</guid>
       
-        <description>코드 리뷰 Youtube 코드 리뷰의 필요에 대해 고민하는 중, 위와 같은 내용을 확인하고, 정리해보려고 한다.</description>
+        <description>코드 리뷰 Youtube 코드 리뷰의 필요에 대해 고민하는 중, 위와 같은 내용을 확인하고, 정리해보려고 한다.
+ 우리가 살고 있는 세상은 VUCA와 같은 시대  V (Volatile, 변동성) U (Uncertainty, 불확실성) C (Complexity, 복잡성) A (Ambiguity, 모호성)  이와 같은 시대에서, 이에 맞춰가기 위해 필요한 시스템 중 하나가 바로, Code Review Tech 관련 된 산업은 이제 막 Digital Transformation을 시작하였으며, 필요한 개발자 수의 증가 속도가 매우 빠르게 증가 DRFR (Deliver SW Rapidly, Frequently and more Reliably) 코드 리소스의 증가에 비해, 코드의 생산성은 점차 수렴하는 현상을 볼 수 있음, 그리고 라인 당 개발 비용은 점차 증가하는 현상이 발생  SW 공학  설계 + 빌드 설계는 완전한 소스 코드, SW 빌드는 컴파일 SW에서는 설계가 매우 중요!</description>
       
     </item>
     
@@ -47,7 +48,9 @@
       
       <guid>http://JacksonK9.github.io/posts/clang_atoi/</guid>
       
-        <description>기초부터 다지자는 마음에서 C언어 공부 중에 몰랐던 내용을 하나씩 추가해보고자 한다.</description>
+        <description>기초부터 다지자는 마음에서 C언어 공부 중에 몰랐던 내용을 하나씩 추가해보고자 한다.
+첫 시작은 atoi 함수
+ atoi  Input : char* , Output : int Example #include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt; int main() {  char x[10] = &amp;#34;450&amp;#34;;  int result = atoi(x);  printf(&amp;#34;integer value of the string is %d\n&amp;#34;, result);   char* str_ptr= &amp;#34;33500&amp;#34;;  result = atoi(str_ptr);  printf(&amp;#34;integer value of the string is %d\n&amp;#34;, result);   str_ptr = &amp;#34;hello_world&amp;#34;;  result = atoi(str_ptr);  printf(&amp;#34;integer value of the string is %d\n&amp;#34;, result);   return 0; } Result  읽는 방법은 &amp;ldquo;에이투아이&amp;rdquo; 또는 &amp;ldquo;아토이&amp;rdquo; 등으로 사람마다 다른 듯 하다.</description>
       
     </item>
     
@@ -58,7 +61,10 @@
       
       <guid>http://JacksonK9.github.io/posts/rospy_multithreading/</guid>
       
-        <description>Rospy 사용 시, Subscriber 및 Timer 클래스를 이용하여 인스턴스 생성 시, 각각에 해당하는 콜백 함수를 지정하게 되어 있다.</description>
+        <description>Rospy 사용 시, Subscriber 및 Timer 클래스를 이용하여 인스턴스 생성 시, 각각에 해당하는 콜백 함수를 지정하게 되어 있다.
+각각의 처리가 별개의 스레드로 되는 지, 하나의 스레드가 순차적으로 처리하는 지 의문이 들어서 해당 내용을 검색해보았다.
+이미 다른 Blog를 찾아보니, 아래와 같다고 하여, 테스트를 해보기로 하였다.
+Timer --&amp;gt; 각각이 개별 Thread로 처리 Subscriber --&amp;gt; 각 Topic에 개별 Thread로 처리 Timer Callback 테스트 환경  Windows 11, WSL2 Ubuntu 18.04 ROS Melodic Version Python 2.</description>
       
     </item>
     

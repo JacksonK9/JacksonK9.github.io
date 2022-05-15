@@ -114,13 +114,19 @@
 <meta name="twitter:image" content="http://JacksonK9.github.io/images/site-feature-image.png"/>
 
 <meta name="twitter:title" content="Rospy Multi-Threading"/>
-<meta name="twitter:description" content="Rospy 사용 시, Subscriber 및 Timer 클래스를 이용하여 인스턴스 생성 시, 각각에 해당하는 콜백 함수를 지정하게 되어 있다."/>
+<meta name="twitter:description" content="Rospy 사용 시, Subscriber 및 Timer 클래스를 이용하여 인스턴스 생성 시, 각각에 해당하는 콜백 함수를 지정하게 되어 있다.
+각각의 처리가 별개의 스레드로 되는 지, 하나의 스레드가 순차적으로 처리하는 지 의문이 들어서 해당 내용을 검색해보았다.
+이미 다른 Blog를 찾아보니, 아래와 같다고 하여, 테스트를 해보기로 하였다.
+Timer --&gt; 각각이 개별 Thread로 처리 Subscriber --&gt; 각 Topic에 개별 Thread로 처리 Timer Callback 테스트 환경  Windows 11, WSL2 Ubuntu 18.04 ROS Melodic Version Python 2."/>
 
 
 
   
   <meta property="og:title" content="Rospy Multi-Threading" />
-<meta property="og:description" content="Rospy 사용 시, Subscriber 및 Timer 클래스를 이용하여 인스턴스 생성 시, 각각에 해당하는 콜백 함수를 지정하게 되어 있다." />
+<meta property="og:description" content="Rospy 사용 시, Subscriber 및 Timer 클래스를 이용하여 인스턴스 생성 시, 각각에 해당하는 콜백 함수를 지정하게 되어 있다.
+각각의 처리가 별개의 스레드로 되는 지, 하나의 스레드가 순차적으로 처리하는 지 의문이 들어서 해당 내용을 검색해보았다.
+이미 다른 Blog를 찾아보니, 아래와 같다고 하여, 테스트를 해보기로 하였다.
+Timer --&gt; 각각이 개별 Thread로 처리 Subscriber --&gt; 각 Topic에 개별 Thread로 처리 Timer Callback 테스트 환경  Windows 11, WSL2 Ubuntu 18.04 ROS Melodic Version Python 2." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://JacksonK9.github.io/posts/rospy_multithreading/" /><meta property="og:image" content="http://JacksonK9.github.io/images/site-feature-image.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-03-20T13:15:40+09:00" />
@@ -143,7 +149,7 @@
         "alternativeHeadline": "",
         "description": "
       
-        Rospy 사용 시, Subscriber 및 Timer 클래스를 이용하여 인스턴스 생성 시, 각각에 해당하는 콜백 함수를 지정하게 되어 있다.
+        Rospy 사용 시, Subscriber 및 Timer 클래스를 이용하여 인스턴스 생성 시, 각각에 해당하는 콜백 함수를 지정하게 되어 있다.\n각각의 처리가 별개의 스레드로 되는 지, 하나의 스레드가 순차적으로 처리하는 지 의문이 들어서 해당 내용을 검색해보았다.\n이미 다른 Blog를 찾아보니, 아래와 같다고 하여, 테스트를 해보기로 하였다.\nTimer --\u0026gt; 각각이 개별 Thread로 처리 Subscriber --\u0026gt; 각 Topic에 개별 Thread로 처리 Timer Callback 테스트 환경  Windows 11, WSL2 Ubuntu 18.04 ROS Melodic Version Python 2.
 
 
       
@@ -369,50 +375,50 @@
       <p>Rospy 사용 시, Subscriber 및 Timer 클래스를 이용하여 인스턴스 생성 시, 각각에 해당하는 콜백 함수를 지정하게 되어 있다.</p>
 <p>각각의 처리가 별개의 스레드로 되는 지, 하나의 스레드가 순차적으로 처리하는 지 의문이 들어서 해당 내용을 검색해보았다.</p>
 <p>이미 다른 Blog를 찾아보니, 아래와 같다고 하여, 테스트를 해보기로 하였다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Timer --&gt; 각각이 개별 Thread로 처리
-</span></span><span class="line"><span class="cl">Subscriber --&gt; 각 Topic에 개별 Thread로 처리
-</span></span></code></pre></div><h1 id="timer-callback">Timer Callback</h1>
+<pre tabindex="0"><code>Timer --&gt; 각각이 개별 Thread로 처리
+Subscriber --&gt; 각 Topic에 개별 Thread로 처리
+</code></pre><h1 id="timer-callback">Timer Callback</h1>
 <h2 id="테스트-환경">테스트 환경</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">    Windows 11, WSL2 Ubuntu 18.04
-</span></span><span class="line"><span class="cl">    ROS Melodic Version
-</span></span><span class="line"><span class="cl">    Python 2.7
-</span></span></code></pre></div><hr>
+<pre tabindex="0"><code>    Windows 11, WSL2 Ubuntu 18.04
+    ROS Melodic Version
+    Python 2.7
+</code></pre><hr>
 <h2 id="실행-코드">실행 코드</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="ch">#!/usr/bin/env python</span>
-</span></span><span class="line"><span class="cl"><span class="c1">## timer_multi_thread.py</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">rospy</span>
-</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">std_msgs.msg</span> <span class="kn">import</span> <span class="n">String</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">time</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">TimerTester</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="s1">&#39;&#39;&#39;
-</span></span></span><span class="line"><span class="cl"><span class="s1">    Timer Tester for multi threading
-</span></span></span><span class="line"><span class="cl"><span class="s1">    &#39;&#39;&#39;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">_string_pub</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Publisher</span><span class="p">(</span><span class="s2">&#34;new_msg&#34;</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="n">queue_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">rospy</span><span class="o">.</span><span class="n">Timer</span><span class="p">(</span><span class="n">rospy</span><span class="o">.</span><span class="n">Duration</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">/</span> <span class="mf">0.5</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">slow_callback</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">rospy</span><span class="o">.</span><span class="n">Timer</span><span class="p">(</span><span class="n">rospy</span><span class="o">.</span><span class="n">Duration</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">/</span> <span class="mi">1</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">fast_callback</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">slow_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&#34;slow callback called&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">_string_pub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="s2">&#34;slow_callback </span><span class="si">{}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rospy</span><span class="o">.</span><span class="n">Time</span><span class="o">.</span><span class="n">now</span><span class="p">()))</span>
-</span></span><span class="line"><span class="cl">        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">3.0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&#34;slow callback end&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">fast_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&#34;fast callback called&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">_string_pub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="s2">&#34;fast_callback </span><span class="si">{}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rospy</span><span class="o">.</span><span class="n">Time</span><span class="o">.</span><span class="n">now</span><span class="p">()))</span>
-</span></span><span class="line"><span class="cl">        <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&#34;fast callback end&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">run</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">    <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s2">&#34;timer_multi_test&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">TimerTester</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="n">rospy</span><span class="o">.</span><span class="n">spin</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">run</span><span class="p">()</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env python</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## timer_multi_thread.py</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> rospy
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> std_msgs.msg <span style="color:#f92672">import</span> String
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TimerTester</span>(object):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;&#39;&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Timer Tester for multi threading
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#39;&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>_string_pub <span style="color:#f92672">=</span> rospy<span style="color:#f92672">.</span>Publisher(<span style="color:#e6db74">&#34;new_msg&#34;</span>, String, queue_size<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        rospy<span style="color:#f92672">.</span>Timer(rospy<span style="color:#f92672">.</span>Duration(<span style="color:#ae81ff">1.0</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">0.5</span>), self<span style="color:#f92672">.</span>slow_callback)
+</span></span><span style="display:flex;"><span>        rospy<span style="color:#f92672">.</span>Timer(rospy<span style="color:#f92672">.</span>Duration(<span style="color:#ae81ff">1.0</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">1</span>), self<span style="color:#f92672">.</span>fast_callback)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">slow_callback</span>(self, event):
+</span></span><span style="display:flex;"><span>        rospy<span style="color:#f92672">.</span>loginfo(<span style="color:#e6db74">&#34;slow callback called&#34;</span>)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>_string_pub<span style="color:#f92672">.</span>publish(<span style="color:#e6db74">&#34;slow_callback </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(rospy<span style="color:#f92672">.</span>Time<span style="color:#f92672">.</span>now()))
+</span></span><span style="display:flex;"><span>        time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">3.0</span>)
+</span></span><span style="display:flex;"><span>        rospy<span style="color:#f92672">.</span>loginfo(<span style="color:#e6db74">&#34;slow callback end&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fast_callback</span>(self, event):
+</span></span><span style="display:flex;"><span>        rospy<span style="color:#f92672">.</span>loginfo(<span style="color:#e6db74">&#34;fast callback called&#34;</span>)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>_string_pub<span style="color:#f92672">.</span>publish(<span style="color:#e6db74">&#34;fast_callback </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(rospy<span style="color:#f92672">.</span>Time<span style="color:#f92672">.</span>now()))
+</span></span><span style="display:flex;"><span>        rospy<span style="color:#f92672">.</span>loginfo(<span style="color:#e6db74">&#34;fast callback end&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">run</span>():
+</span></span><span style="display:flex;"><span>    rospy<span style="color:#f92672">.</span>init_node(<span style="color:#e6db74">&#34;timer_multi_test&#34;</span>)
+</span></span><span style="display:flex;"><span>    TimerTester()
+</span></span><span style="display:flex;"><span>    rospy<span style="color:#f92672">.</span>spin()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    run()
 </span></span></code></pre></div><hr>
 <h2 id="코드-실행-결과">코드 실행 결과</h2>
 <p><img src="/images/rospy_multithreading/Timer_Callback_Result.png" alt="Timer Callback Result"></p>
@@ -430,43 +436,43 @@
 <hr>
 <h1 id="subscriber-callback">Subscriber Callback</h1>
 <h2 id="실행-코드-1">실행 코드</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="ch">#!/usr/bin/env python</span>
-</span></span><span class="line"><span class="cl"><span class="c1">## subscriber_multi_test.py</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">rospy</span>
-</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">std_msgs.msg</span> <span class="kn">import</span> <span class="n">String</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">time</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">SubscriberTester</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="s1">&#39;&#39;&#39;
-</span></span></span><span class="line"><span class="cl"><span class="s1">    Subscriber Tester for multi threading
-</span></span></span><span class="line"><span class="cl"><span class="s1">    &#39;&#39;&#39;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">rospy</span><span class="o">.</span><span class="n">Subscriber</span><span class="p">(</span><span class="s2">&#34;msg_1&#34;</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">msg_1_callback_1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">rospy</span><span class="o">.</span><span class="n">Subscriber</span><span class="p">(</span><span class="s2">&#34;msg_1&#34;</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">msg_1_callback_2</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">rospy</span><span class="o">.</span><span class="n">Subscriber</span><span class="p">(</span><span class="s2">&#34;msg_2&#34;</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">msg_2_callback</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">msg_1_callback_1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&#34;msg_1_callback_1 called </span><span class="si">{}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rospy</span><span class="o">.</span><span class="n">Time</span><span class="o">.</span><span class="n">now</span><span class="p">()))</span>
-</span></span><span class="line"><span class="cl">        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&#34;msg_1_callback_1 end&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">msg_1_callback_2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&#34;msg_1_callback_2 called </span><span class="si">{}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rospy</span><span class="o">.</span><span class="n">Time</span><span class="o">.</span><span class="n">now</span><span class="p">()))</span>
-</span></span><span class="line"><span class="cl">        <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&#34;msg_1_callback_2 end&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">msg_2_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&#34;msg_2_callback called </span><span class="si">{}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rospy</span><span class="o">.</span><span class="n">Time</span><span class="o">.</span><span class="n">now</span><span class="p">()))</span>
-</span></span><span class="line"><span class="cl">        <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&#34;msg_2_callback end&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">run</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">    <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s2">&#34;subscriber_multi_test&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">SubscriberTester</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="n">rospy</span><span class="o">.</span><span class="n">spin</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">run</span><span class="p">()</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env python</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## subscriber_multi_test.py</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> rospy
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> std_msgs.msg <span style="color:#f92672">import</span> String
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SubscriberTester</span>(object):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;&#39;&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Subscriber Tester for multi threading
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#39;&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self):
+</span></span><span style="display:flex;"><span>        rospy<span style="color:#f92672">.</span>Subscriber(<span style="color:#e6db74">&#34;msg_1&#34;</span>, String, self<span style="color:#f92672">.</span>msg_1_callback_1)
+</span></span><span style="display:flex;"><span>        rospy<span style="color:#f92672">.</span>Subscriber(<span style="color:#e6db74">&#34;msg_1&#34;</span>, String, self<span style="color:#f92672">.</span>msg_1_callback_2)
+</span></span><span style="display:flex;"><span>        rospy<span style="color:#f92672">.</span>Subscriber(<span style="color:#e6db74">&#34;msg_2&#34;</span>, String, self<span style="color:#f92672">.</span>msg_2_callback)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">msg_1_callback_1</span>(self, msg):
+</span></span><span style="display:flex;"><span>        rospy<span style="color:#f92672">.</span>loginfo(<span style="color:#e6db74">&#34;msg_1_callback_1 called </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(rospy<span style="color:#f92672">.</span>Time<span style="color:#f92672">.</span>now()))
+</span></span><span style="display:flex;"><span>        time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">1.0</span>)
+</span></span><span style="display:flex;"><span>        rospy<span style="color:#f92672">.</span>loginfo(<span style="color:#e6db74">&#34;msg_1_callback_1 end&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">msg_1_callback_2</span>(self, msg):
+</span></span><span style="display:flex;"><span>        rospy<span style="color:#f92672">.</span>loginfo(<span style="color:#e6db74">&#34;msg_1_callback_2 called </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(rospy<span style="color:#f92672">.</span>Time<span style="color:#f92672">.</span>now()))
+</span></span><span style="display:flex;"><span>        rospy<span style="color:#f92672">.</span>loginfo(<span style="color:#e6db74">&#34;msg_1_callback_2 end&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">msg_2_callback</span>(self, msg):
+</span></span><span style="display:flex;"><span>        rospy<span style="color:#f92672">.</span>loginfo(<span style="color:#e6db74">&#34;msg_2_callback called </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(rospy<span style="color:#f92672">.</span>Time<span style="color:#f92672">.</span>now()))
+</span></span><span style="display:flex;"><span>        rospy<span style="color:#f92672">.</span>loginfo(<span style="color:#e6db74">&#34;msg_2_callback end&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">run</span>():
+</span></span><span style="display:flex;"><span>    rospy<span style="color:#f92672">.</span>init_node(<span style="color:#e6db74">&#34;subscriber_multi_test&#34;</span>)
+</span></span><span style="display:flex;"><span>    SubscriberTester()
+</span></span><span style="display:flex;"><span>    rospy<span style="color:#f92672">.</span>spin()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    run()
 </span></span></code></pre></div><hr>
 <h2 id="코드-실행-결과-1">코드 실행 결과</h2>
 <h2 id="subscriber-callback-resultimagesrospy_multithreadingsubscriber_callback_resultpng"><img src="/images/rospy_multithreading/Subscriber_Callback_Result.png" alt="Subscriber Callback Result"></h2>
@@ -477,12 +483,12 @@
 <li>다른 Topic (msg_2)에 대한 Callback은 따로 처리된다. (다른 스레드로 처리)</li>
 </ul>
 <p><code>msg_1</code>에 대한 callback 함수는 늘 순서가 동일하다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">    1번 Callback 호출됨
-</span></span><span class="line"><span class="cl">    1번 Callback 내부의 대기가 동작
-</span></span><span class="line"><span class="cl">    1번 Callback 대기 종료
-</span></span><span class="line"><span class="cl">    2번 Callback 호출됨
-</span></span><span class="line"><span class="cl">    2번 Callback 종료
-</span></span></code></pre></div><p>출력되는 내용을 보면 위와 같은 내용을 확인할 수 있고, 늘 처리하는 순서가 정해져 있는 듯 하다.</p>
+<pre tabindex="0"><code>    1번 Callback 호출됨
+    1번 Callback 내부의 대기가 동작
+    1번 Callback 대기 종료
+    2번 Callback 호출됨
+    2번 Callback 종료
+</code></pre><p>출력되는 내용을 보면 위와 같은 내용을 확인할 수 있고, 늘 처리하는 순서가 정해져 있는 듯 하다.</p>
 <p>아마 Subscriber를 정의하는 순서대로가 아닐까 예상됩니다.</p>
 <p>따라서, 동일한 Topic에 대한 Callback은 동일한 Thread에서 처리하는 것으로 보입니다.</p>
 <p><code>msg_2</code>에 대한 callback은 <code>msg_1</code>과 상관 없이, 따로 동작하는 것을 볼 수 있습니다.</p>
