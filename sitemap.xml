@@ -2,10 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://JacksonK9.github.io/posts/ai_for_everyone/</loc>
-    <lastmod>2022-05-10T22:02:06+09:00</lastmod>
-  </url><url>
     <loc>http://JacksonK9.github.io/posts/</loc>
+    <lastmod>2022-05-15T13:26:57+09:00</lastmod>
+  </url><url>
+    <loc>http://JacksonK9.github.io/posts/what_is_coding_interview_and_python_syntax/</loc>
+    <lastmod>2022-05-15T13:26:57+09:00</lastmod>
+  </url><url>
+    <loc>http://JacksonK9.github.io/posts/ai_for_everyone/</loc>
     <lastmod>2022-05-10T22:02:06+09:00</lastmod>
   </url><url>
     <loc>http://JacksonK9.github.io/posts/woohyung_code_review/</loc>
