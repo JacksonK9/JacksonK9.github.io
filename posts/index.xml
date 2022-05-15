@@ -6,7 +6,54 @@
     <description>Recent content in Posts on TIL the END</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 May 2022 13:26:57 +0900</lastBuildDate><atom:link href="http://JacksonK9.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 May 2022 21:12:40 +0900</lastBuildDate><atom:link href="http://JacksonK9.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>우아한형제들 - 개발자 퍼스널 브랜딩</title>
+      <link>http://JacksonK9.github.io/posts/personal_branding_woohyung/</link>
+      <pubDate>Sun, 15 May 2022 21:12:40 +0900</pubDate>
+      
+      <guid>http://JacksonK9.github.io/posts/personal_branding_woohyung/</guid>
+      
+        <description>개발자 퍼스널 브랜딩, 그런데 이제 리크루터 활용을 곁들인!
+리크루터?  조직에 필요한 사람을 찾아서 공급하는 역할 적합한 사람을 찾아서, 적합한 자리에 배치하는 역할 리크루팅 방법  채용을 원하는 조직의 요청 사항을 받고, 인재 서칭 찾았다면, 지원자로 만들기 위한 설득 이력서 검토 및 보완, 채용 프로세스를 코칭    성공적인 이직 Tip  이력서 쓰는 법  프로젝트의 이름 및 기간만 표현된 것은 별로 좋지 않다 프로젝트 정보가 필요  프로젝트 명, 기간, 간단한 소개   프로젝트 별 기술 스택  Java, Spring F/W, MySQL, React 등&amp;hellip;   본인이 기여한 부분  ROS 개발 (X) ROS 기반으로 영상 스트리밍하는 기능을 개발 (O)   성과 및 개선한 점  어떤 성과가 났으며, 정량적인 평가가 필요 정량적인 평가가 힘들다면, 정성적인 평가도 괜찮습니다.</description>
+      
+    </item>
+    
+    <item>
+      <title>우아한형제들 - 배달로봇 딜리</title>
+      <link>http://JacksonK9.github.io/posts/dilly_woohyung/</link>
+      <pubDate>Sun, 15 May 2022 19:28:25 +0900</pubDate>
+      
+      <guid>http://JacksonK9.github.io/posts/dilly_woohyung/</guid>
+      
+        <description>배달로봇 딜리를 조종하는 흑마술
+흑마술?  마법 같은 건 없음 ^^, 이것은 지식입니다.</description>
+      
+    </item>
+    
+    <item>
+      <title>우아한형제들 - 개발자와 교육자</title>
+      <link>http://JacksonK9.github.io/posts/why_should_teach_woohyung/</link>
+      <pubDate>Sun, 15 May 2022 18:53:43 +0900</pubDate>
+      
+      <guid>http://JacksonK9.github.io/posts/why_should_teach_woohyung/</guid>
+      
+        <description>개발자가 교육자의 길을 걸어야 하는 이유는?
+우아한 테크코스?  프로그래머의 길을 도전하는 취준생에게 현장과 가까운 교육을 진행하기 위한 10개월짜리 교육 프로그램 현장성을 매우 중요하게 여김 2 ~ 5년 정도의 현장 경험이 있는 개발자를 교육자로 채용  교육의 장점?</description>
+      
+    </item>
+    
+    <item>
+      <title>우아한형제들 - 기술 부채</title>
+      <link>http://JacksonK9.github.io/posts/technical_debt_woohyung/</link>
+      <pubDate>Sun, 15 May 2022 17:50:03 +0900</pubDate>
+      
+      <guid>http://JacksonK9.github.io/posts/technical_debt_woohyung/</guid>
+      
+        <description>기술 부채 Youtube 기술 부채  기술 부채는 대출과 유사 기술 부채가 자산?</description>
+      
+    </item>
+    
     <item>
       <title>코딩 테스트 개요 및 파이썬 문법 정리</title>
       <link>http://JacksonK9.github.io/posts/what_is_coding_interview_and_python_syntax/</link>
@@ -14,7 +61,7 @@
       
       <guid>http://JacksonK9.github.io/posts/what_is_coding_interview_and_python_syntax/</guid>
       
-        <description>참고 원본 - 코딩 테스트 출제 경향 분석 및 파이썬 문법 부수기 Table of Contents  코딩 테스트  코딩 테스트 ? 온라인 저지 코딩 테스트용 언어 개발형 코딩 테스트용 언어 코딩 테스트 준비를 위한 환경 팀 노트 출제 경향 알고리즘 성능 평가 알고리즘 설계 Tip 알고리즘 문제 해결 과정   파이썬 문법  자료형 입출력 조건문 반복문 함수 람다 표현식  유용한 표준 라이브러리    코딩 테스트란?</description>
+        <description>참고 원본 - 코딩 테스트 출제 경향 분석 및 파이썬 문법 부수기 Table of Contents  코딩 테스트  코딩 테스트 ?</description>
       
     </item>
     
@@ -36,8 +83,7 @@
       
       <guid>http://JacksonK9.github.io/posts/woohyung_code_review/</guid>
       
-        <description>코드 리뷰 Youtube 코드 리뷰의 필요에 대해 고민하는 중, 위와 같은 내용을 확인하고, 정리해보려고 한다.
- 우리가 살고 있는 세상은 VUCA와 같은 시대  V (Volatile, 변동성) U (Uncertainty, 불확실성) C (Complexity, 복잡성) A (Ambiguity, 모호성)  이와 같은 시대에서, 이에 맞춰가기 위해 필요한 시스템 중 하나가 바로, Code Review Tech 관련 된 산업은 이제 막 Digital Transformation을 시작하였으며, 필요한 개발자 수의 증가 속도가 매우 빠르게 증가 DRFR (Deliver SW Rapidly, Frequently and more Reliably) 코드 리소스의 증가에 비해, 코드의 생산성은 점차 수렴하는 현상을 볼 수 있음, 그리고 라인 당 개발 비용은 점차 증가하는 현상이 발생  SW 공학  설계 + 빌드 설계는 완전한 소스 코드, SW 빌드는 컴파일 SW에서는 설계가 매우 중요!</description>
+        <description>코드 리뷰 Youtube 코드 리뷰의 필요에 대해 고민하는 중, 위와 같은 내용을 확인하고, 정리해보려고 한다.</description>
       
     </item>
     
@@ -48,9 +94,7 @@
       
       <guid>http://JacksonK9.github.io/posts/clang_atoi/</guid>
       
-        <description>기초부터 다지자는 마음에서 C언어 공부 중에 몰랐던 내용을 하나씩 추가해보고자 한다.
-첫 시작은 atoi 함수
- atoi  Input : char* , Output : int Example #include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt; int main() {  char x[10] = &amp;#34;450&amp;#34;;  int result = atoi(x);  printf(&amp;#34;integer value of the string is %d\n&amp;#34;, result);   char* str_ptr= &amp;#34;33500&amp;#34;;  result = atoi(str_ptr);  printf(&amp;#34;integer value of the string is %d\n&amp;#34;, result);   str_ptr = &amp;#34;hello_world&amp;#34;;  result = atoi(str_ptr);  printf(&amp;#34;integer value of the string is %d\n&amp;#34;, result);   return 0; } Result  읽는 방법은 &amp;ldquo;에이투아이&amp;rdquo; 또는 &amp;ldquo;아토이&amp;rdquo; 등으로 사람마다 다른 듯 하다.</description>
+        <description>기초부터 다지자는 마음에서 C언어 공부 중에 몰랐던 내용을 하나씩 추가해보고자 한다.</description>
       
     </item>
     
@@ -61,10 +105,7 @@
       
       <guid>http://JacksonK9.github.io/posts/rospy_multithreading/</guid>
       
-        <description>Rospy 사용 시, Subscriber 및 Timer 클래스를 이용하여 인스턴스 생성 시, 각각에 해당하는 콜백 함수를 지정하게 되어 있다.
-각각의 처리가 별개의 스레드로 되는 지, 하나의 스레드가 순차적으로 처리하는 지 의문이 들어서 해당 내용을 검색해보았다.
-이미 다른 Blog를 찾아보니, 아래와 같다고 하여, 테스트를 해보기로 하였다.
-Timer --&amp;gt; 각각이 개별 Thread로 처리 Subscriber --&amp;gt; 각 Topic에 개별 Thread로 처리 Timer Callback 테스트 환경  Windows 11, WSL2 Ubuntu 18.04 ROS Melodic Version Python 2.</description>
+        <description>Rospy 사용 시, Subscriber 및 Timer 클래스를 이용하여 인스턴스 생성 시, 각각에 해당하는 콜백 함수를 지정하게 되어 있다.</description>
       
     </item>
     
