@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programmings on TIL the END</title>
+    <link>http://JacksonK9.github.io/programming/</link>
+    <description>Recent content in Programmings on TIL the END</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 02 Apr 2022 11:38:58 +0900</lastBuildDate><atom:link href="http://JacksonK9.github.io/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Clang_atoi 함수</title>
+      <link>http://JacksonK9.github.io/programming/clang_atoi/</link>
+      <pubDate>Sat, 02 Apr 2022 11:38:58 +0900</pubDate>
+      
+      <guid>http://JacksonK9.github.io/programming/clang_atoi/</guid>
+      
+        <description>기초부터 다지자는 마음에서 C언어 공부 중에 몰랐던 내용을 하나씩 추가해보고자 한다.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

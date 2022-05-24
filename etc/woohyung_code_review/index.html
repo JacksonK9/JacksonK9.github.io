@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  class="html"
+><head>
+  <title>
+    
+      
+        우아한형제들 - 코드 리뷰 |
+
+      
+      Jackson Kim
+
+
+    
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.95.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Jackson Kim" />
+  <meta
+    name="description"
+    content="
+      Wanna be Good SLAMer
+
+
+    "
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.b2e0cb07595e3519ab1193bb421914e06c0e26b0cc561fef23b3c6131d4d2ffa.css"
+      integrity="sha256-suDLB1leNRmrEZO7QhkU4GwOJrDMVh/vI7PGEx1NL/o="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.b1c4e6a10bdbab01f33fff9d78816ee68cf9a9a731f07668afd546a79924cb80.css"
+    integrity="sha256-scTmoQvbqwHzP/&#43;deIFu5oz5qacx8HZor9VGp5kky4A="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.423dee17c62f55fa733a4ee13e00d523dfce88cc4f4ab4549a24ba36bd9de681.css"
+    integrity="sha256-Qj3uF8YvVfpzOk7hPgDVI9/OiMxPSrRUmiS6Nr2d5oE="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.b7d54133b27e5b4de15245b8e143de3e8ed2d674c706137274cedc9953f31917.css"
+    integrity="sha256-t9VBM7J&#43;W03hUkW44UPePo7S1nTHBhNydM7cmVPzGRc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="http://JacksonK9.github.io/etc/woohyung_code_review/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.560a26330d27ff44a44e83b53cd07a95d4230a65930d31c5c76a8d481e5b35bf.js"
+      integrity="sha256-VgomMw0n/0SkToO1PNB6ldQjCmWTDTHFx2qNSB5bNb8="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://JacksonK9.github.io/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="우아한형제들 - 코드 리뷰"/>
+<meta name="twitter:description" content="코드 리뷰 Youtube 코드 리뷰의 필요에 대해 고민하는 중, 위와 같은 내용을 확인하고, 정리해보려고 한다."/>
+
+
+
+  
+  <meta property="og:title" content="우아한형제들 - 코드 리뷰" />
+<meta property="og:description" content="코드 리뷰 Youtube 코드 리뷰의 필요에 대해 고민하는 중, 위와 같은 내용을 확인하고, 정리해보려고 한다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://JacksonK9.github.io/etc/woohyung_code_review/" /><meta property="og:image" content="http://JacksonK9.github.io/images/site-feature-image.png"/><meta property="article:section" content="etc" />
+<meta property="article:published_time" content="2022-05-05T22:36:41+09:00" />
+<meta property="article:modified_time" content="2022-05-05T22:36:41+09:00" /><meta property="og:site_name" content="TIL the END" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "etc",
+        "name": "우아한형제들 - 코드 리뷰",
+        "headline": "우아한형제들 - 코드 리뷰",
+        "alternativeHeadline": "",
+        "description": "
+      
+        코드 리뷰 Youtube 코드 리뷰의 필요에 대해 고민하는 중, 위와 같은 내용을 확인하고, 정리해보려고 한다.
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/JacksonK9.github.io\/etc\/woohyung_code_review\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Jackson Kim"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Jackson Kim"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Jackson Kim"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Jackson Kim"
+        },
+        "copyrightYear" : "2022",
+        "dateCreated": "2022-05-05T22:36:41.00Z",
+        "datePublished": "2022-05-05T22:36:41.00Z",
+        "dateModified": "2022-05-05T22:36:41.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Jackson Kim",
+            "url": "http://JacksonK9.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "http:\/\/JacksonK9.github.io\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "http://JacksonK9.github.io/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "http:\/\/JacksonK9.github.io\/etc\/woohyung_code_review\/",
+        "wordCount" : "1359",
+        "genre" : [ ],
+        "keywords" : [ ]
+    }
+  </script>
+
+
+
+</head>
+<body
+    
+      class="body theme--light"
+
+    
+  >
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/K9.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">TIL the END</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>Wanna be Good SLAMer</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/JacksonK9/"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:k9632441@gmail.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Jackson Kim
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.a3fd0638ada4e3cec287e49a604b4a828cfef33a669afe60b96575761fff5cf3.js"
+    integrity="sha256-o/0GOK2k487Ch&#43;SaYEtKgoz&#43;8zpmmv5guWV1dh//XPM="
+    crossorigin="anonymous"
+  ></script><script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+
+          <li class="nav__list-item">
+            <div class="optionswitch">
+              <input class="optionswitch__picker" type="checkbox" id="1" hidden />
+
+              
+              
+                
+
+
+              
+                
+
+
+              
+                
+
+
+              
+                
+
+
+              
+                
+
+
+              
+
+
+              <label class="optionswitch__label" for="1"
+                >Posts <i class="fa fa-angle-down" aria-hidden="true"></i
+              ></label>
+
+              <div class="optionswitch__triangle"></div>
+              <ul class="optionswitch__list">
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/algorithm/"
+                      
+                      title=""
+                      >Algorithm</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/programming/"
+                      
+                      title=""
+                      >Programming</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/cv/"
+                      
+                      title=""
+                      >Computer Vision</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/robotics/"
+                      
+                      title=""
+                      >Robotics</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/etc/"
+                      
+                      title=""
+                      >ETC</a
+                    >
+                  </li>
+
+                
+              </ul>
+            </div>
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/plans/"
+              
+              title=""
+              >Plans</a
+            >
+          </li>
+
+        
+
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+    <div class="post__content">
+      <h1>우아한형제들 - 코드 리뷰</h1>
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                2022/05/05
+
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">7-minute read</span>
+          </li>
+        </ul>
+
+      <h4 id="코드-리뷰-youtubehttpswwwyoutubecomwatchvssdmicpbquelistwlindex8t5137s"><a href="https://www.youtube.com/watch?v=ssDMIcPBqUE&amp;list=WL&amp;index=8&amp;t=5137s">코드 리뷰 Youtube</a></h4>
+<p>코드 리뷰의 필요에 대해 고민하는 중, 위와 같은 내용을 확인하고, 정리해보려고 한다.</p>
+<hr>
+<h4 id="우리가-살고-있는-세상은-vuca와-같은-시대">우리가 살고 있는 세상은 VUCA와 같은 시대</h4>
+<ul>
+<li>V (Volatile, 변동성)</li>
+<li>U (Uncertainty, 불확실성)</li>
+<li>C (Complexity, 복잡성)</li>
+<li>A (Ambiguity, 모호성)</li>
+</ul>
+<h4 id="이와-같은-시대에서-이에-맞춰가기-위해-필요한-시스템-중-하나가-바로-code-review">이와 같은 시대에서, 이에 맞춰가기 위해 필요한 시스템 중 하나가 바로, Code Review</h4>
+<h4 id="tech-관련-된-산업은-이제-막-digital-transformation을-시작하였으며-필요한-개발자-수의-증가-속도가-매우-빠르게-증가">Tech 관련 된 산업은 이제 막 Digital Transformation을 시작하였으며, 필요한 개발자 수의 증가 속도가 매우 빠르게 증가</h4>
+<h4 id="drfr-deliver-sw-rapidly-frequently-and-more-reliably">DRFR (Deliver SW Rapidly, Frequently and more Reliably)</h4>
+<h4 id="코드-리소스의-증가에-비해-코드의-생산성은-점차-수렴하는-현상을-볼-수-있음-그리고-라인-당-개발-비용은-점차-증가하는-현상이-발생">코드 리소스의 증가에 비해, 코드의 생산성은 점차 수렴하는 현상을 볼 수 있음, 그리고 라인 당 개발 비용은 점차 증가하는 현상이 발생</h4>
+<hr>
+<h3 id="sw-공학">SW 공학</h3>
+<ul>
+<li>설계 + 빌드</li>
+<li>설계는 완전한 소스 코드, SW 빌드는 컴파일</li>
+<li>SW에서는 설계가 매우 중요!</li>
+<li>SW는 유지보수가 전체의 80% 이상</li>
+<li>작성보다 이해에 더 많은 시간과 노력이 필요</li>
+<li>SW는 가격와 품질이 비례하지 않음!</li>
+<li>향후 수정 가능 여부 등도 가격에 적용 되므로, 무조건 비싼게 현재 품질이 좋다고 할 순 없음!</li>
+</ul>
+<h3 id="sw-장인-정신">SW 장인 정신</h3>
+<ul>
+<li>SW가 발전하기 위해서는 서로 학교에서 어떤 내용을 배우는 것 보다, 개발자 간 상호 내용을 공유하고, 학습하는 것이 중요</li>
+</ul>
+<h3 id="code-review">Code Review</h3>
+<ul>
+<li>품질 상승을 위해, 향후 변경 비용 개선을 위해, 상호 간의 지식 공유를 위해 진행</li>
+<li>동기부여 및 하드스킬, 소프트 스킬을 배울 수 있음</li>
+<li>하드 스킬 : 실질적인 업무에 필요한 기술</li>
+<li>소프트 스킬 : 직접적인 연관은 없지만, 필요한 기술 (커뮤니케이션 방법 등)</li>
+</ul>
+<h3 id="why">Why?</h3>
+<ul>
+<li>상호 책임감, 설계 개선 제안, 개발 문화 개선 등</li>
+</ul>
+<h3 id="procedure">Procedure</h3>
+<ul>
+<li>3가지 요소 (저자, 리뷰어, 변경 내역)</li>
+<li>저자 : 리뷰어의 시간을 SAVE하기 위해, 상세한 내용으로 설명, 리뷰어의 입장에서 필요한 내용을 설명해야 함!</li>
+</ul>
+<h3 id="어려운-이유">어려운 이유?</h3>
+<ul>
+<li>기술에 대한 비판을 사람에 대한 비판으로 받아들이기 때문에, 리뷰가 어렵다! (오해 ㄴ)</li>
+<li>생각을 글로 전달하는 것이 어렵다.</li>
+<li>말을 공격적이지 않게 하는 것이 중요 (소프트 스킬 필요)</li>
+</ul>
+<h3 id="code-review를-받아들이는-방법">Code Review를 받아들이는 방법</h3>
+<p>Code를 기반으로 하는 SNS 활동으로 생각하면 좋다!</p>
+<h2 id="효율적인-pr-방법">효율적인 PR 방법</h2>
+<ul>
+<li>지루한 작업은 컴퓨터로 처리</li>
+<li>스타일 가이드를 꼭 따를 것! (없으면 만들어서!)</li>
+<li>PR 올릴 때 꼭 주석 달기!</li>
+<li>모든 사람을 포함할 것</li>
+<li>의미있는 단위로 분리해서 나눌 것!</li>
+</ul>
+<h3 id="지루한-작업">지루한 작업</h3>
+<ul>
+<li>컴퓨터가 더 잘하는 일에 노력을 사용하지 말 것!</li>
+<li>Formatting Tool 등을 잘 이용</li>
+<li>Formatting을 할 경우에는 다른 커밋 또는 PR로 분리할 것!</li>
+<li>ex) 특정 Warning을 Error로 바꾸도록 설정해서 (IntelliJ inspection 활용) 쉽게 인지할 수 있도록 하는 방법
+&ndash;&gt; 툴을 잘 다루면, 본질에 집중할 수 있게 된다.</li>
+</ul>
+<h3 id="style-guide">Style Guide</h3>
+<ol>
+<li>좋은 가이드를 찾아서 그냥 쓰기</li>
+<li>새로운 스타일 가이드를 점점 만들어 가기</li>
+<li>두 가지를 합쳐서 사용하기</li>
+</ol>
+<h3 id="pr-올릴-때-꼭-주석-달기">PR 올릴 때 꼭 주석 달기!</h3>
+<ul>
+<li>PR을 본인이 먼저 읽어보고, 커멘트를 달아서, 리뷰어의 시간을 아껴줄 것</li>
+<li>모든 사람을 포함해서, 더 많은 버그를 찾아낼 수 있도록</li>
+<li>여러 명이 볼 수록 더 잘하려는 경향이 있으므로</li>
+</ul>
+<h3 id="의미있는-커밋으로-분리">의미있는 커밋으로 분리</h3>
+<ul>
+<li>혼자하더라도, 꽤나 상세하게 의미있게 분리할 것</li>
+</ul>
+<h2 id="효율적인-리뷰-방법">효율적인 리뷰 방법</h2>
+<ul>
+<li>리뷰는 지금 당장 시작</li>
+<li>고수준 &ndash;&gt; 저수준 순으로</li>
+<li>예제 코드 제공에 관대하라</li>
+<li>리뷰의 범위를 존중하라</li>
+<li>태그를 활용하라</li>
+<li>한 두 등급만 코드 레벨을 올리는 것을 목표로 하라</li>
+</ul>
+<h3 id="리뷰는-즉시-시작">리뷰는 즉시 시작</h3>
+<ul>
+<li>코드 리뷰의 우선 순위는 높아야함!<br>
+&ndash;&gt; 요청자는 리뷰를 받기 전까지 대기함</li>
+<li>리뷰를 바로 시작하면 선순환이 가능</li>
+<li>리뷰의 최대 기간은 하루<br>
+&ndash;&gt; 1일 내 불가하면 다른 리뷰어로 변경<br>
+&ndash;&gt; 월 1회 이상 재지정을 해야한다면, 개발 속도를 줄일 필요가 있음</li>
+<li>리뷰가 싫으면, 더 많이 해서 익숙해져라</li>
+<li>PR에 너무 많은 내용이 들어가지 않도록</li>
+<li>리뷰 자체를 업무 성과로 인정하고, 조직적인 문화로 받아들여라</li>
+</ul>
+<h3 id="고수준----저수준-순으로">고수준 &ndash;&gt; 저수준 순으로</h3>
+<ul>
+<li>초기에는 고수준 피드팩으로 제한 (버그, 장애, 성능, 보안 등)</li>
+<li>고수준 완료 후 저수준으로<br>
+&ndash;&gt; 설계 개선, 변수명 변경, 주석 등</li>
+</ul>
+<h3 id="예제-코드-제공">예제 코드 제공</h3>
+<ul>
+<li>리뷰 중 선물 주기 (예제 코드)</li>
+<li>너무 긴 예제 말고, 짧게&hellip;</li>
+<li>라운드 당 2 ~ 3개 코드 예제로</li>
+<li>너무 많이하면 자존심 상함ㅠ</li>
+</ul>
+<h3 id="리뷰의-범위-존중">리뷰의 범위 존중</h3>
+<ul>
+<li>PR 범위 밖의 코드에 대해 수정 요청하지 말 것</li>
+<li>PR에 포함되지 않은 라인은 리뷰 범위가 아님을 명심</li>
+<li>PR이 둘러싼 다른 코드에 영향을 미칠 때는 예외</li>
+</ul>
+<h3 id="태그를-활용">태그를 활용</h3>
+<ul>
+<li>팀에서 활용하는 태그를 사용<br>
+&ndash;&gt; Nit : 고치면 좋지만 아니어도 그만임</li>
+</ul>
+<h3 id="한-두-등급만-코드-레벨을-올릴-수-있도록">한 두 등급만 코드 레벨을 올릴 수 있도록</h3>
+<ul>
+<li>D등급의 PR은 C or B만 받도록 도울 것</li>
+<li>완전할 필요는 없지만, 충분히 좋기만 하면 됨</li>
+<li>F 등급 : 기능적으로 틀림, 너무 복잡</li>
+</ul>
+<hr>
+<h2 id="피드백-방법">피드백 방법</h2>
+<ul>
+<li>너라고 하지 마라</li>
+<li>건설적인 피드백</li>
+<li>진정한 칭찬</li>
+<li>피드백은 명령이 아니라 요청으로 표현</li>
+<li>의견이 아니라, 원칙에 기반하여 피드백</li>
+<li>반복적인 패턴에 대해서 피드백은 제한</li>
+</ul>
+<h3 id="너라고-하지-마라">너라고 하지 마라</h3>
+<ul>
+<li>비판의 대상이 사람이면 안됨.</li>
+<li>I Message 대화법 : 행동 - 결과 - 감정 순서로 말할 것</li>
+<li>~ 하는게 어떨까요? 로 말할 것</li>
+</ul>
+<h3 id="건설적인-피드백">건설적인 피드백</h3>
+<ul>
+<li>목적이 생산성을 높이는 것임을 잊지 말 것</li>
+<li>실수를 받아들이고, 동기부여할 것</li>
+<li>건설적인 피드백을 못할 것 같으면, 차라리 말하지 마라</li>
+</ul>
+<h3 id="진정한-칭찬">진정한 칭찬</h3>
+<ul>
+<li>잘 못된 부분 외에도 좋은 부분은 칭찬할 것</li>
+<li>팀워크가 좋아질 수 있음</li>
+</ul>
+<h3 id="의견이-아니라-원칙에-기반">의견이 아니라 원칙에 기반</h3>
+<ul>
+<li>제안하는 변경과, 이유를 모두 설명할 것</li>
+<li>객관적으로 설명할 것<br>
+&ndash;&gt; 이 코드는 혼란스럽네요 X<br>
+&ndash;&gt; 제가 이 코드를 이해하기가 힘드네요 O</li>
+</ul>
+<h3 id="반복적인-패턴에-대한-피드백-제한">반복적인 패턴에 대한 피드백 제한</h3>
+<ul>
+<li>10개가 있어도, 2~3개만 얘기해도 이해할 것임</li>
+</ul>
+<hr>
+<h2 id="교착-상태-해결-방법">교착 상태 해결 방법</h2>
+<ul>
+<li>만나서 얘기하는게 좋음</li>
+<li>인정하거나 EScalate 하라 (윗 사람에게 토스)</li>
+<li>다른 리뷰어 할당</li>
+<li>설계 리뷰를 고려해라</li>
+<li>아주 심각하지 않다면, 협업이 더 중요하다.</li>
+</ul>
+<h2 id="코드-리뷰하는-좋은-방법">코드 리뷰하는 좋은 방법</h2>
+<ul>
+<li>PR한 사람과 서로 짝 프로그래밍</li>
+<li>그 다음 갑자기 Revert ㅋㅋㅋㅋㅋㅋㅋㅋ</li>
+<li>자 이제 니가 해봐ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</li>
+<li>이 과정 속에서 2시간 동안 스스로 고민하며, 배움</li>
+</ul>
+<h3 id="추가적인-사례">추가적인 사례</h3>
+<ul>
+<li>결정은 저자가 한다.<br>
+&ndash;&gt; 완벽한 설계가 아닌, 할 수 있는 최고의 설계<br>
+&ndash;&gt; 팀의 협업 능력이 더 중요하므로, 불완전한 해결책도 어느정도 받아들일 것<br>
+&ndash;&gt; 모든 설계 결험이 꼭 문제가 되진 않음</li>
+<li>코드 리뷰의 목적은 비난하는 것이 아니라 배우는 것</li>
+<li>리뷰하려는 코드가 그냥 나쁠 수도 있음<br>
+&ndash;&gt; 상황을 이해하려는 시도도 필요 (그 사람의 현재 상태 등)<br>
+&ndash;&gt; 분위기를 부드럽게 이어갈 것</li>
+</ul>
+<h3 id="코드-리뷰의-핵심">코드 리뷰의 핵심</h3>
+<ul>
+<li>저자가 노력해서, 리뷰어의 시간을 아껴줘야 함</li>
+<li>리더의 관심과 의지가 중요! <br>
+&ndash;&gt; 가끔, 그러나 매우 자세히 할 것</li>
+<li>코드 비난에 대한 두려움을 내려놓을 것</li>
+<li>멋있어 보여야 한다! (다른 사람이 하고 싶어 지게!)</li>
+</ul>
+<h3 id="코드-리뷰-문화-정착의-어려움을-극복하는-방법">코드 리뷰 문화 정착의 어려움을 극복하는 방법</h3>
+<ul>
+<li>항상 털릴 준비를 해라&hellip;. (좌절ㅠ)</li>
+<li>내가 원한다고, 다른 사람에게 영감을 줄 순 없다</li>
+<li>영감은 부산물이고, 이를 위해 내가 모범이 되어야 한다.</li>
+<li>모범이 되어라<br>
+&ndash;&gt; 지각하지말 것, 업무에 기여할 것, 긍정적으로 할 것, 사람들에게 잘 대할 것<br>
+&ndash;&gt; 기술적 훈련을 위해서는 고도로 숙달될 것<br>
+&ndash;&gt; 키보드로 코딩할 때는 사람들이 경악하도록 할 것</li>
+</ul>
+<p>새로운 것을 도입할 때는, 늘 약간의 고통이 수반된다.<br>
+포기 하지 않고, 버텨서 꾸준히 좋아질 때 까지 해라</p>
+<h3 id="코드-리뷰의-효과">코드 리뷰의 효과</h3>
+<ul>
+<li>예상치 못한 버그를 타 프로젝트에서 발견</li>
+<li>선플이 늘어나기 시작함 (시간이 좀 지나면)</li>
+<li>PR 전에 한 번 더 코드를 다듬게 된다.</li>
+<li>좋은 설계, 아키텍처, 클린코드, TDD 등에 대한 공감대/열정 형성 (잘하는 동료를 따라하고 싶어짐)</li>
+</ul>
+<h3 id="코드-리뷰를-위해-필요한-기술">코드 리뷰를 위해 필요한 기술</h3>
+<ul>
+<li>리팩터링<br>
+&ndash;&gt; 결과의 변경 없이, 코드의 구조만 재조정<br>
+&ndash;&gt; 가독성이 좋게 또는 유지보수가 편하게</li>
+<li>매일 리팩터링<br>
+&ndash;&gt; Continuous Renaming<br>
+&ndash;&gt; Composed Method (Extract Method)<br>
+&ndash;&gt; 응집도 높이기<br>
+&ndash;&gt; Discover Value Object</li>
+<li>Legacy Code 다루기<br>
+&ndash;&gt; 의존성 관리 : Subclass &amp; Override Method<br>
+&ndash;&gt; 테스트 추가 : Characterization Test<br>
+&ndash;&gt; 새로운 코드빠르게 추가 : Sprout/Wrap Method/Class<br>
+&ndash;&gt; 레거시 분석<br>
+legacy code (코드의 가독성, 규약, 결합도, 땜빵 코드 등으로 인해, 화석처럼 굳어진 코드&hellip;, 수정이나 개선이 힘든 코드를 의미)</li>
+<li>TDD, Clean Code 등</li>
+</ul>
+<h3 id="faq">FAQ</h3>
+<ul>
+<li>코드 리뷰 자체라기 보단, 코드에 대한 논의 및 공유를 할 수 있는 문화가 중요</li>
+<li>개발 생산성 vs 개발 품질 사이의 Trade off</li>
+<li>필요한 대상을 찾아가서 물어봐도 좋다 (잘 아는 사람)</li>
+<li>꼭 리뷰만이 방법은 아님, 여러 가지 방법을 시도</li>
+<li>어떤 것이 중요한지, 우선순위를 정해서 할 것</li>
+<li>주기를 짧게 자주, PR을 자주 작게 할 것</li>
+<li>리뷰가 버그를 100% 잡을 수 있는 것은 아님, 누적하면 할 수록 사전 탐지율이 높아질 것</li>
+<li>상사 설득 방법<br>
+&ndash;&gt; 측정 항목을 정해서, 개선 효과 측정<br>
+&ndash;&gt; 의사 결정권자들에게 중요한 것을 이해 및 신뢰 관계<br>
+&ndash;&gt; 작은 단위로 올바른 방향으로 갈 수 있는 기회 찾기<br>
+&ndash;&gt; 허가가 필요한가? 노, 필요없다 그냥 필요한 내용을 수행하면 된다. (자동화 테스트, 리팩터링, 코드 리뷰, 페어프로그래밍 등)</li>
+<li>코드 리뷰 강의<br>
+&ndash;&gt; 패캠 The RED<br>
+&ndash;&gt; sudo : CTO&rsquo;s Tech Talk 2022 Conference</li>
+</ul>
+<h3 id="qna">QNA</h3>
+<ul>
+<li>Notion으로 코드 리뷰하는 분<br>
+&ndash;&gt; 코드를 과거와 현재를 비교할 수 있게 두고 보는 방식으로 하는 것이 제일 좋음 (Notion 비추&hellip;)</li>
+<li>Non-tech 기업에서 Code review 방법<br>
+&ndash;&gt; 우선은 쉬운 것부터 시작하자.</li>
+<li>리뷰가 너무 오래 걸릴 때?<br>
+&ndash;&gt; 리뷰 관련 규칙을 정해놓고 할 것</li>
+<li>코드 구현시, 주석의 정도?, 변수명 짓는 법?, 디렉토리 구조?<br>
+&ndash;&gt; 의도를 드러내게 지을 것.<br>
+&ndash;&gt; Clean 코드에 어느정도 있음</li>
+<li>코드 리뷰 성과 측정 방법?<br>
+&ndash;&gt; 수치적인 요소</li>
+<li>리뷰의 내용이 좋지 못한 것 같아서, 받아들이지 못한다면?<br>
+&ndash;&gt; Escalation (상사에게 전달)</li>
+<li>짝코딩 잘하는 방법?<br>
+&ndash;&gt; 한 번에 너무 많은 것을 하지 말 것</li>
+<li>회사 문화를 알아보는 방법?<br>
+&ndash;&gt; 테크 세미나? 블라인드? 주변 지인 등을 통해</li>
+</ul>
+<hr>
+<p>내용을 전체를 다 확인해보니, 코드 리뷰의 필요성에 대해서는 원래도 알고 있었던 것 같지만, 더 빠른 적용이 필요할 것으로 생각된다.<br>
+회사의 형태에 따라, 적용하는 형태가 조금씩 달라야되므로&hellip; 우리 회사에 적용하는데는 또 새로운 방법이 필요하겠지만 꼭 적응해볼 수 있기를 바라며..</p>
+</div>
+    <div class="post__footer">
+      
+
+      
+    </div>
+
+    <div id="comment">
+          <h2>comments</h2>
+          <script
+  src="https://utteranc.es/client.js"
+  repo="JacksonK9/blog_comments"
+  issue-term="pathname"
+  theme="preferred-color-scheme"
+  
+  crossorigin="anonymous"
+  async
+></script>
+
+        </div>
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Jackson Kim
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.a3fd0638ada4e3cec287e49a604b4a828cfef33a669afe60b96575761fff5cf3.js"
+    integrity="sha256-o/0GOK2k487Ch&#43;SaYEtKgoz&#43;8zpmmv5guWV1dh//XPM="
+    crossorigin="anonymous"
+  ></script><script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script></body>
+</html>

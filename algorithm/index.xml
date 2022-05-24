@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algorithms on TIL the END</title>
+    <link>http://JacksonK9.github.io/algorithm/</link>
+    <description>Recent content in Algorithms on TIL the END</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 22 May 2022 20:01:30 +0900</lastBuildDate><atom:link href="http://JacksonK9.github.io/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>탐색 알고리즘 (BFS &amp; DFS)</title>
+      <link>http://JacksonK9.github.io/algorithm/dfs_bfs/</link>
+      <pubDate>Sun, 22 May 2022 20:01:30 +0900</pubDate>
+      
+      <guid>http://JacksonK9.github.io/algorithm/dfs_bfs/</guid>
+      
+        <description>참고 원본 - DFS &amp;amp; BFS Table of Contents  탐색 알고리즘이란 스택과 큐 Python의 스택과 큐 C++의 스택과 큐 재귀함수이란 DFS BFS 음료수 얼려먹기 문제 미로 탈출 문제 리뷰  탐색?</description>
+      
+    </item>
+    
+    <item>
+      <title>코딩 테스트 개요 및 파이썬 문법 정리</title>
+      <link>http://JacksonK9.github.io/algorithm/what_is_coding_interview_and_python_syntax/</link>
+      <pubDate>Sun, 15 May 2022 13:26:57 +0900</pubDate>
+      
+      <guid>http://JacksonK9.github.io/algorithm/what_is_coding_interview_and_python_syntax/</guid>
+      
+        <description>참고 원본 - 코딩 테스트 출제 경향 분석 및 파이썬 문법 부수기 Table of Contents  코딩 테스트  코딩 테스트 ?</description>
+      
+    </item>
+    
+  </channel>
+</rss>

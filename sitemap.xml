@@ -2,38 +2,53 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://JacksonK9.github.io/posts/</loc>
+    <loc>http://JacksonK9.github.io/algorithm/</loc>
     <lastmod>2022-05-22T20:01:30+09:00</lastmod>
   </url><url>
-    <loc>http://JacksonK9.github.io/posts/dfs_bfs/</loc>
+    <loc>http://JacksonK9.github.io/algorithm/dfs_bfs/</loc>
     <lastmod>2022-05-22T20:01:30+09:00</lastmod>
   </url><url>
-    <loc>http://JacksonK9.github.io/posts/personal_branding_woohyung/</loc>
+    <loc>http://JacksonK9.github.io/etc/</loc>
     <lastmod>2022-05-15T21:12:40+09:00</lastmod>
   </url><url>
-    <loc>http://JacksonK9.github.io/posts/dilly_woohyung/</loc>
+    <loc>http://JacksonK9.github.io/etc/personal_branding_woohyung/</loc>
+    <lastmod>2022-05-15T21:12:40+09:00</lastmod>
+  </url><url>
+    <loc>http://JacksonK9.github.io/robotics/</loc>
     <lastmod>2022-05-15T19:28:25+09:00</lastmod>
   </url><url>
-    <loc>http://JacksonK9.github.io/posts/why_should_teach_woohyung/</loc>
+    <loc>http://JacksonK9.github.io/robotics/dilly_woohyung/</loc>
+    <lastmod>2022-05-15T19:28:25+09:00</lastmod>
+  </url><url>
+    <loc>http://JacksonK9.github.io/etc/why_should_teach_woohyung/</loc>
     <lastmod>2022-05-15T18:53:43+09:00</lastmod>
   </url><url>
-    <loc>http://JacksonK9.github.io/posts/technical_debt_woohyung/</loc>
+    <loc>http://JacksonK9.github.io/etc/technical_debt_woohyung/</loc>
     <lastmod>2022-05-15T17:50:03+09:00</lastmod>
   </url><url>
-    <loc>http://JacksonK9.github.io/posts/what_is_coding_interview_and_python_syntax/</loc>
+    <loc>http://JacksonK9.github.io/algorithm/what_is_coding_interview_and_python_syntax/</loc>
     <lastmod>2022-05-15T13:26:57+09:00</lastmod>
   </url><url>
-    <loc>http://JacksonK9.github.io/posts/ai_for_everyone/</loc>
+    <loc>http://JacksonK9.github.io/cv/ai_for_everyone/</loc>
     <lastmod>2022-05-10T22:02:06+09:00</lastmod>
   </url><url>
-    <loc>http://JacksonK9.github.io/posts/woohyung_code_review/</loc>
+    <loc>http://JacksonK9.github.io/cv/</loc>
+    <lastmod>2022-05-10T22:02:06+09:00</lastmod>
+  </url><url>
+    <loc>http://JacksonK9.github.io/etc/woohyung_code_review/</loc>
     <lastmod>2022-05-05T22:36:41+09:00</lastmod>
   </url><url>
-    <loc>http://JacksonK9.github.io/posts/clang_atoi/</loc>
+    <loc>http://JacksonK9.github.io/programming/clang_atoi/</loc>
     <lastmod>2022-04-02T11:38:58+09:00</lastmod>
   </url><url>
-    <loc>http://JacksonK9.github.io/posts/rospy_multithreading/</loc>
+    <loc>http://JacksonK9.github.io/programming/</loc>
+    <lastmod>2022-04-02T11:38:58+09:00</lastmod>
+  </url><url>
+    <loc>http://JacksonK9.github.io/robotics/rospy_multithreading/</loc>
     <lastmod>2022-03-20T13:15:40+09:00</lastmod>
+  </url><url>
+    <loc>http://JacksonK9.github.io/plans/</loc>
+    <lastmod>2022-03-18T20:12:20+09:00</lastmod>
   </url><url>
     <loc>http://JacksonK9.github.io/</loc>
     <lastmod>2022-03-18T20:12:20+09:00</lastmod>
