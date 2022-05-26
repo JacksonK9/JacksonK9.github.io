@@ -8,6 +8,17 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 18 Mar 2022 20:12:20 +0900</lastBuildDate><atom:link href="http://JacksonK9.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>개발형 코딩 테스트</title>
+      <link>http://JacksonK9.github.io/algorithm/developing_coding_test/</link>
+      <pubDate>Thu, 26 May 2022 19:17:16 +0900</pubDate>
+      
+      <guid>http://JacksonK9.github.io/algorithm/developing_coding_test/</guid>
+      
+        <description>참고 원본 - 개발형 코딩 테스트 Table of Contents  개발형 코딩 테스트 REST API JSON REST API 연습용 서비스 리뷰   개발형 코딩 테스트?</description>
+      
+    </item>
+    
+    <item>
       <title>기타 그래프 이론</title>
       <link>http://JacksonK9.github.io/algorithm/graph_theory/</link>
       <pubDate>Wed, 25 May 2022 22:28:43 +0900</pubDate>
@@ -25,7 +36,7 @@
       
       <guid>http://JacksonK9.github.io/algorithm/dfs_bfs/</guid>
       
-        <description>참고 원본 - DFS &amp;amp; BFS Table of Contents  탐색 알고리즘이란 스택과 큐 Python의 스택과 큐 C++의 스택과 큐 재귀함수이란 DFS BFS 음료수 얼려먹기 문제 미로 탈출 문제 리뷰  탐색?</description>
+        <description>참고 원본 - DFS &amp;amp; BFS Table of Contents  탐색 알고리즘이란 스택과 큐 Python의 스택과 큐 C++의 스택과 큐 재귀함수이란 DFS BFS 음료수 얼려먹기 문제 미로 탈출 문제 리뷰   탐색 ?</description>
       
     </item>
     
