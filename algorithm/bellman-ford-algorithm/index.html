@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  class="html"
+><head>
+  <title>
+    
+      
+        벨만포드 알고리즘 |
+
+      
+      Jackson Kim
+
+
+    
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.95.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Jackson Kim" />
+  <meta
+    name="description"
+    content="
+      Wanna be Good SLAMer
+
+
+    "
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.b2e0cb07595e3519ab1193bb421914e06c0e26b0cc561fef23b3c6131d4d2ffa.css"
+      integrity="sha256-suDLB1leNRmrEZO7QhkU4GwOJrDMVh/vI7PGEx1NL/o="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.b1c4e6a10bdbab01f33fff9d78816ee68cf9a9a731f07668afd546a79924cb80.css"
+    integrity="sha256-scTmoQvbqwHzP/&#43;deIFu5oz5qacx8HZor9VGp5kky4A="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.423dee17c62f55fa733a4ee13e00d523dfce88cc4f4ab4549a24ba36bd9de681.css"
+    integrity="sha256-Qj3uF8YvVfpzOk7hPgDVI9/OiMxPSrRUmiS6Nr2d5oE="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.b7d54133b27e5b4de15245b8e143de3e8ed2d674c706137274cedc9953f31917.css"
+    integrity="sha256-t9VBM7J&#43;W03hUkW44UPePo7S1nTHBhNydM7cmVPzGRc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="http://JacksonK9.github.io/algorithm/bellman-ford-algorithm/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.560a26330d27ff44a44e83b53cd07a95d4230a65930d31c5c76a8d481e5b35bf.js"
+      integrity="sha256-VgomMw0n/0SkToO1PNB6ldQjCmWTDTHFx2qNSB5bNb8="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://JacksonK9.github.io/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="벨만포드 알고리즘"/>
+<meta name="twitter:description" content="참고 원본 - 벨만포드 알고리즘 7분 요약 Table of Contents  최단 거리 문제 다익스트라 알고리즘 음수 간선 벨만포드 알고리즘 다익스트라 vs 벨만포드   최단 거리 문제  그래프에서 최단 거리를 찾는 문제 일반적으로 최단 거리 문제에서 자주 사용하는 알고리즘은 다익스트라 알고리즘    다익스트라 알고리즘  다익스트라 알고리즘 다이나믹 프로그래밍을 활용하는 알고리즘 특정한 하나의 Node에서 다른 모든 Node로의 최단 거리를 계산하는 알고리즘 각 Node 사이의 Edge가 양수일 때 사용할 수 있음 현실 세계와 잘 맞아 떨어지므로, 현실 세계에 사용하기 적합한 알고리즘   Negative Edge?"/>
+
+
+
+  
+  <meta property="og:title" content="벨만포드 알고리즘" />
+<meta property="og:description" content="참고 원본 - 벨만포드 알고리즘 7분 요약 Table of Contents  최단 거리 문제 다익스트라 알고리즘 음수 간선 벨만포드 알고리즘 다익스트라 vs 벨만포드   최단 거리 문제  그래프에서 최단 거리를 찾는 문제 일반적으로 최단 거리 문제에서 자주 사용하는 알고리즘은 다익스트라 알고리즘    다익스트라 알고리즘  다익스트라 알고리즘 다이나믹 프로그래밍을 활용하는 알고리즘 특정한 하나의 Node에서 다른 모든 Node로의 최단 거리를 계산하는 알고리즘 각 Node 사이의 Edge가 양수일 때 사용할 수 있음 현실 세계와 잘 맞아 떨어지므로, 현실 세계에 사용하기 적합한 알고리즘   Negative Edge?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://JacksonK9.github.io/algorithm/bellman-ford-algorithm/" /><meta property="og:image" content="http://JacksonK9.github.io/images/site-feature-image.png"/><meta property="article:section" content="algorithm" />
+<meta property="article:published_time" content="2022-06-01T21:17:10+09:00" />
+<meta property="article:modified_time" content="2022-06-01T21:17:10+09:00" /><meta property="og:site_name" content="TIL the END" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "algorithm",
+        "name": "벨만포드 알고리즘",
+        "headline": "벨만포드 알고리즘",
+        "alternativeHeadline": "",
+        "description": "
+      
+        참고 원본 - 벨만포드 알고리즘 7분 요약 Table of Contents  최단 거리 문제 다익스트라 알고리즘 음수 간선 벨만포드 알고리즘 다익스트라 vs 벨만포드   최단 거리 문제  그래프에서 최단 거리를 찾는 문제 일반적으로 최단 거리 문제에서 자주 사용하는 알고리즘은 다익스트라 알고리즘    다익스트라 알고리즘  다익스트라 알고리즘 다이나믹 프로그래밍을 활용하는 알고리즘 특정한 하나의 Node에서 다른 모든 Node로의 최단 거리를 계산하는 알고리즘 각 Node 사이의 Edge가 양수일 때 사용할 수 있음 현실 세계와 잘 맞아 떨어지므로, 현실 세계에 사용하기 적합한 알고리즘   Negative Edge?
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/JacksonK9.github.io\/algorithm\/bellman-ford-algorithm\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Jackson Kim"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Jackson Kim"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Jackson Kim"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Jackson Kim"
+        },
+        "copyrightYear" : "2022",
+        "dateCreated": "2022-06-01T21:17:10.00Z",
+        "datePublished": "2022-06-01T21:17:10.00Z",
+        "dateModified": "2022-06-01T21:17:10.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Jackson Kim",
+            "url": "http://JacksonK9.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "http:\/\/JacksonK9.github.io\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "http://JacksonK9.github.io/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "http:\/\/JacksonK9.github.io\/algorithm\/bellman-ford-algorithm\/",
+        "wordCount" : "405",
+        "genre" : [ ],
+        "keywords" : [ ]
+    }
+  </script>
+
+
+
+</head>
+<body
+    
+      class="body theme--light"
+
+    
+  >
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/K9.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">TIL the END</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>Wanna be Good SLAMer</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/JacksonK9/"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:k9632441@gmail.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Jackson Kim
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.a3fd0638ada4e3cec287e49a604b4a828cfef33a669afe60b96575761fff5cf3.js"
+    integrity="sha256-o/0GOK2k487Ch&#43;SaYEtKgoz&#43;8zpmmv5guWV1dh//XPM="
+    crossorigin="anonymous"
+  ></script><script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+
+          <li class="nav__list-item">
+            <div class="optionswitch">
+              <input class="optionswitch__picker" type="checkbox" id="1" hidden />
+
+              
+              
+                
+
+
+              
+                
+
+
+              
+                
+
+
+              
+                
+
+
+              
+                
+
+
+              
+
+
+              <label class="optionswitch__label" for="1"
+                >Posts <i class="fa fa-angle-down" aria-hidden="true"></i
+              ></label>
+
+              <div class="optionswitch__triangle"></div>
+              <ul class="optionswitch__list">
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/algorithm/"
+                      
+                      title=""
+                      >Algorithm</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/programming/"
+                      
+                      title=""
+                      >Programming</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/cv/"
+                      
+                      title=""
+                      >Computer Vision</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/robotics/"
+                      
+                      title=""
+                      >Robotics</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/etc/"
+                      
+                      title=""
+                      >ETC</a
+                    >
+                  </li>
+
+                
+              </ul>
+            </div>
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/plans/"
+              
+              title=""
+              >Plans</a
+            >
+          </li>
+
+        
+
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+    <div class="post__content">
+      <h1>벨만포드 알고리즘</h1>
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                2022/06/01
+
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">2-minute read</span>
+          </li>
+        </ul>
+
+      <h4 id="참고-원본---벨만포드-알고리즘-7분-요약httpswwwyoutubecomwatchvppimbaxm8d8listplrx0vpvlemdaghtr5mxqxgphjwqsz0dgcindex13"><a href="https://www.youtube.com/watch?v=Ppimbaxm8d8&amp;list=PLRx0vPvlEmdAghTr5mXQxGpHjWqSz0dgC&amp;index=13">참고 원본 - 벨만포드 알고리즘 7분 요약</a></h4>
+<h3 id="table-of-contents">Table of Contents</h3>
+<ul>
+<li><a href="#%EC%B5%9C%EB%8B%A8-%EA%B1%B0%EB%A6%AC-%EB%AC%B8%EC%A0%9C">최단 거리 문제</a></li>
+<li><a href="#%EB%8B%A4%EC%9D%B5%EC%8A%A4%ED%8A%B8%EB%9D%BC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98">다익스트라 알고리즘</a></li>
+<li><a href="#negative-edge">음수 간선</a></li>
+<li><a href="#bellman-ford-algorithm">벨만포드 알고리즘</a></li>
+<li><a href="#%EB%B2%A8%EB%A7%8C%ED%8F%AC%EB%93%9C-vs-%EB%8B%A4%EC%9D%B5%EC%8A%A4%ED%8A%B8%EB%9D%BC">다익스트라 vs 벨만포드</a></li>
+</ul>
+<hr>
+<h3 id="최단-거리-문제">최단 거리 문제</h3>
+<ul>
+<li>그래프에서 최단 거리를 찾는 문제</li>
+<li>일반적으로 최단 거리 문제에서 자주 사용하는 알고리즘은 <code>다익스트라 알고리즘</code>
+<img src="/images/Bellman-Ford-Algorithm/shortest_path.png" alt="Shortest_path"></li>
+</ul>
+<hr>
+<h3 id="다익스트라-알고리즘">다익스트라 알고리즘</h3>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=611B-9zk2o4&amp;t=461s">다익스트라 알고리즘</a></li>
+<li><code>다이나믹 프로그래밍</code>을 활용하는 알고리즘</li>
+<li>특정한 하나의 Node에서 다른 모든 Node로의 최단 거리를 계산하는 알고리즘</li>
+<li>각 Node 사이의 Edge가 양수일 때 사용할 수 있음</li>
+<li>현실 세계와 잘 맞아 떨어지므로, 현실 세계에 사용하기 적합한 알고리즘</li>
+</ul>
+<hr>
+<h3 id="negative-edge">Negative Edge?</h3>
+<ul>
+<li>현실에 존재하는 일반적인 상황이 아닌 경우 Edge의 값이 음수인 경우가 존재</li>
+<li>이와 같은 경우에는 다익스트라 알고리즘을 적용하여 계산이 불가능</li>
+<li>또한, 발생한 사이클 내부의 Edge 값의 합이 음수인 경우, 최단 거리가 모두 $-\infty$가 될 수 있음
+<img src="/images/Bellman-Ford-Algorithm/negative_cycle.png" alt="Negative_Cycle"></li>
+<li>이에 따라, 음수인 간선을 포함한 그래프의 최단 거리를 구하는 알고리즘과 사이클의 합이 음수가 되는지를 확인하는 알고리즘이 모두 필요</li>
+</ul>
+<hr>
+<h3 id="bellman-ford-algorithm">Bellman-Ford Algorithm</h3>
+<ul>
+<li>이와 같은 음의 간선을 포함하는 경우 및 사이클의 합이 음수가 되는지를 파악하는 알고리즘이 벨만포드 알고리즘</li>
+<li>모든 간선에 대해 확인하므로, 다익스트라 알고리즘보다 속도가 느림</li>
+<li>시간 복잡도는 $O(VE)$, $V \rightarrow$ Node 개수, $E \rightarrow$ Edge 개수</li>
+</ul>
+<ol>
+<li>출발 Node를 설정</li>
+<li>최단 거리 테이블을 초기화 (출발 Node는 0, 나머지는 모두 무한대 ($1e9$))</li>
+<li>아래의 과정을 $N-1$번 반복
+<ul>
+<li>Edge $E$개를 모두 확인</li>
+<li>각 Edge를 거쳐서 다른 Node로 가는 비용을 계산해서 최단 거리 테이블을 업데이트</li>
+</ul>
+</li>
+<li>음수 간선 순환 여부를 판단하려면, 3의 과정을 1번 더 수행하여, 최단 거리 테이블이 업데이트되면, 순환이 존재하는 것으로 판단</li>
+</ol>
+<hr>
+<h3 id="벨만포드-vs-다익스트라">벨만포드 vs 다익스트라</h3>
+<ul>
+<li>다익스트라
+<ul>
+<li>방문하지 않은 Node 중에 최단 거리가 가장 짧은 Node를 선택하여 해당 Node를 경유한 경로를 통해 최단 거리 테이블을 업데이트</li>
+<li>음수 Edge가 없다면 최적해를 찾을 수 있음</li>
+</ul>
+</li>
+<li>벨만포드
+<ul>
+<li>매번 모든 Edge를 확인 $\rightarrow$ 다익스트라의 최적해를 항상 포함할 수 밖에 없음</li>
+<li>시간은 다익스트라보다 오래 걸림</li>
+<li>음수 Edge가 포함된 경우의 최단 거리 계산 및 음수 Edge 사이클 탐지가 가능</li>
+</ul>
+</li>
+</ul>
+<h3 id="구현-tip">구현 Tip</h3>
+<ul>
+<li>벨만포드 구현 시, 알고리즘 상으로는 $N-1$번 탐색하지만, $N$번 탐색하는 방법을 통해, 사이클 탐지도 함께 확인할 수 있음</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">bellman_ford</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">dist_table</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="n">edges</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dist_table</span><span class="p">[</span><span class="n">start</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># 시작 Node의 거리 초기화</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span> <span class="c1"># N-1대신 N번 탐색을 통해 사이클도 함께 탐지</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">M</span><span class="p">):</span> <span class="c1"># 모든 간선을 탐색</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cur</span> <span class="o">=</span> <span class="n">edges</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># edges는 (시작 Node, 도착 Node, 비용)이 저장되어 있음</span>
+</span></span><span class="line"><span class="cl">            <span class="n">target</span> <span class="o">=</span> <span class="n">edges</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cost</span> <span class="o">=</span> <span class="n">edges</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">dist_table</span><span class="p">[</span><span class="n">cur</span><span class="p">]</span> <span class="o">!=</span> <span class="n">INF</span> <span class="ow">and</span> <span class="n">dist_table</span><span class="p">[</span><span class="n">target</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">dist_table</span><span class="p">(</span><span class="n">cur</span><span class="p">)</span> <span class="o">+</span> <span class="n">cost</span><span class="p">:</span> <span class="c1"># 현재 간선을 통해 이동하는 경우가 더 짧은 경우</span>
+</span></span><span class="line"><span class="cl">                <span class="n">dist_table</span><span class="p">[</span><span class="n">target</span><span class="p">]</span> <span class="o">=</span> <span class="n">dist_table</span><span class="p">[</span><span class="n">cur</span><span class="p">]</span> <span class="o">+</span> <span class="n">cost</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">return</span> <span class="kc">True</span> <span class="c1"># N번째 확인 시에, 값이 업데이트 되면 음의 사이클 확인</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kc">False</span> <span class="c1"># N번째 확인 시에, 값이 업데이트 되지 않았으므로, 음의 사이클 없음</span>
+</span></span></code></pre></div></div>
+    <div class="post__footer">
+      
+
+      
+    </div>
+
+    <div id="comment">
+          <h2>comments</h2>
+          <script
+  src="https://utteranc.es/client.js"
+  repo="JacksonK9/blog_comments"
+  issue-term="pathname"
+  theme="preferred-color-scheme"
+  
+  crossorigin="anonymous"
+  async
+></script>
+
+        </div>
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Jackson Kim
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.a3fd0638ada4e3cec287e49a604b4a828cfef33a669afe60b96575761fff5cf3.js"
+    integrity="sha256-o/0GOK2k487Ch&#43;SaYEtKgoz&#43;8zpmmv5guWV1dh//XPM="
+    crossorigin="anonymous"
+  ></script><script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script></body>
+</html>
