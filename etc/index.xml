@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Etcs on TIL the END</title>
-    <link>http://JacksonK9.github.io/etc/</link>
+    <link>https://JacksonK9.github.io/etc/</link>
     <description>Recent content in Etcs on TIL the END</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 May 2022 21:12:40 +0900</lastBuildDate><atom:link href="http://JacksonK9.github.io/etc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 May 2022 21:12:40 +0900</lastBuildDate><atom:link href="https://JacksonK9.github.io/etc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>우아한형제들 - 개발자 퍼스널 브랜딩</title>
-      <link>http://JacksonK9.github.io/etc/personal_branding_woohyung/</link>
+      <link>https://JacksonK9.github.io/etc/personal_branding_woohyung/</link>
       <pubDate>Sun, 15 May 2022 21:12:40 +0900</pubDate>
       
-      <guid>http://JacksonK9.github.io/etc/personal_branding_woohyung/</guid>
+      <guid>https://JacksonK9.github.io/etc/personal_branding_woohyung/</guid>
       
         <description>개발자 퍼스널 브랜딩, 그런데 이제 리크루터 활용을 곁들인!
 리크루터?  조직에 필요한 사람을 찾아서 공급하는 역할 적합한 사람을 찾아서, 적합한 자리에 배치하는 역할 리크루팅 방법  채용을 원하는 조직의 요청 사항을 받고, 인재 서칭 찾았다면, 지원자로 만들기 위한 설득 이력서 검토 및 보완, 채용 프로세스를 코칭    성공적인 이직 Tip  이력서 쓰는 법  프로젝트의 이름 및 기간만 표현된 것은 별로 좋지 않다 프로젝트 정보가 필요  프로젝트 명, 기간, 간단한 소개   프로젝트 별 기술 스택  Java, Spring F/W, MySQL, React 등&amp;hellip;   본인이 기여한 부분  ROS 개발 (X) ROS 기반으로 영상 스트리밍하는 기능을 개발 (O)   성과 및 개선한 점  어떤 성과가 났으며, 정량적인 평가가 필요 정량적인 평가가 힘들다면, 정성적인 평가도 괜찮습니다.</description>
@@ -21,10 +21,10 @@
     
     <item>
       <title>우아한형제들 - 개발자와 교육자</title>
-      <link>http://JacksonK9.github.io/etc/why_should_teach_woohyung/</link>
+      <link>https://JacksonK9.github.io/etc/why_should_teach_woohyung/</link>
       <pubDate>Sun, 15 May 2022 18:53:43 +0900</pubDate>
       
-      <guid>http://JacksonK9.github.io/etc/why_should_teach_woohyung/</guid>
+      <guid>https://JacksonK9.github.io/etc/why_should_teach_woohyung/</guid>
       
         <description>개발자가 교육자의 길을 걸어야 하는 이유는?
 우아한 테크코스?  프로그래머의 길을 도전하는 취준생에게 현장과 가까운 교육을 진행하기 위한 10개월짜리 교육 프로그램 현장성을 매우 중요하게 여김 2 ~ 5년 정도의 현장 경험이 있는 개발자를 교육자로 채용  교육의 장점?</description>
@@ -33,10 +33,10 @@
     
     <item>
       <title>우아한형제들 - 기술 부채</title>
-      <link>http://JacksonK9.github.io/etc/technical_debt_woohyung/</link>
+      <link>https://JacksonK9.github.io/etc/technical_debt_woohyung/</link>
       <pubDate>Sun, 15 May 2022 17:50:03 +0900</pubDate>
       
-      <guid>http://JacksonK9.github.io/etc/technical_debt_woohyung/</guid>
+      <guid>https://JacksonK9.github.io/etc/technical_debt_woohyung/</guid>
       
         <description>기술 부채 Youtube 기술 부채  기술 부채는 대출과 유사 기술 부채가 자산?</description>
       
@@ -44,10 +44,10 @@
     
     <item>
       <title>우아한형제들 - 코드 리뷰</title>
-      <link>http://JacksonK9.github.io/etc/woohyung_code_review/</link>
+      <link>https://JacksonK9.github.io/etc/woohyung_code_review/</link>
       <pubDate>Thu, 05 May 2022 22:36:41 +0900</pubDate>
       
-      <guid>http://JacksonK9.github.io/etc/woohyung_code_review/</guid>
+      <guid>https://JacksonK9.github.io/etc/woohyung_code_review/</guid>
       
         <description>코드 리뷰 Youtube 코드 리뷰의 필요에 대해 고민하는 중, 위와 같은 내용을 확인하고, 정리해보려고 한다.</description>
       

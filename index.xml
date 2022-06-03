@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>TIL the END</title>
-    <link>http://JacksonK9.github.io/</link>
+    <link>https://JacksonK9.github.io/</link>
     <description>Recent content on TIL the END</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Mar 2022 20:12:20 +0900</lastBuildDate><atom:link href="http://JacksonK9.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 18 Mar 2022 20:12:20 +0900</lastBuildDate><atom:link href="https://JacksonK9.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>구간합 (feat. Prefix Sum, Binary Indexed Tree)</title>
-      <link>http://JacksonK9.github.io/algorithm/interval_sum/</link>
+      <link>https://JacksonK9.github.io/algorithm/interval_sum/</link>
       <pubDate>Fri, 03 Jun 2022 21:59:26 +0900</pubDate>
       
-      <guid>http://JacksonK9.github.io/algorithm/interval_sum/</guid>
+      <guid>https://JacksonK9.github.io/algorithm/interval_sum/</guid>
       
         <description>참고 원본 - 바이너리 인덱스 트리 10분 정복 BOJ 2042 구간 합 구하기 문제 Table of Contents  구간 합 문제 풀이1.</description>
       
@@ -20,10 +20,10 @@
     
     <item>
       <title>A* 알고리즘</title>
-      <link>http://JacksonK9.github.io/algorithm/a_star_algorithm/</link>
+      <link>https://JacksonK9.github.io/algorithm/a_star_algorithm/</link>
       <pubDate>Fri, 03 Jun 2022 11:42:01 +0900</pubDate>
       
-      <guid>http://JacksonK9.github.io/algorithm/a_star_algorithm/</guid>
+      <guid>https://JacksonK9.github.io/algorithm/a_star_algorithm/</guid>
       
         <description>원본 링크 - Introduction to the A* Algorithm Table of Contents  개요 지도 표현하기 Graph 탐색 알고리즘 BFS Early Exit Dijkstra Greedy Best First Search A* Algorithm 결론 Review Appendix A - Map to Graph Appendix B - 구현   개요  길 찾기 알고리즘은 꽤나 많은 영역에서 사용됩니다.</description>
       
@@ -31,10 +31,10 @@
     
     <item>
       <title>2022년도 SAFFY 8기 코딩 테스트 유사 문제</title>
-      <link>http://JacksonK9.github.io/algorithm/2022_saffy_similar_problem/</link>
+      <link>https://JacksonK9.github.io/algorithm/2022_saffy_similar_problem/</link>
       <pubDate>Wed, 01 Jun 2022 23:51:25 +0900</pubDate>
       
-      <guid>http://JacksonK9.github.io/algorithm/2022_saffy_similar_problem/</guid>
+      <guid>https://JacksonK9.github.io/algorithm/2022_saffy_similar_problem/</guid>
       
         <description>홀짝 칵테일 선수 과목(Prerequisite) Table of Contents  홀짝 칵테일 문제 설명 홀짝 칵테일 풀이 선수과목 문제 설명 선수과목 풀이 Review   홀짝 칵테일 (BOJ 21312)  문제 내용이 꽤 길다&amp;hellip; 결과적으로 보면 내용은 다음과 같았다 칵테일은 고유 번호의 곱을 의미한다 칵테일(곱셈의 결과)이 짝수보다는 홀수가 맛있다 (홀수 &amp;gt; 짝수) 홀수끼리 또는 짝수끼리는 숫자가 크면 더 맛있다 (큰 수) 정리해보면, 3개의 숫자의 조합된 값의 곱을 이용하여, 홀수 중 제일 큰수, 불가능하면 짝수 중 제일 큰 수를 출력하면 되는 문제  홀짝 칵테일 풀이  홀수 $\times$ 홀수 $=$ 홀수 홀수 $\times$ 짝수 $=$ 짝수 짝수 $\times$ 짝수 $=$ 짝수 위 세 가지 내용을 알고 있는 상태라면 문제가 쉽게 풀린다   3개의 숫자를 받고, 각 값이 홀수인지 짝수인지 확인한다.</description>
       
@@ -42,10 +42,10 @@
     
     <item>
       <title>벨만포드 알고리즘</title>
-      <link>http://JacksonK9.github.io/algorithm/bellman-ford-algorithm/</link>
+      <link>https://JacksonK9.github.io/algorithm/bellman-ford-algorithm/</link>
       <pubDate>Wed, 01 Jun 2022 21:17:10 +0900</pubDate>
       
-      <guid>http://JacksonK9.github.io/algorithm/bellman-ford-algorithm/</guid>
+      <guid>https://JacksonK9.github.io/algorithm/bellman-ford-algorithm/</guid>
       
         <description>참고 원본 - 벨만포드 알고리즘 7분 요약 BOJ 11657 타임머신 문제 Table of Contents  최단 거리 문제 다익스트라 알고리즘 음수 간선 벨만포드 알고리즘 다익스트라 vs 벨만포드 Review   최단 거리 문제  그래프에서 최단 거리를 찾는 문제 일반적으로 최단 거리 문제에서 자주 사용하는 알고리즘은 다익스트라 알고리즘    다익스트라 알고리즘  다익스트라 알고리즘 다이나믹 프로그래밍을 활용하는 알고리즘 특정한 하나의 Node에서 다른 모든 Node로의 최단 거리를 계산하는 알고리즘 각 Node 사이의 Edge가 양수일 때 사용할 수 있음 현실 세계와 잘 맞아 떨어지므로, 현실 세계에 사용하기 적합한 알고리즘   Negative Edge?</description>
       
@@ -53,10 +53,10 @@
     
     <item>
       <title>개발형 코딩 테스트</title>
-      <link>http://JacksonK9.github.io/algorithm/developing_coding_test/</link>
+      <link>https://JacksonK9.github.io/algorithm/developing_coding_test/</link>
       <pubDate>Thu, 26 May 2022 19:17:16 +0900</pubDate>
       
-      <guid>http://JacksonK9.github.io/algorithm/developing_coding_test/</guid>
+      <guid>https://JacksonK9.github.io/algorithm/developing_coding_test/</guid>
       
         <description>참고 원본 - 개발형 코딩 테스트 Table of Contents  개발형 코딩 테스트 REST API JSON REST API 연습용 서비스 리뷰   개발형 코딩 테스트?</description>
       
@@ -64,10 +64,10 @@
     
     <item>
       <title>기타 그래프 이론</title>
-      <link>http://JacksonK9.github.io/algorithm/graph_theory/</link>
+      <link>https://JacksonK9.github.io/algorithm/graph_theory/</link>
       <pubDate>Wed, 25 May 2022 22:28:43 +0900</pubDate>
       
-      <guid>http://JacksonK9.github.io/algorithm/graph_theory/</guid>
+      <guid>https://JacksonK9.github.io/algorithm/graph_theory/</guid>
       
         <description>참고 원본 - 기타 그래프 이론 Table of Contents  서로소 집합  서로소 집합의 특징 서로소 집합의 구현 서로소 집합의 활용   최소 신장 트리  최소 신장 트리의 특징 크루스칼 알고리즘   위상 정렬 리뷰  서로소 집합  서로소 집합 $\rightarrow$ 공통 원소가 없는 두 집합을 의미 ({1, 2}, {3, 4} 두 집합은 공통 원소가 없으므로, 서로소 집합)  서로소 집합 자료 구조란?</description>
       
@@ -75,10 +75,10 @@
     
     <item>
       <title>탐색 알고리즘 (BFS &amp; DFS)</title>
-      <link>http://JacksonK9.github.io/algorithm/dfs_bfs/</link>
+      <link>https://JacksonK9.github.io/algorithm/dfs_bfs/</link>
       <pubDate>Sun, 22 May 2022 20:01:30 +0900</pubDate>
       
-      <guid>http://JacksonK9.github.io/algorithm/dfs_bfs/</guid>
+      <guid>https://JacksonK9.github.io/algorithm/dfs_bfs/</guid>
       
         <description>참고 원본 - DFS &amp;amp; BFS Table of Contents  탐색 알고리즘이란 스택과 큐 Python의 스택과 큐 C++의 스택과 큐 재귀함수이란 DFS BFS 음료수 얼려먹기 문제 미로 탈출 문제 리뷰   탐색 ?</description>
       
@@ -86,10 +86,10 @@
     
     <item>
       <title>우아한형제들 - 개발자 퍼스널 브랜딩</title>
-      <link>http://JacksonK9.github.io/etc/personal_branding_woohyung/</link>
+      <link>https://JacksonK9.github.io/etc/personal_branding_woohyung/</link>
       <pubDate>Sun, 15 May 2022 21:12:40 +0900</pubDate>
       
-      <guid>http://JacksonK9.github.io/etc/personal_branding_woohyung/</guid>
+      <guid>https://JacksonK9.github.io/etc/personal_branding_woohyung/</guid>
       
         <description>개발자 퍼스널 브랜딩, 그런데 이제 리크루터 활용을 곁들인!
 리크루터?  조직에 필요한 사람을 찾아서 공급하는 역할 적합한 사람을 찾아서, 적합한 자리에 배치하는 역할 리크루팅 방법  채용을 원하는 조직의 요청 사항을 받고, 인재 서칭 찾았다면, 지원자로 만들기 위한 설득 이력서 검토 및 보완, 채용 프로세스를 코칭    성공적인 이직 Tip  이력서 쓰는 법  프로젝트의 이름 및 기간만 표현된 것은 별로 좋지 않다 프로젝트 정보가 필요  프로젝트 명, 기간, 간단한 소개   프로젝트 별 기술 스택  Java, Spring F/W, MySQL, React 등&amp;hellip;   본인이 기여한 부분  ROS 개발 (X) ROS 기반으로 영상 스트리밍하는 기능을 개발 (O)   성과 및 개선한 점  어떤 성과가 났으며, 정량적인 평가가 필요 정량적인 평가가 힘들다면, 정성적인 평가도 괜찮습니다.</description>
@@ -98,10 +98,10 @@
     
     <item>
       <title>우아한형제들 - 배달로봇 딜리</title>
-      <link>http://JacksonK9.github.io/robotics/dilly_woohyung/</link>
+      <link>https://JacksonK9.github.io/robotics/dilly_woohyung/</link>
       <pubDate>Sun, 15 May 2022 19:28:25 +0900</pubDate>
       
-      <guid>http://JacksonK9.github.io/robotics/dilly_woohyung/</guid>
+      <guid>https://JacksonK9.github.io/robotics/dilly_woohyung/</guid>
       
         <description>배달로봇 딜리를 조종하는 흑마술
 흑마술?  마법 같은 건 없음 ^^, 이것은 지식입니다.</description>
@@ -110,10 +110,10 @@
     
     <item>
       <title>우아한형제들 - 개발자와 교육자</title>
-      <link>http://JacksonK9.github.io/etc/why_should_teach_woohyung/</link>
+      <link>https://JacksonK9.github.io/etc/why_should_teach_woohyung/</link>
       <pubDate>Sun, 15 May 2022 18:53:43 +0900</pubDate>
       
-      <guid>http://JacksonK9.github.io/etc/why_should_teach_woohyung/</guid>
+      <guid>https://JacksonK9.github.io/etc/why_should_teach_woohyung/</guid>
       
         <description>개발자가 교육자의 길을 걸어야 하는 이유는?
 우아한 테크코스?  프로그래머의 길을 도전하는 취준생에게 현장과 가까운 교육을 진행하기 위한 10개월짜리 교육 프로그램 현장성을 매우 중요하게 여김 2 ~ 5년 정도의 현장 경험이 있는 개발자를 교육자로 채용  교육의 장점?</description>
@@ -122,10 +122,10 @@
     
     <item>
       <title>우아한형제들 - 기술 부채</title>
-      <link>http://JacksonK9.github.io/etc/technical_debt_woohyung/</link>
+      <link>https://JacksonK9.github.io/etc/technical_debt_woohyung/</link>
       <pubDate>Sun, 15 May 2022 17:50:03 +0900</pubDate>
       
-      <guid>http://JacksonK9.github.io/etc/technical_debt_woohyung/</guid>
+      <guid>https://JacksonK9.github.io/etc/technical_debt_woohyung/</guid>
       
         <description>기술 부채 Youtube 기술 부채  기술 부채는 대출과 유사 기술 부채가 자산?</description>
       
@@ -133,10 +133,10 @@
     
     <item>
       <title>코딩 테스트 개요 및 파이썬 문법 정리</title>
-      <link>http://JacksonK9.github.io/algorithm/what_is_coding_interview_and_python_syntax/</link>
+      <link>https://JacksonK9.github.io/algorithm/what_is_coding_interview_and_python_syntax/</link>
       <pubDate>Sun, 15 May 2022 13:26:57 +0900</pubDate>
       
-      <guid>http://JacksonK9.github.io/algorithm/what_is_coding_interview_and_python_syntax/</guid>
+      <guid>https://JacksonK9.github.io/algorithm/what_is_coding_interview_and_python_syntax/</guid>
       
         <description>참고 원본 - 코딩 테스트 출제 경향 분석 및 파이썬 문법 부수기 Table of Contents  코딩 테스트  코딩 테스트 ?</description>
       
@@ -144,10 +144,10 @@
     
     <item>
       <title>Coursera AI for everyone 정리</title>
-      <link>http://JacksonK9.github.io/cv/ai_for_everyone/</link>
+      <link>https://JacksonK9.github.io/cv/ai_for_everyone/</link>
       <pubDate>Tue, 10 May 2022 22:02:06 +0900</pubDate>
       
-      <guid>http://JacksonK9.github.io/cv/ai_for_everyone/</guid>
+      <guid>https://JacksonK9.github.io/cv/ai_for_everyone/</guid>
       
         <description>Table of Contents  Machine Learning   Machine Learning (2022/05/11)  Supervised Learning   A &amp;ndash;&amp;gt; B 와 같은 입력 &amp;ndash;&amp;gt; 출력 사이의 연관 관계를 학습하는 것</description>
       
@@ -155,10 +155,10 @@
     
     <item>
       <title>우아한형제들 - 코드 리뷰</title>
-      <link>http://JacksonK9.github.io/etc/woohyung_code_review/</link>
+      <link>https://JacksonK9.github.io/etc/woohyung_code_review/</link>
       <pubDate>Thu, 05 May 2022 22:36:41 +0900</pubDate>
       
-      <guid>http://JacksonK9.github.io/etc/woohyung_code_review/</guid>
+      <guid>https://JacksonK9.github.io/etc/woohyung_code_review/</guid>
       
         <description>코드 리뷰 Youtube 코드 리뷰의 필요에 대해 고민하는 중, 위와 같은 내용을 확인하고, 정리해보려고 한다.</description>
       
@@ -166,10 +166,10 @@
     
     <item>
       <title>Clang_atoi 함수</title>
-      <link>http://JacksonK9.github.io/programming/clang_atoi/</link>
+      <link>https://JacksonK9.github.io/programming/clang_atoi/</link>
       <pubDate>Sat, 02 Apr 2022 11:38:58 +0900</pubDate>
       
-      <guid>http://JacksonK9.github.io/programming/clang_atoi/</guid>
+      <guid>https://JacksonK9.github.io/programming/clang_atoi/</guid>
       
         <description>기초부터 다지자는 마음에서 C언어 공부 중에 몰랐던 내용을 하나씩 추가해보고자 한다.</description>
       
@@ -177,10 +177,10 @@
     
     <item>
       <title>Rospy Multi-Threading</title>
-      <link>http://JacksonK9.github.io/robotics/rospy_multithreading/</link>
+      <link>https://JacksonK9.github.io/robotics/rospy_multithreading/</link>
       <pubDate>Sun, 20 Mar 2022 13:15:40 +0900</pubDate>
       
-      <guid>http://JacksonK9.github.io/robotics/rospy_multithreading/</guid>
+      <guid>https://JacksonK9.github.io/robotics/rospy_multithreading/</guid>
       
         <description>Rospy 사용 시, Subscriber 및 Timer 클래스를 이용하여 인스턴스 생성 시, 각각에 해당하는 콜백 함수를 지정하게 되어 있다.</description>
       
@@ -188,10 +188,10 @@
     
     <item>
       <title>.Hello World.</title>
-      <link>http://JacksonK9.github.io/plans/</link>
+      <link>https://JacksonK9.github.io/plans/</link>
       <pubDate>Fri, 18 Mar 2022 20:12:20 +0900</pubDate>
       
-      <guid>http://JacksonK9.github.io/plans/</guid>
+      <guid>https://JacksonK9.github.io/plans/</guid>
       
         <description>꾸준히 노력해서 업데이트하기.
 Objectives  C++ 를 Python 정도로 다룰 수 있게 공부하기 ROS1 2D SLAM 코드 주석 달기 1주에 1개 이상 꼭&amp;hellip; 올려보기!</description>

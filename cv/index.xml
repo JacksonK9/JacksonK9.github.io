@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cvs on TIL the END</title>
-    <link>http://JacksonK9.github.io/cv/</link>
+    <link>https://JacksonK9.github.io/cv/</link>
     <description>Recent content in Cvs on TIL the END</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 May 2022 22:02:06 +0900</lastBuildDate><atom:link href="http://JacksonK9.github.io/cv/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 May 2022 22:02:06 +0900</lastBuildDate><atom:link href="https://JacksonK9.github.io/cv/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Coursera AI for everyone 정리</title>
-      <link>http://JacksonK9.github.io/cv/ai_for_everyone/</link>
+      <link>https://JacksonK9.github.io/cv/ai_for_everyone/</link>
       <pubDate>Tue, 10 May 2022 22:02:06 +0900</pubDate>
       
-      <guid>http://JacksonK9.github.io/cv/ai_for_everyone/</guid>
+      <guid>https://JacksonK9.github.io/cv/ai_for_everyone/</guid>
       
         <description>Table of Contents  Machine Learning   Machine Learning (2022/05/11)  Supervised Learning   A &amp;ndash;&amp;gt; B 와 같은 입력 &amp;ndash;&amp;gt; 출력 사이의 연관 관계를 학습하는 것</description>
       
