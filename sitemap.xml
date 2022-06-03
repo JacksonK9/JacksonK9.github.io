@@ -2,10 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://JacksonK9.github.io/algorithm/a_star_algorithm/</loc>
-    <lastmod>2022-06-03T11:42:01+09:00</lastmod>
-  </url><url>
     <loc>http://JacksonK9.github.io/algorithm/</loc>
+    <lastmod>2022-06-03T21:59:26+09:00</lastmod>
+  </url><url>
+    <loc>http://JacksonK9.github.io/algorithm/interval_sum/</loc>
+    <lastmod>2022-06-03T21:59:26+09:00</lastmod>
+  </url><url>
+    <loc>http://JacksonK9.github.io/algorithm/a_star_algorithm/</loc>
     <lastmod>2022-06-03T11:42:01+09:00</lastmod>
   </url><url>
     <loc>http://JacksonK9.github.io/algorithm/2022_saffy_similar_problem/</loc>
