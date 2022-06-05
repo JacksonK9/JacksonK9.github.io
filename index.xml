@@ -8,7 +8,18 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 18 Mar 2022 20:12:20 +0900</lastBuildDate><atom:link href="https://JacksonK9.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hugo Blog에서 Custom CSS 사용하기</title>
+      <title>Git 강의 정리 및 리뷰</title>
+      <link>https://JacksonK9.github.io/etc/git_legend_recipe_udemy_maker_jun/</link>
+      <pubDate>Sun, 05 Jun 2022 23:19:58 +0900</pubDate>
+      
+      <guid>https://JacksonK9.github.io/etc/git_legend_recipe_udemy_maker_jun/</guid>
+      
+        <description>원본 영상 - Git으로 만드는 전설의 레시피 - Udemy Table of Contents  Git?</description>
+      
+    </item>
+    
+    <item>
+      <title>Hugo Blog에 Custom CSS 적용하기</title>
       <link>https://JacksonK9.github.io/etc/hugo_blog_customcss/</link>
       <pubDate>Sun, 05 Jun 2022 21:01:59 +0900</pubDate>
       
@@ -19,13 +30,13 @@
     </item>
     
     <item>
-      <title>Lowest_Common_Ancestor_algorithm</title>
+      <title>최소 공통 조상 알고리즘</title>
       <link>https://JacksonK9.github.io/algorithm/lowest_common_ancestor_algorithm/</link>
       <pubDate>Sun, 05 Jun 2022 21:01:37 +0900</pubDate>
       
       <guid>https://JacksonK9.github.io/algorithm/lowest_common_ancestor_algorithm/</guid>
       
-        <description></description>
+        <description>참고 원본 - 최소 공통 조상 알고리즘 10분 정복 BOJ 11437 LCA 문제 BOJ 11438 LCA 2 문제 Table of Contents  최소 공통 조상 문제 기본 최소 공통 조상 알고리즘 심화 최소 공통 조상 알고리즘 Review   최소 공통 조상 문제  Lowest Common Ancestor의 줄임말로 LCA문제라고도 한다.</description>
       
     </item>
     

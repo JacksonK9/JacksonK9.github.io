@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  class="html"
+><head>
+  <title>
+    
+      
+        Git 강의 정리 및 리뷰 |
+
+      
+      Jackson Kim
+
+
+    
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.95.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Jackson Kim" />
+  <meta
+    name="description"
+    content="
+      Wanna be Good SLAMer
+
+
+    "
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.b2e0cb07595e3519ab1193bb421914e06c0e26b0cc561fef23b3c6131d4d2ffa.css"
+      integrity="sha256-suDLB1leNRmrEZO7QhkU4GwOJrDMVh/vI7PGEx1NL/o="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+    <link rel="stylesheet" href="https://JacksonK9.github.io/css/table.css"/>
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.b1c4e6a10bdbab01f33fff9d78816ee68cf9a9a731f07668afd546a79924cb80.css"
+    integrity="sha256-scTmoQvbqwHzP/&#43;deIFu5oz5qacx8HZor9VGp5kky4A="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.423dee17c62f55fa733a4ee13e00d523dfce88cc4f4ab4549a24ba36bd9de681.css"
+    integrity="sha256-Qj3uF8YvVfpzOk7hPgDVI9/OiMxPSrRUmiS6Nr2d5oE="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.b7d54133b27e5b4de15245b8e143de3e8ed2d674c706137274cedc9953f31917.css"
+    integrity="sha256-t9VBM7J&#43;W03hUkW44UPePo7S1nTHBhNydM7cmVPzGRc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://JacksonK9.github.io/etc/git_legend_recipe_udemy_maker_jun/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.560a26330d27ff44a44e83b53cd07a95d4230a65930d31c5c76a8d481e5b35bf.js"
+      integrity="sha256-VgomMw0n/0SkToO1PNB6ldQjCmWTDTHFx2qNSB5bNb8="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://JacksonK9.github.io/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="Git 강의 정리 및 리뷰"/>
+<meta name="twitter:description" content="원본 영상 - Git으로 만드는 전설의 레시피 - Udemy Table of Contents  Git?"/>
+
+
+
+  
+  <meta property="og:title" content="Git 강의 정리 및 리뷰" />
+<meta property="og:description" content="원본 영상 - Git으로 만드는 전설의 레시피 - Udemy Table of Contents  Git?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://JacksonK9.github.io/etc/git_legend_recipe_udemy_maker_jun/" /><meta property="og:image" content="https://JacksonK9.github.io/images/site-feature-image.png"/><meta property="article:section" content="etc" />
+<meta property="article:published_time" content="2022-06-05T23:19:58+09:00" />
+<meta property="article:modified_time" content="2022-06-05T23:19:58+09:00" /><meta property="og:site_name" content="TIL the END" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "etc",
+        "name": "Git 강의 정리 및 리뷰",
+        "headline": "Git 강의 정리 및 리뷰",
+        "alternativeHeadline": "",
+        "description": "
+      
+        원본 영상 - Git으로 만드는 전설의 레시피 - Udemy Table of Contents  Git?
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/JacksonK9.github.io\/etc\/git_legend_recipe_udemy_maker_jun\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Jackson Kim"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Jackson Kim"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Jackson Kim"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Jackson Kim"
+        },
+        "copyrightYear" : "2022",
+        "dateCreated": "2022-06-05T23:19:58.00Z",
+        "datePublished": "2022-06-05T23:19:58.00Z",
+        "dateModified": "2022-06-05T23:19:58.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Jackson Kim",
+            "url": "https://JacksonK9.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/JacksonK9.github.io\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://JacksonK9.github.io/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/JacksonK9.github.io\/etc\/git_legend_recipe_udemy_maker_jun\/",
+        "wordCount" : "733",
+        "genre" : [ ],
+        "keywords" : [ ]
+    }
+  </script>
+
+
+
+</head>
+<body
+    
+      class="body theme--light"
+
+    
+  >
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/K9.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">TIL the END</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>Wanna be Good SLAMer</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/JacksonK9/"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:k9632441@gmail.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Jackson Kim
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.a3fd0638ada4e3cec287e49a604b4a828cfef33a669afe60b96575761fff5cf3.js"
+    integrity="sha256-o/0GOK2k487Ch&#43;SaYEtKgoz&#43;8zpmmv5guWV1dh//XPM="
+    crossorigin="anonymous"
+  ></script><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-e/4/LvThKH1gwzXhdbY2AsjR3rm7LHWyhIG5C0jiRfn8AN2eTN5ILeztWw0H9jmN" crossorigin="anonymous"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+
+          <li class="nav__list-item">
+            <div class="optionswitch">
+              <input class="optionswitch__picker" type="checkbox" id="1" hidden />
+
+              
+              
+                
+
+
+              
+                
+
+
+              
+                
+
+
+              
+                
+
+
+              
+                
+
+
+              
+
+
+              <label class="optionswitch__label" for="1"
+                >Posts <i class="fa fa-angle-down" aria-hidden="true"></i
+              ></label>
+
+              <div class="optionswitch__triangle"></div>
+              <ul class="optionswitch__list">
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/algorithm/"
+                      
+                      title=""
+                      >Algorithm</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/programming/"
+                      
+                      title=""
+                      >Programming</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/cv/"
+                      
+                      title=""
+                      >Computer Vision</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/robotics/"
+                      
+                      title=""
+                      >Robotics</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/etc/"
+                      
+                      title=""
+                      >ETC</a
+                    >
+                  </li>
+
+                
+              </ul>
+            </div>
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/plans/"
+              
+              title=""
+              >Plans</a
+            >
+          </li>
+
+        
+
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+    <div class="post__content">
+      <h1>Git 강의 정리 및 리뷰</h1>
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                2022/06/05
+
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">4-minute read</span>
+          </li>
+        </ul>
+
+      <h4 id="원본-영상---git으로-만드는-전설의-레시피---udemyhttpswwwudemycomcoursegit-recipe"><a href="https://www.udemy.com/course/git-recipe/">원본 영상 - Git으로 만드는 전설의 레시피 - Udemy</a></h4>
+<h3 id="table-of-contents">Table of Contents</h3>
+<ul>
+<li><a href="#git">Git?</a></li>
+<li><a href="#git-%EC%84%A4%EC%B9%98">Git 설치</a></li>
+<li><a href="#git-%EC%82%AC%EC%9A%A9">Git 사용</a></li>
+<li><a href="#github%EC%97%90-%EC%98%AC%EB%A6%AC%EA%B8%B0">GitHub Push</a></li>
+<li><a href="#github%EC%97%90%EC%84%9C-%EB%B0%9B%EC%95%84%EC%98%A4%EA%B8%B0">GitHub Pull</a></li>
+<li><a href="#branch-%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0">Branch?</a></li>
+<li><a href="#merge-%ED%95%98%EA%B8%B0">Merge?</a></li>
+<li><a href="#%EC%8B%A0%EC%A4%91%ED%95%98%EA%B2%8C-merge%ED%95%98%EA%B8%B0">Pull Request</a></li>
+</ul>
+<hr>
+<h3 id="git-">Git ?</h3>
+<ul>
+<li>버전을 편하게 관리하게 도와주는 도구</li>
+<li>ex) 과제_최종, 과제_진짜최종, 과제_진짜진짜최종 &hellip;</li>
+<li>위와 같은 여러 개의 파일을 생서하는 문제 등을 해결하기 위한 도구</li>
+<li>모든 버전의 파일을 기록해두고, 변화한 내용을 확인할 수 있고, 언제든 돌아갈 수 있는 기능을 제공</li>
+<li>대표적으로 개발자의 코드를 지속적으로 수정 및 관리를 위해서 주로 사용</li>
+<li>개발자의 필수 도구 중 하나</li>
+<li>Git의 장점
+<ul>
+<li>최종 과정까지의 중간 히스토리를 볼 수 있음</li>
+<li>이전 버전으로 돌아갈 수 있음</li>
+<li>여러 개발자가 협업할 수 있는 환경을 만들 수 있음 (개발한 내용을 합칠 수 있음)</li>
+</ul>
+</li>
+<li>버전 관리 및 협업을 가능하게 해주는 도구</li>
+<li>GitHub $\rightarrow$ Git으로 저장된 내역을 원격으로 관리하고 저장하는 공간을 제공하는 서비스</li>
+<li>Git이 없다는 것은 Save 기능이 없는 게임을 하는 것과 같음</li>
+</ul>
+<hr>
+<h3 id="git-설치">Git 설치</h3>
+<ul>
+<li>Git을 제대로 사용하고 배우기 위해 필요한 내용</li>
+</ul>
+<ol>
+<li><a href="https://git-scm.com/book/ko/v2/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-Git-%EC%84%A4%EC%B9%98">Git 설치하기</a></li>
+<li><a href="https://code.visualstudio.com/">Visual Studio Code 설치하기</a></li>
+<li><a href="https://github.com/">GitHub 계정 만들기</a></li>
+</ol>
+<hr>
+<h3 id="git-사용">Git 사용</h3>
+<ol>
+<li>Git 테스트를 위한 폴더 생성</li>
+<li>해당 폴더에서 terminal 열기 (Windows라면 Git Bash 사용 권장)</li>
+<li><code>git init</code> 명령어 입력하기 $\rightarrow$ Git local 저장소 생성(<code>.git</code> 폴더 생성), 기본 이름은 <code>master</code> or <code>main</code>
+<img src="/images/git_legend_recipe_udemy_maker_jun/git_init.png" alt="Git init result"></li>
+<li>VS Code로 해당 폴더를 열어서, 새로운 파일 <code>README.md</code>파일 생성하기 (내용은 아무거나 상관 없음)</li>
+<li>terminal에서 <code>git add README.md</code>를 입력해서, 해당 파일을 관리
+<ul>
+<li><code>git add &lt;&lt;FILENAME&gt;&gt;</code> $\rightarrow$ 특정 파일을 git이 관리하도록 추가하는 명령어
+<img src="/images/git_legend_recipe_udemy_maker_jun/git_add.png" alt="Git add result"></li>
+</ul>
+</li>
+<li>terminal에서 <code>git commit -m &quot;비빔밥 레시피 1번 밥 짓기 추가&quot;</code>를 입력해서, 해당 버전을 저장
+<ul>
+<li><code>git commit -m &quot;Message&quot;</code> $\rightarrow$ 현재까지의 변경 사항을 저장 (해당 내용을 확인할 수 있는 문구를 Message 부분에 입력해서 함께 저장)
+<img src="/images/git_legend_recipe_udemy_maker_jun/git_commit_result.png" alt="Git commit result"></li>
+</ul>
+</li>
+<li>terminal에서 <code>git log --oneline</code>을 입력해서, 저장된 기록을 확인
+<ul>
+<li><code>git log --oneline</code> $\rightarrow$ 현재까지의 변경 사항을 확인
+<img src="/images/git_legend_recipe_udemy_maker_jun/git_log.png" alt="Git log result"></li>
+</ul>
+</li>
+<li><code>README.md</code>파일에 다른 내용을 추가하고 5 ~ 7의 과정을 응용하여 새로운 내용을 저장해본다.</li>
+</ol>
+<ul>
+<li><code>commit</code>은 여러 개의 변화를 한 번에 저장하고 관리할 수 있으므로, <code>commit message</code>는 아주 잘 관리해서 올리는 것이 중요!</li>
+</ul>
+<hr>
+<h3 id="github에-올리기">GitHub에 올리기</h3>
+<ol>
+<li>GitHub에서 저장소 만들기 (우측 상단 +, New Repository 선택)
+<ul>
+<li>Repository 이름 설정, 설명 내용 추가, <code>Public</code> or <code>Private</code> 설정</li>
+<li>Add .gitignore $\rightarrow$ 특정 파일을 Git이 관리하지 않도록 하는 설정 파일을 미리 생성할지 여부 지정</li>
+<li>Choose a license $\rightarrow$ 오픈 소스를 생성했다면, 이에 대한 라이센스 지정</li>
+</ul>
+</li>
+<li>생성되면 뜨는 가이드 중 <code>...or push an existing repository from the command line</code> 부분 따라하기
+<ul>
+<li><code>git remote add origin &lt;&lt;URL&gt;&gt;</code>
+<ul>
+<li><code>remote</code>는 원격 저장소 (github 등)을 의미</li>
+<li><code>remote add</code>는 원격 저장소를 추가한다는 의미</li>
+<li>추가하는 원격 저장소의 이름을 <code>origin</code>으로 하겠다는 의미 (다른 것으로 변경 가능)</li>
+<li><code>URL</code>부분은 추가할 원격 저장소의 주소를 적어줄 것</li>
+</ul>
+</li>
+<li><code>git branch -M main</code>
+<ul>
+<li><code>branch</code>는 git 저장소의 <code>branch</code> (갈래)를 의미 (뒤에서 설명)</li>
+<li><code>branch -M &lt;&lt;name&gt;&gt;</code>은 현재 <code>branch</code>의 이름을 <code>name</code>으로 바꾼다는 의미</li>
+</ul>
+</li>
+<li><code>git push -u origin main</code>
+<ul>
+<li><code>push</code>는 로컬 저장소의 내용을 원격 저장소로 보내는 명령어</li>
+<li><code>origin main</code>은 <code>origin</code> 원격 저장소에 <code>main</code>이라는 <code>branch</code>로 보내겠다는 의미</li>
+<li><code>-u</code> 옵션은 로컬 저장소를 원격 저장소에 연결하기 위한 명령어 (최초 1회만 필요)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>terminal에서 <code>git remote -v</code>를 입력하면, 추가된 원격 저장소를 모두 볼 수 있음</li>
+</ol>
+<hr>
+<h3 id="github에서-받아오기">GitHub에서 받아오기</h3>
+<ul>
+<li>원격 저장소와 로컬 저장소를 동기화할 때 사용</li>
+<li>일반적으로 여러 명이 원격 저장소에 데이터를 업로드하는 경우, 내 저장소에도 동기화를 시키기 위해 사용</li>
+</ul>
+<ol>
+<li><code>README.md</code> 파일을 github repository에서 직접 수정 (연필 버튼 클릭)</li>
+<li>로컬 저장소의 terminal에서 <code>git pull</code>을 입력
+<ul>
+<li><code>git pull</code>은 원격 저장소의 변경 사항을 확인하고 이를 받아오는 기능</li>
+<li><code>git fetch</code>는 원격 저장소의 변경 사항을 확인만 하는 기능 (받아오지는 않음)</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="branch-추가하기">Branch 추가하기</h3>
+<ul>
+<li>개발자가 개발 중에 하나의 <code>Branch</code>만 사용한다면, 최종본에 버그가 생기면 과거로 돌아와야만 하는 문제가 생김</li>
+<li>하지만 <code>main</code> <code>branch</code>는 일반적으로 기능이 검증되고, 확실한 내용만 있기를 바라는 경우가 많음</li>
+<li>따라서, 새로운 <code>branch</code>를 생성하여 수정을 하는 것이 바람직함 (평행 우주를 생성하는 것)</li>
+<li>수정을 하다가 기능이 정상적으로 수행한다면 다시 합쳐줄 수 있음</li>
+<li>terminal에서 <code>git branch bibimbap</code> 명령어를 입력하여 새로운 <code>branch</code>를 생성할 수 있음</li>
+<li>terminal에서 <code>git switch bibimbap</code> 명령어를 입력하여 다른 <code>branch</code>로 이동할 수 있음</li>
+<li>작업 중인 <code>branch</code>에서의 내용은 다른 <code>branch</code>에서는 영향을 받지 않음!</li>
+<li>따라서, 새로운 <code>branch</code>에서 실험적인 내용 등을 수행해볼 수 있음</li>
+</ul>
+<hr>
+<h3 id="merge-하기">Merge 하기</h3>
+<ul>
+<li>새로운 <code>Branch</code>에서 충분히 검증이 되고, 확인이 되었다면, 다시 <code>main</code> <code>Branch</code>에 합쳐줄 수 있음</li>
+</ul>
+<ol>
+<li><code>bibimbap</code> <code>branch</code>에서 <code>README.md</code> 파일을 수정하고, <code>add</code> 및 <code>commit</code>한다.</li>
+<li>기반이 되는 <code>branch</code> (<code>main</code>)으로 돌아간다. <code>git switch main</code></li>
+<li>합치려는 <code>branch</code>를 <code>merge</code>한다. <code>git merge bibimbap</code></li>
+</ol>
+<hr>
+<h3 id="신중하게-merge하기">신중하게 Merge하기</h3>
+<ul>
+<li>일반적으로 로컬에서 <code>merge</code>하는 경우는 자주 없음</li>
+<li>철저한 검증이 필요한데, 이 때 사용하는 것이 <code>Pull Request</code></li>
+<li>로컬 저장소에서 새로운 <code>branch</code>로 진행 후, <code>Pull Request</code>를 날리는 것이 일반적</li>
+<li>오픈 소스에 대한 기여 및 코드 리뷰를 위해서 꼭 원격 저장소에 올려서 <code>Pull Request</code>해주는 것이 중요</li>
+</ul>
+<ol>
+<li><code>bibimbap</code> <code>branch</code>로 변경 <code>git switch bibimbap</code></li>
+<li><code>README.md</code>파일 수정 및 <code>add</code> 및 <code>commit</code> 진행</li>
+<li>원격 저장소에 올리기 <code>git push --set-upstream origin bibimbap</code></li>
+<li>GitHub에 들어가서 올라간 내용을 확인하고, Pull Request 선택</li>
+<li><code>Pull Request</code>를 통해 서로 코드에 대한 코멘트 및 의견을 남길 수 있음</li>
+</ol>
+<hr>
+<ul>
+<li>이후는 추가 예정 &hellip;</li>
+</ul>
+</div>
+    <div class="post__footer">
+      
+
+      
+    </div>
+
+    <div id="comment">
+          <h2>comments</h2>
+          <script
+  src="https://utteranc.es/client.js"
+  repo="JacksonK9/blog_comments"
+  issue-term="pathname"
+  theme="preferred-color-scheme"
+  
+  crossorigin="anonymous"
+  async
+></script>
+
+        </div>
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Jackson Kim
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.a3fd0638ada4e3cec287e49a604b4a828cfef33a669afe60b96575761fff5cf3.js"
+    integrity="sha256-o/0GOK2k487Ch&#43;SaYEtKgoz&#43;8zpmmv5guWV1dh//XPM="
+    crossorigin="anonymous"
+  ></script><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-e/4/LvThKH1gwzXhdbY2AsjR3rm7LHWyhIG5C0jiRfn8AN2eTN5ILeztWw0H9jmN" crossorigin="anonymous"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script></body>
+</html>

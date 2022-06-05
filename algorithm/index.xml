@@ -8,13 +8,13 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 05 Jun 2022 21:01:37 +0900</lastBuildDate><atom:link href="https://JacksonK9.github.io/algorithm/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Lowest_Common_Ancestor_algorithm</title>
+      <title>최소 공통 조상 알고리즘</title>
       <link>https://JacksonK9.github.io/algorithm/lowest_common_ancestor_algorithm/</link>
       <pubDate>Sun, 05 Jun 2022 21:01:37 +0900</pubDate>
       
       <guid>https://JacksonK9.github.io/algorithm/lowest_common_ancestor_algorithm/</guid>
       
-        <description></description>
+        <description>참고 원본 - 최소 공통 조상 알고리즘 10분 정복 BOJ 11437 LCA 문제 BOJ 11438 LCA 2 문제 Table of Contents  최소 공통 조상 문제 기본 최소 공통 조상 알고리즘 심화 최소 공통 조상 알고리즘 Review   최소 공통 조상 문제  Lowest Common Ancestor의 줄임말로 LCA문제라고도 한다.</description>
       
     </item>
     

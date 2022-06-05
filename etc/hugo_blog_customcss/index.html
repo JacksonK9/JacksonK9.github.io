@@ -8,7 +8,7 @@
   <title>
     
       
-        Hugo Blog에서 Custom CSS 사용하기 |
+        Hugo Blog에 Custom CSS 적용하기 |
 
       
       Jackson Kim
@@ -115,13 +115,13 @@
   <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://JacksonK9.github.io/images/site-feature-image.png"/>
 
-<meta name="twitter:title" content="Hugo Blog에서 Custom CSS 사용하기"/>
+<meta name="twitter:title" content="Hugo Blog에 Custom CSS 적용하기"/>
 <meta name="twitter:description" content="참고 사이트 - Add Custom CSS or JavaScript to Your Hugo Site Table of Contents  문제 정의 과정 해결 방법 추가 사항 Review   문제 정의 과정  이 내용을 찾아보려고 한 것은, 내가 사용하는 anatole 테마가 Markdown의 Table을 지원하지 않는 문제 때문이었다."/>
 
 
 
   
-  <meta property="og:title" content="Hugo Blog에서 Custom CSS 사용하기" />
+  <meta property="og:title" content="Hugo Blog에 Custom CSS 적용하기" />
 <meta property="og:description" content="참고 사이트 - Add Custom CSS or JavaScript to Your Hugo Site Table of Contents  문제 정의 과정 해결 방법 추가 사항 Review   문제 정의 과정  이 내용을 찾아보려고 한 것은, 내가 사용하는 anatole 테마가 Markdown의 Table을 지원하지 않는 문제 때문이었다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://JacksonK9.github.io/etc/hugo_blog_customcss/" /><meta property="og:image" content="https://JacksonK9.github.io/images/site-feature-image.png"/><meta property="article:section" content="etc" />
@@ -140,8 +140,8 @@
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "articleSection": "etc",
-        "name": "Hugo Blog에서 Custom CSS 사용하기",
-        "headline": "Hugo Blog에서 Custom CSS 사용하기",
+        "name": "Hugo Blog에 Custom CSS 적용하기",
+        "headline": "Hugo Blog에 Custom CSS 적용하기",
         "alternativeHeadline": "",
         "description": "
       
@@ -200,7 +200,7 @@
 
     ,
         "url" : "https:\/\/JacksonK9.github.io\/etc\/hugo_blog_customcss\/",
-        "wordCount" : "610",
+        "wordCount" : "633",
         "genre" : [ ],
         "keywords" : [ ]
     }
@@ -472,7 +472,7 @@
   >
     
     <div class="post__content">
-      <h1>Hugo Blog에서 Custom CSS 사용하기</h1>
+      <h1>Hugo Blog에 Custom CSS 적용하기</h1>
       
         <ul class="post__meta">
           <li class="post__meta-item">
@@ -580,9 +580,11 @@
 <li>테마에 포함되어있는게 기본적으로 load되고, 그 외에 Blog 최상단 폴더에도 동일한 파일이 있다면, 해당 파일이 우선적으로 load되는 형태이다.</li>
 <li>이 중에 동작에 해당하는 <code>layouts / partials / head.html</code> 파일을 복사해서, blog 최상단 폴더의 <code>layouts</code> 폴더에 넣어준다.</li>
 <li><code>themes / anatole / layouts / partials / head.html</code> 파일을 <code>layouts / partials / head.html</code>로 옮겨주는 방법을 의미한다.</li>
-<li>그리고 복사한 <code>head.html</code>파일을 열어서 아래와 같은 부분이 존재할텐데, 해당 부분을 변경한다.</li>
+<li>그리고 복사한 <code>head.html</code>파일을 열어서 아래와 같은 부분이 존재할텐데, 해당 부분 삭제하고 아래의 내용을 추가한다.</li>
+<li>왜 이렇게 수정하는 지에 대해서는&hellip; HTML 문법을 정확하게 몰라서, 이해할 수 없었습니다. 죄송합니다.</li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">  {{ range .Site.Params.customCss }}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- 아래와 같은 원본 코드가 존재 --&gt;</span>
+</span></span><span class="line"><span class="cl">  {{ range .Site.Params.customCss }}
 </span></span><span class="line"><span class="cl">    {{ $minstyles := resources.Get . }}
 </span></span><span class="line"><span class="cl">    {{ $styles := $minstyles | resources.Minify | resources.Fingerprint }}
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span>
@@ -592,8 +594,9 @@
 </span></span><span class="line"><span class="cl">      <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span>
 </span></span><span class="line"><span class="cl">      <span class="na">media</span><span class="o">=</span><span class="s">&#34;screen&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">/&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- 위쪽 부분이 기존까지 존재하던 부분 --&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- 아래의 한줄을 추가하면 된다 --&gt;</span>
+</span></span><span class="line"><span class="cl">  {{ end }}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- 아래와 같이 변경해주면 된다. --&gt;</span>
+</span></span><span class="line"><span class="cl">  {{ range .Site.Params.customCss }}
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ . | absURL }}&#34;</span><span class="p">/&gt;</span>
 </span></span><span class="line"><span class="cl">  {{ end }}
 </span></span></code></pre></div><ul>
