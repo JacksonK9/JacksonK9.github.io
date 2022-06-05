@@ -6,7 +6,18 @@
     <description>Recent content in Etcs on TIL the END</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 May 2022 21:12:40 +0900</lastBuildDate><atom:link href="https://JacksonK9.github.io/etc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Jun 2022 21:01:59 +0900</lastBuildDate><atom:link href="https://JacksonK9.github.io/etc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo Blog에서 Custom CSS 사용하기</title>
+      <link>https://JacksonK9.github.io/etc/hugo_blog_customcss/</link>
+      <pubDate>Sun, 05 Jun 2022 21:01:59 +0900</pubDate>
+      
+      <guid>https://JacksonK9.github.io/etc/hugo_blog_customcss/</guid>
+      
+        <description>참고 사이트 - Add Custom CSS or JavaScript to Your Hugo Site Table of Contents  문제 정의 과정 해결 방법 추가 사항 Review   문제 정의 과정  이 내용을 찾아보려고 한 것은, 내가 사용하는 anatole 테마가 Markdown의 Table을 지원하지 않는 문제 때문이었다.</description>
+      
+    </item>
+    
     <item>
       <title>우아한형제들 - 개발자 퍼스널 브랜딩</title>
       <link>https://JacksonK9.github.io/etc/personal_branding_woohyung/</link>

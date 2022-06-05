@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  class="html"
+><head>
+  <title>
+    
+      
+        Hugo Blog에서 Custom CSS 사용하기 |
+
+      
+      Jackson Kim
+
+
+    
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.95.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Jackson Kim" />
+  <meta
+    name="description"
+    content="
+      Wanna be Good SLAMer
+
+
+    "
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.b2e0cb07595e3519ab1193bb421914e06c0e26b0cc561fef23b3c6131d4d2ffa.css"
+      integrity="sha256-suDLB1leNRmrEZO7QhkU4GwOJrDMVh/vI7PGEx1NL/o="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+    <link rel="stylesheet" href="https://JacksonK9.github.io/css/table.css"/>
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.b1c4e6a10bdbab01f33fff9d78816ee68cf9a9a731f07668afd546a79924cb80.css"
+    integrity="sha256-scTmoQvbqwHzP/&#43;deIFu5oz5qacx8HZor9VGp5kky4A="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.423dee17c62f55fa733a4ee13e00d523dfce88cc4f4ab4549a24ba36bd9de681.css"
+    integrity="sha256-Qj3uF8YvVfpzOk7hPgDVI9/OiMxPSrRUmiS6Nr2d5oE="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.b7d54133b27e5b4de15245b8e143de3e8ed2d674c706137274cedc9953f31917.css"
+    integrity="sha256-t9VBM7J&#43;W03hUkW44UPePo7S1nTHBhNydM7cmVPzGRc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://JacksonK9.github.io/etc/hugo_blog_customcss/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.560a26330d27ff44a44e83b53cd07a95d4230a65930d31c5c76a8d481e5b35bf.js"
+      integrity="sha256-VgomMw0n/0SkToO1PNB6ldQjCmWTDTHFx2qNSB5bNb8="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://JacksonK9.github.io/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="Hugo Blog에서 Custom CSS 사용하기"/>
+<meta name="twitter:description" content="참고 사이트 - Add Custom CSS or JavaScript to Your Hugo Site Table of Contents  문제 정의 과정 해결 방법 추가 사항 Review   문제 정의 과정  이 내용을 찾아보려고 한 것은, 내가 사용하는 anatole 테마가 Markdown의 Table을 지원하지 않는 문제 때문이었다."/>
+
+
+
+  
+  <meta property="og:title" content="Hugo Blog에서 Custom CSS 사용하기" />
+<meta property="og:description" content="참고 사이트 - Add Custom CSS or JavaScript to Your Hugo Site Table of Contents  문제 정의 과정 해결 방법 추가 사항 Review   문제 정의 과정  이 내용을 찾아보려고 한 것은, 내가 사용하는 anatole 테마가 Markdown의 Table을 지원하지 않는 문제 때문이었다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://JacksonK9.github.io/etc/hugo_blog_customcss/" /><meta property="og:image" content="https://JacksonK9.github.io/images/site-feature-image.png"/><meta property="article:section" content="etc" />
+<meta property="article:published_time" content="2022-06-05T21:01:59+09:00" />
+<meta property="article:modified_time" content="2022-06-05T21:01:59+09:00" /><meta property="og:site_name" content="TIL the END" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "etc",
+        "name": "Hugo Blog에서 Custom CSS 사용하기",
+        "headline": "Hugo Blog에서 Custom CSS 사용하기",
+        "alternativeHeadline": "",
+        "description": "
+      
+        참고 사이트 - Add Custom CSS or JavaScript to Your Hugo Site Table of Contents  문제 정의 과정 해결 방법 추가 사항 Review   문제 정의 과정  이 내용을 찾아보려고 한 것은, 내가 사용하는 anatole 테마가 Markdown의 Table을 지원하지 않는 문제 때문이었다.
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/JacksonK9.github.io\/etc\/hugo_blog_customcss\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Jackson Kim"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Jackson Kim"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Jackson Kim"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Jackson Kim"
+        },
+        "copyrightYear" : "2022",
+        "dateCreated": "2022-06-05T21:01:59.00Z",
+        "datePublished": "2022-06-05T21:01:59.00Z",
+        "dateModified": "2022-06-05T21:01:59.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Jackson Kim",
+            "url": "https://JacksonK9.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/JacksonK9.github.io\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://JacksonK9.github.io/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/JacksonK9.github.io\/etc\/hugo_blog_customcss\/",
+        "wordCount" : "610",
+        "genre" : [ ],
+        "keywords" : [ ]
+    }
+  </script>
+
+
+
+</head>
+<body
+    
+      class="body theme--light"
+
+    
+  >
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/K9.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">TIL the END</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>Wanna be Good SLAMer</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/JacksonK9/"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:k9632441@gmail.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Jackson Kim
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.a3fd0638ada4e3cec287e49a604b4a828cfef33a669afe60b96575761fff5cf3.js"
+    integrity="sha256-o/0GOK2k487Ch&#43;SaYEtKgoz&#43;8zpmmv5guWV1dh//XPM="
+    crossorigin="anonymous"
+  ></script><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-e/4/LvThKH1gwzXhdbY2AsjR3rm7LHWyhIG5C0jiRfn8AN2eTN5ILeztWw0H9jmN" crossorigin="anonymous"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+
+          <li class="nav__list-item">
+            <div class="optionswitch">
+              <input class="optionswitch__picker" type="checkbox" id="1" hidden />
+
+              
+              
+                
+
+
+              
+                
+
+
+              
+                
+
+
+              
+                
+
+
+              
+                
+
+
+              
+
+
+              <label class="optionswitch__label" for="1"
+                >Posts <i class="fa fa-angle-down" aria-hidden="true"></i
+              ></label>
+
+              <div class="optionswitch__triangle"></div>
+              <ul class="optionswitch__list">
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/algorithm/"
+                      
+                      title=""
+                      >Algorithm</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/programming/"
+                      
+                      title=""
+                      >Programming</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/cv/"
+                      
+                      title=""
+                      >Computer Vision</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/robotics/"
+                      
+                      title=""
+                      >Robotics</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/etc/"
+                      
+                      title=""
+                      >ETC</a
+                    >
+                  </li>
+
+                
+              </ul>
+            </div>
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/plans/"
+              
+              title=""
+              >Plans</a
+            >
+          </li>
+
+        
+
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+    <div class="post__content">
+      <h1>Hugo Blog에서 Custom CSS 사용하기</h1>
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                2022/06/05
+
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">3-minute read</span>
+          </li>
+        </ul>
+
+      <h4 id="참고-사이트---add-custom-css-or-javascript-to-your-hugo-sitehttpswwwbanjocodecomposthugocustom-css"><a href="https://www.banjocode.com/post/hugo/custom-css/">참고 사이트 - Add Custom CSS or JavaScript to Your Hugo Site</a></h4>
+<h3 id="table-of-contents">Table of Contents</h3>
+<ul>
+<li><a href="#%EB%AC%B8%EC%A0%9C-%EC%A0%95%EC%9D%98-%EA%B3%BC%EC%A0%95">문제 정의 과정</a></li>
+<li><a href="#%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95">해결 방법</a></li>
+<li><a href="#%EC%B6%94%EA%B0%80-%EC%82%AC%ED%95%AD">추가 사항</a></li>
+<li><a href="#review">Review</a></li>
+</ul>
+<hr>
+<h3 id="문제-정의-과정">문제 정의 과정</h3>
+<ul>
+<li>이 내용을 찾아보려고 한 것은, 내가 사용하는 <a href="https://github.com/lxndrblz/anatole">anatole</a> 테마가 Markdown의 Table을 지원하지 않는 문제 때문이었다.</li>
+<li>해당 내용에 관련해서 테마 원 제작자에게 Issue를 등록해서, 물어봤는데, 아직 지원하지 않고 있어서 Custom으로 사용하거나, Pull Request하면 받아준다고 해서 진행하게 되었다.</li>
+<li>가장 먼저 테스트해본 방법은 당연히 테마 자체를 변경해서, 적용이 되면 Pull Request까지 진행할 생각이었는데, 생각보다 잘 안되었다.</li>
+<li>부족한 Hugo 및 Golang에 대한 지식 및 웹 프로그래밍 자체에 대한 지식이 너무 부족한 탓이었다.</li>
+<li>그래서 그냥 테이블을 직접 작성해서 캡쳐해서 넣어서 쓸까&hellip;. 고민했는데, VS Code에서 자체적으로 지원하는 Markdown Preview에 있는 테이블이 생각보다 깔끔하고 너무 마음에 들어서, 이에 대한 내용을 적용하고 싶었다.</li>
+<li>조금 검색을 진행해보니, Table 자체에 대한 기능을 제공을 안하는 것은 아닌데, Table에 대한 Style이 지정이 되어있지 않아서, 이쁘지 않게 나오는 것이었던 것으로 확인되었고, 이를 위해서는 해당 Table에 대한 Style을 지정해주는 CSS파일이 있어야한다는 것을 확인하였다.</li>
+<li>VS Code 자체에 포함된 CSS파일을 살펴보니 Table에 대한 내용은 다음과 같았다.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">table</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">border-collapse</span><span class="p">:</span> <span class="kc">collapse</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">margin-bottom</span><span class="p">:</span> <span class="mf">0.7</span><span class="kt">em</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">th</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">text-align</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">border-bottom</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">th</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">td</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">padding</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">table</span> <span class="o">&gt;</span> <span class="nt">tbody</span> <span class="o">&gt;</span> <span class="nt">tr</span> <span class="o">+</span> <span class="nt">tr</span> <span class="o">&gt;</span> <span class="nt">td</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">border-top</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><ul>
+<li>이와 같은 스타일을 적용하니 아래와 같이 기본 형태의 Table을 생성할 수 있었다.
+<table>
+<thead>
+<tr>
+<th>이름</th>
+<th>메일주소</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jackson</td>
+<td><a href="mailto:k9632441@gmail.com">k9632441@gmail.com</a></td>
+</tr>
+<tr>
+<td>Jane</td>
+<td><a href="mailto:JaneDo@gmail.com">JaneDo@gmail.com</a></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>문제는 다음이었는데, 이걸 어떻게 내 사이트에 적용하는지를 몰랐다.</li>
+<li>단순하게, 내 사이트에 적용되는 CSS에 붙여넣으면 되긴한데, 이렇게 적용하면 아마 새롭게 빌드될 때마다, 해당 파일이 덮어져서 늘 추가해줘야할 것 같았다.</li>
+<li>그래서 Hugo에서 Custom CSS 파일을 적용하는 방법을 찾아보았고, 이에 대한 해답을 다음과 같이 찾을 수 있었다.</li>
+</ul>
+<hr>
+<h3 id="해결-방법">해결 방법</h3>
+<ul>
+<li>해결 방법은 생각보다 단순했다.</li>
+<li>Hugo에서는 &ldquo;당연하게?&ldquo;도 마음에 들지 않으면, 본인이 원하는 형태의 Custom CSS나 Custom JavaScript를 적용할 수 있는 방법이 있었다.</li>
+<li>나는 JavaScript는 필요없었고, CSS만 적용하면 되었기에, 이에 대한 내용을 확인하였다.</li>
+<li>우선 Custom으로 적용할 CSS파일을 생성해서 일반적으로 hugo blog에서 이미지 등을 불러올 때 저장해주는 <code>static</code> 폴더 내부에 <code>css</code>라는 폴더를 생성해서 추가했다. (아래 Tree에서 static folder 내부의 파일을 볼 수 있다.)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">├─css
+</span></span><span class="line"><span class="cl">└─images
+</span></span><span class="line"><span class="cl">    ├─A_star_algorithm
+</span></span><span class="line"><span class="cl">    ├─Bellman-Ford-Algorithm
+</span></span><span class="line"><span class="cl">    ├─Clang_atoi
+</span></span><span class="line"><span class="cl">    ├─dfs_bfs
+</span></span><span class="line"><span class="cl">    ├─graph_theory
+</span></span><span class="line"><span class="cl">    ├─hugo_blog_customCSS
+</span></span><span class="line"><span class="cl">    ├─interval_sum
+</span></span><span class="line"><span class="cl">    └─rospy_multithreading
+</span></span></code></pre></div><ul>
+<li>이 다음 <code>config / _default / params.toml</code> 파일을 열어서 다음과 같은 부분을 추가해주었다.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">customCss</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;css/table.css&#34;</span><span class="p">]</span>
+</span></span></code></pre></div><ul>
+<li>그리고 일반적으로 기본적으로 hugo blog의 형태를 정해주는 <code>layouts</code>이라는 폴더가 있는데 해당 폴더는 기본적으로 테마에 포함되어 있다.</li>
+<li>테마에 포함되어있는게 기본적으로 load되고, 그 외에 Blog 최상단 폴더에도 동일한 파일이 있다면, 해당 파일이 우선적으로 load되는 형태이다.</li>
+<li>이 중에 동작에 해당하는 <code>layouts / partials / head.html</code> 파일을 복사해서, blog 최상단 폴더의 <code>layouts</code> 폴더에 넣어준다.</li>
+<li><code>themes / anatole / layouts / partials / head.html</code> 파일을 <code>layouts / partials / head.html</code>로 옮겨주는 방법을 의미한다.</li>
+<li>그리고 복사한 <code>head.html</code>파일을 열어서 아래와 같은 부분이 존재할텐데, 해당 부분을 변경한다.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">  {{ range .Site.Params.customCss }}
+</span></span><span class="line"><span class="cl">    {{ $minstyles := resources.Get . }}
+</span></span><span class="line"><span class="cl">    {{ $styles := $minstyles | resources.Minify | resources.Fingerprint }}
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span>
+</span></span><span class="line"><span class="cl">      <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ $styles.RelPermalink }}&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;{{ $styles.Data.Integrity }}&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="na">media</span><span class="o">=</span><span class="s">&#34;screen&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- 위쪽 부분이 기존까지 존재하던 부분 --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- 아래의 한줄을 추가하면 된다 --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ . | absURL }}&#34;</span><span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">  {{ end }}
+</span></span></code></pre></div><ul>
+<li>이렇게 수정해주고 다시 블로그를 업데이트해주면 추가한 CSS파일이 적용되는 것을 볼 수 있다.</li>
+</ul>
+<hr>
+<h3 id="추가-사항">추가 사항</h3>
+<ul>
+<li>위의 내용을 추가한 후 사이트를 열고 F12를 눌러보면 아래쪽에 사이트에서 문제가 되는 부분을 보여주는데, 이 중 다음과 같은 오류가 발생할 때가 있었다.</li>
+<li><code>Mixed Content: was loaded over HTTPS, but requested an insecure image. This content should also be served over HTTPS</code></li>
+<li>위와 같은 오류는 HTTPS와 HTTP를 혼용해서 사용하는 경우 발생하는 문제라고 한다.</li>
+<li>해결 방법은 의외로 간단했는데, <code>config / _default / config.toml</code> 파일을 열어서 <code>baseURL</code>이라고 되어 있는 부분이 <code>https</code>로 시작하는 주소로 되게 변경해주면 되는 것이었다.</li>
+<li>이와 같이 변경해주면, 해당 문제가 없어지는 것으로 확인되었다.</li>
+</ul>
+<hr>
+<h3 id="review">Review</h3>
+<ul>
+<li>사실 간단한 문제였던 것 같은데, 웹이나 Golang 등에 대한 지식이 없어서 너무 오래걸렸던 것 같다.</li>
+<li>그리고&hellip; PR을 하고 싶었는데&hellip; 너무 아쉽다.</li>
+<li>혹시 모르니, 원작자에게 방법의 힌트를 조금만 달라고 해야겠다.</li>
+</ul>
+</div>
+    <div class="post__footer">
+      
+
+      
+    </div>
+
+    <div id="comment">
+          <h2>comments</h2>
+          <script
+  src="https://utteranc.es/client.js"
+  repo="JacksonK9/blog_comments"
+  issue-term="pathname"
+  theme="preferred-color-scheme"
+  
+  crossorigin="anonymous"
+  async
+></script>
+
+        </div>
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Jackson Kim
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.a3fd0638ada4e3cec287e49a604b4a828cfef33a669afe60b96575761fff5cf3.js"
+    integrity="sha256-o/0GOK2k487Ch&#43;SaYEtKgoz&#43;8zpmmv5guWV1dh//XPM="
+    crossorigin="anonymous"
+  ></script><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-e/4/LvThKH1gwzXhdbY2AsjR3rm7LHWyhIG5C0jiRfn8AN2eTN5ILeztWw0H9jmN" crossorigin="anonymous"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script></body>
+</html>

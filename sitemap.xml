@@ -2,8 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://JacksonK9.github.io/etc/</loc>
+    <lastmod>2022-06-05T21:01:59+09:00</lastmod>
+  </url><url>
+    <loc>https://JacksonK9.github.io/etc/hugo_blog_customcss/</loc>
+    <lastmod>2022-06-05T21:01:59+09:00</lastmod>
+  </url><url>
     <loc>https://JacksonK9.github.io/algorithm/</loc>
-    <lastmod>2022-06-03T21:59:26+09:00</lastmod>
+    <lastmod>2022-06-05T21:01:37+09:00</lastmod>
+  </url><url>
+    <loc>https://JacksonK9.github.io/algorithm/lowest_common_ancestor_algorithm/</loc>
+    <lastmod>2022-06-05T21:01:37+09:00</lastmod>
   </url><url>
     <loc>https://JacksonK9.github.io/algorithm/interval_sum/</loc>
     <lastmod>2022-06-03T21:59:26+09:00</lastmod>
@@ -25,9 +34,6 @@
   </url><url>
     <loc>https://JacksonK9.github.io/algorithm/dfs_bfs/</loc>
     <lastmod>2022-05-22T20:01:30+09:00</lastmod>
-  </url><url>
-    <loc>https://JacksonK9.github.io/etc/</loc>
-    <lastmod>2022-05-15T21:12:40+09:00</lastmod>
   </url><url>
     <loc>https://JacksonK9.github.io/etc/personal_branding_woohyung/</loc>
     <lastmod>2022-05-15T21:12:40+09:00</lastmod>
