@@ -200,7 +200,7 @@
 
     ,
         "url" : "https:\/\/JacksonK9.github.io\/etc\/git_legend_recipe_udemy_maker_jun\/",
-        "wordCount" : "733",
+        "wordCount" : "1479",
         "genre" : [ ],
         "keywords" : [ ]
     }
@@ -487,7 +487,7 @@
           </li>
           <li class="post__meta-item">
             <em class="fas fa-stopwatch post__meta-icon"></em>
-            <span class="post__meta-text">4-minute read</span>
+            <span class="post__meta-text">7-minute read</span>
           </li>
         </ul>
 
@@ -502,6 +502,14 @@
 <li><a href="#branch-%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0">Branch?</a></li>
 <li><a href="#merge-%ED%95%98%EA%B8%B0">Merge?</a></li>
 <li><a href="#%EC%8B%A0%EC%A4%91%ED%95%98%EA%B2%8C-merge%ED%95%98%EA%B8%B0">Pull Request</a></li>
+<li><a href="#%EB%8D%AE%EC%96%B4%EC%93%B0%EA%B8%B0">Amend</a></li>
+<li><a href="#%EC%A5%90%EB%8F%84-%EC%83%88%EB%8F%84-%EB%AA%A8%EB%A5%B4%EA%B2%8C-%EB%90%98%EB%8F%8C%EB%A6%AC%EA%B8%B0">Reset</a></li>
+<li><a href="#%ED%9D%94%EC%A0%81%EC%9D%84-%EB%82%A8%EA%B8%B0%EA%B3%A0-%EB%90%98%EB%8F%8C%EB%A6%AC%EA%B8%B0">Revert</a></li>
+<li><a href="#%EC%9E%A0%EA%B9%90-%EB%B3%80%EA%B2%BD-%EC%82%AC%ED%95%AD-%EB%82%A8%EA%B2%A8%EB%91%90%EA%B8%B0">Stash</a></li>
+<li><a href="#%EB%8B%A4%EB%A5%B8-branch%EC%9D%98-%EB%B3%80%EA%B2%BD-%EC%82%AC%ED%95%AD-%EA%B0%80%EC%A0%B8%EC%98%A4%EA%B8%B0">Cherry-pick</a></li>
+<li><a href="#%EC%98%A4%ED%94%88-%EC%86%8C%EC%8A%A4%EC%97%90-%EA%B8%B0%EC%97%AC%ED%95%98%EA%B8%B0">Pull Request to OpenSource</a></li>
+<li><a href="#%EC%B6%94%EA%B0%80-%EB%82%B4%EC%9A%A9">Appendix</a></li>
+<li><a href="#review">Review</a></li>
 </ul>
 <hr>
 <h3 id="git-">Git ?</h3>
@@ -650,12 +658,151 @@
 <li><code>bibimbap</code> <code>branch</code>로 변경 <code>git switch bibimbap</code></li>
 <li><code>README.md</code>파일 수정 및 <code>add</code> 및 <code>commit</code> 진행</li>
 <li>원격 저장소에 올리기 <code>git push --set-upstream origin bibimbap</code></li>
-<li>GitHub에 들어가서 올라간 내용을 확인하고, Pull Request 선택</li>
+<li>GitHub에 들어가서 올라간 내용을 확인하고, <code>Pull Request</code> 선택</li>
 <li><code>Pull Request</code>를 통해 서로 코드에 대한 코멘트 및 의견을 남길 수 있음</li>
 </ol>
 <hr>
+<h3 id="덮어쓰기">덮어쓰기</h3>
 <ul>
-<li>이후는 추가 예정 &hellip;</li>
+<li><code>commit</code> 한 이후, 새롭게 <code>commit</code>하는 대신, <code>Amend</code>를 통해 수정할 수 있음</li>
+<li><code>README.md</code>파일 수정 및 <code>add</code> 및 <code>commit</code> 진행</li>
+<li>추가적인 수정을 한 후, 새롭게 <code>commit</code>하는 대신 <code>git commit --amend</code> 명령어를 통해 기존 <code>commit</code>을 수정할 수 있음</li>
+<li>동일하게 <code>git push</code>를 통해 제대로 <code>commit</code>이 한 번만 되어서 올라갔는지 확인</li>
+</ul>
+<hr>
+<h3 id="쥐도-새도-모르게-되돌리기">쥐도 새도 모르게 되돌리기</h3>
+<ul>
+<li><code>reset</code> 명령어를 이용하여, 초기화를 할 수 있음</li>
+<li>우선 실험적인 내용을 <code>README.md</code>파일에 추가하고, <code>add</code> 및 <code>commit</code>을 진행</li>
+<li><code>git log --oneline</code>을 통해 각 <code>commit</code>의 고유 번호를 확인 (commit message 앞에 있는 알파벳과 영어로 된 7자리 번호)</li>
+<li><code>git reset abcd123</code>과 같이 번호를 입력하여, 특정 <code>commit</code>으로 돌아가기 가능</li>
+<li><code>Unstaged changes after reset</code>이라는 문구를 확인할 수 있음
+<ul>
+<li>리셋 이후의 변화가 스테이지 되지 않았다???</li>
+<li>이전 <code>commit</code>으로 돌아는 왔지만, 변경 사항은 그대로 남기고 돌아왔기 때문</li>
+<li><code>git reset</code>의 추가 옵션 중, 기본 옵션은 <code>--mixed</code> 옵션</li>
+<li><code>--mixed</code> 옵션은 변경 사항은 그대로 남긴 상태로, <code>commit</code>의 이력만 reset</li>
+<li><code>--hard</code> 옵션은 변경 사항도 그대로 삭제하고, <code>commit</code>의 이력도 삭제</li>
+<li>명령어들에 많은 옵션이 있으므로, 사용에 필요한 내용을 확인하고 사용하는 것이 좋다.</li>
+</ul>
+</li>
+<li><code>reset</code> 명령은 흔적도 남기지 않고 돌아가므로, 다시 복구할 수 있는 방법이 없다는 단점도 존재</li>
+</ul>
+<hr>
+<h3 id="흔적을-남기고-되돌리기">흔적을 남기고 되돌리기</h3>
+<ul>
+<li>특정 변경 사항만을 없애고 싶을 때 <code>revert</code>를 사용할 수 있음</li>
+<li>여러 개의 <code>commit</code> 기록 중, 특정 부분의 변경 사항만 삭제</li>
+<li><code>commit</code>의 일련번호를 확인하고, <code>git revert abcd123</code>과 같이 입력해서 돌아갈 수 있음</li>
+<li>돌아가는 기록 자체가 새로운 <code>commit</code>으로 남기 때문에, <code>reset</code>보다 <code>revert</code>를 훨씬 자주 사용</li>
+</ul>
+<hr>
+<h3 id="잠깐-변경-사항-남겨두기">잠깐 변경 사항 남겨두기</h3>
+<ul>
+<li>다른 <code>branch</code>로 변경하기 전, 변경 사항을 미리 저장해두는 기능</li>
+<li><code>commit</code>할 정도는 아니고, 지우자니 안될 것 같은 상황에 사용</li>
+<li>새로운 <code>branch</code>를 생성하는 것 대신, 여러 가지를 테스트할 때도 유용하게 사용할 수 있음</li>
+<li>단순히 <code>git stash</code> 명령어만을 이용해도 저장할 수 있음 (하지만 설명 부분이 부실)</li>
+<li><code>git stash push -m &quot;Messages&quot;</code> 명령어로 사용할 수 있음</li>
+<li><code>add</code>해놓지 않아도, 기존 이후의 변경 사항을 모두 저장</li>
+<li><code>Saved working directory and index state On bibimbap</code>과 같은 문구가 출력되며 내용이 저장됨</li>
+<li><code>stash</code>라는 공간으로 옮겨지는 것</li>
+<li><code>git stash list</code>를 통해 저장된 내용을 확인할 수 있음</li>
+<li>이 때 출력되는 <code>stash@{0}</code>과 같은 부분을 기억해두었다가</li>
+<li><code>git stash show stash@{0} -p</code>로 입력하면, 더 상세한 변경 사항도 확인할 수 있음</li>
+<li>여러 개의 실험적인 내용을 <code>stash</code>에 저장해둘 수 있음</li>
+<li>여러 개 저장 시, 가장 마지막에 저장한 것이 0번에 저장됨</li>
+<li><code>git stash apply</code>를 통해 가장 최근에 저장한 내용을 복구할 수 있음</li>
+<li><code>git stash apply stash@{2}</code>와 같이 입력해서, 특정 저장 내용도 복구할 수 있음</li>
+</ul>
+<hr>
+<h3 id="다른-branch의-변경-사항-가져오기">다른 branch의 변경 사항 가져오기</h3>
+<ul>
+<li>특정한 <code>branch</code>에서 <code>commit</code>한 변경 사항 중 다른 <code>branch</code>에도 적용하고 싶은 내용이 있을 때 사용</li>
+<li><code>cherry-pick</code> 명령어를 통해서 특정 <code>commit</code>의 변경 사항을 다른 <code>branch</code>에도 적용</li>
+<li>변경하고 싶은 <code>commit</code>의 일련번호를 확인</li>
+<li>적용하고 싶은 <code>branch</code>로 변경 후 <code>git cherry-pick abcd123</code>으로 특정 <code>commit</code>을 적용</li>
+<li>충돌이 발생한다면 아래와 같은 내용이 출력</li>
+<li><code>error: could not apply abcd123... message</code></li>
+<li><code>hint: after resolving the conflicts, mark the corrected paths</code></li>
+<li><code>hint: with 'git add &lt;paths&gt;' or 'git rm &lt;paths&gt;'</code></li>
+<li><code>hint: and commit the result with 'git commit'</code></li>
+<li>충돌 해결 (겹치는 부분 제거 or 둘다 적용 등) 진행</li>
+<li>충돌 후 <code>add</code> 및 <code>git cherry-pick --continue</code>를 통해 다시 <code>merge</code> 및 <code>commit message</code>도 변경할 수 있음</li>
+</ul>
+<hr>
+<h3 id="오픈-소스에-기여하기">오픈 소스에 기여하기</h3>
+<ul>
+<li><a href="https://github.com/blackcoffee-study/git-recipe">Git-recipe 오픈소스</a></li>
+<li>해당 오픈소스에 기여하기!</li>
+<li>방법은 해당 <code>GitHub</code>에 소개되어 있음</li>
+</ul>
+<ol>
+<li><code>fork</code>하기 (일반적으로 쓰기 권한이 없으므로, 저장소를 내 저장소로 가져와서 작업하기 위함)</li>
+<li>로컬 저장소로 <code>clone</code> 해오기 (<code>git clone &lt;&lt;Fork한 GitHub 주소&gt;&gt;</code>)</li>
+<li>새로운 <code>branch</code>를 만들어서 작업을 진행</li>
+<li><code>fork</code>한 저장소에 다시 업로드 후, <code>Pull Request</code> 날리기</li>
+</ol>
+<hr>
+<h3 id="추가-내용">추가 내용</h3>
+<ul>
+<li><code>Git</code>은 누가&hellip;?
+<ul>
+<li><code>Git</code>을 만든 사람은 <code>리누스 토르발즈</code></li>
+<li>바로 <code>LINUX</code>를 만든 사람!</li>
+<li>나무위키에 찾아보면 아주 소프트웨어 관리가 맘에 안들어서 분노한 나머지&hellip; <code>2주</code>만에 만들어냈다고 한다&hellip; 대단&hellip;</li>
+</ul>
+</li>
+<li><code>Git</code>은 <code>CLI</code>만 있나요..?
+<ul>
+<li><code>Git</code>을 꼭 터미널로 사용할 필요는 없음</li>
+<li><code>GUI</code>에서 사용하려면 <code>SourceTree</code>가 대표적으로 사용</li>
+<li><code>GUI</code>가 시각적으로 보기엔 더 좋음!</li>
+<li><code>CLI</code>만을 지원하는 경우도 있으므로, <code>CLI</code>도 알아두어야 함!</li>
+</ul>
+</li>
+<li><code>commit message</code> 잘 적는 방법?
+<ul>
+<li>일반적인 약속들이 있음</li>
+<li>한 단위의 <code>commit</code>은 한 <code>commit</code>에 작성하기</li>
+<li>한 <code>commit</code>에 2개 이상의 작업을 넣지 않기</li>
+<li><code>commit</code>의 성격에 따라 특징 표시해두기</li>
+<li><a href="https://udacity.github.io/git-styleguide/">참고 - Udacity Git Commit Message Style Guide</a>
+<ul>
+<li>제목에 포함되는 Type
+<ul>
+<li>feat : 새로운 특징 추가</li>
+<li>fix : 버그 수정</li>
+<li>docs : 문서 업데이트 시</li>
+<li>style : 포매팅, 세미콜론 빼먹음 등의 코드 외적인 변화</li>
+<li>refactor : 코드 리팩토링 시</li>
+<li>test : 테스트를 추가하거나, 테스트의 변경 사항이 있을 시</li>
+<li>chore : 빌드 태스크 업데이트 및 패키지 매니저 수정 등</li>
+</ul>
+</li>
+<li>Subject
+<ul>
+<li>50글자 넘지 않기</li>
+<li>대문자로 시작하고 마침표는 없이!</li>
+<li>과거 시제를 사용하지 않고, 명령형으로 사용</li>
+</ul>
+</li>
+<li>이 외의 내용도 사이트에서 확인할 수 있음!</li>
+</ul>
+</li>
+<li><a href="https://github.com/angular/angular">좋은 예시 - angular repository</a></li>
+<li><a href="https://gitmoji.dev/">GitMoji 사용하기</a></li>
+<li><code>commit message</code> 앞에서 <code>GitMoji</code>를 이용하여 더 재밌게 표현할 수도 있음!</li>
+<li>중요한 것은 일관된 약속이 있다는 것이 중요!</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="review">Review</h1>
+<ul>
+<li>모르는 내용이 한 두개 더 있어서 들을만 했던 것 같다.</li>
+<li>가장 알찼던 것은 <code>commit message</code>를 어떤 식으로 잘 작성하면 되는지에 대한 내용이었다.</li>
+<li>회사 내부적으로 어떤 규칙을 정할지를 또 논의해서 진행해봐야 할 것 같다.</li>
 </ul>
 </div>
     <div class="post__footer">
