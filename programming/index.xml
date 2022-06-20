@@ -6,7 +6,18 @@
     <description>Recent content in Programmings on TIL the END</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Apr 2022 11:38:58 +0900</lastBuildDate><atom:link href="https://JacksonK9.github.io/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Jun 2022 23:17:20 +0900</lastBuildDate><atom:link href="https://JacksonK9.github.io/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python 기반의 TDD</title>
+      <link>https://JacksonK9.github.io/programming/python_tdd/</link>
+      <pubDate>Mon, 20 Jun 2022 23:17:20 +0900</pubDate>
+      
+      <guid>https://JacksonK9.github.io/programming/python_tdd/</guid>
+      
+        <description>Table of Contents TDD TDD? TDD는 Test-Driven Development를 뜻하는 것으로, 테스트 코드를 먼저 작성하고, 이에 맞도록 코드를 작성하는 개발 방법론을 의미한다.</description>
+      
+    </item>
+    
     <item>
       <title>Clang_atoi 함수</title>
       <link>https://JacksonK9.github.io/programming/clang_atoi/</link>
