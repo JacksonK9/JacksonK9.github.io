@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  class="html"
+><head>
+  <title>
+    
+      
+        2022년도 현대모비스 코딩 테스트 유사 문제 |
+
+      
+      Jackson Kim
+
+
+    
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.95.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Jackson Kim" />
+  <meta
+    name="description"
+    content="
+      Wanna be Good SLAMer
+
+
+    "
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.b2e0cb07595e3519ab1193bb421914e06c0e26b0cc561fef23b3c6131d4d2ffa.css"
+      integrity="sha256-suDLB1leNRmrEZO7QhkU4GwOJrDMVh/vI7PGEx1NL/o="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+    <link rel="stylesheet" href="https://JacksonK9.github.io/css/table.css"/>
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.7d272de35b410fb165377550cdf9c4d3a80fbbcc961e111914e4d5c0eaf5729f.css"
+    integrity="sha256-fSct41tBD7FlN3VQzfnE06gPu8yWHhEZFOTVwOr1cp8="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.55d8333481b07a08e07cf6f37319753a2b47e99f4c395394c5747b48b495aa9b.css"
+    integrity="sha256-VdgzNIGwegjgfPbzcxl1OitH6Z9MOVOUxXR7SLSVqps="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.9ed75a5d670c953fe4df935937674b4646f92674367e9e66eb995bb04e821647.css"
+    integrity="sha256-ntdaXWcMlT/k35NZN2dLRkb5JnQ2fp5m65lbsE6CFkc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://JacksonK9.github.io/algorithm/hyundai_mobis_similar_problem/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.560a26330d27ff44a44e83b53cd07a95d4230a65930d31c5c76a8d481e5b35bf.js"
+      integrity="sha256-VgomMw0n/0SkToO1PNB6ldQjCmWTDTHFx2qNSB5bNb8="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://JacksonK9.github.io/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="2022년도 현대모비스 코딩 테스트 유사 문제"/>
+<meta name="twitter:description" content="Problem  설탕 배달 평균 네 수 단어의 개수 회전 초밥  Table of Contents  설탕 배달 문제 설탕 배달 풀이 1 설탕 배달 풀이 2 평균 문제 평균 문제 풀이 네 수 문제 네 수 문제 풀이 단어의 개수 문제 단어의 개수 문제 풀이 회전 초밥 문제 회전 초밥 문제 풀이 Review   설탕 배달 (BOJ 2839)  3kg, 5kg의 설탕 봉지가 있음 특정 무게의 봉지를 들고 갈 때, 봉지의 개수를 최소화하고 싶음 얼핏보면 Greedy Algorithm을 적용하면 되지 않나?"/>
+
+
+
+  
+  <meta property="og:title" content="2022년도 현대모비스 코딩 테스트 유사 문제" />
+<meta property="og:description" content="Problem  설탕 배달 평균 네 수 단어의 개수 회전 초밥  Table of Contents  설탕 배달 문제 설탕 배달 풀이 1 설탕 배달 풀이 2 평균 문제 평균 문제 풀이 네 수 문제 네 수 문제 풀이 단어의 개수 문제 단어의 개수 문제 풀이 회전 초밥 문제 회전 초밥 문제 풀이 Review   설탕 배달 (BOJ 2839)  3kg, 5kg의 설탕 봉지가 있음 특정 무게의 봉지를 들고 갈 때, 봉지의 개수를 최소화하고 싶음 얼핏보면 Greedy Algorithm을 적용하면 되지 않나?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://JacksonK9.github.io/algorithm/hyundai_mobis_similar_problem/" /><meta property="og:image" content="https://JacksonK9.github.io/images/site-feature-image.png"/><meta property="article:section" content="algorithm" />
+<meta property="article:published_time" content="2022-08-07T22:49:51+09:00" />
+<meta property="article:modified_time" content="2022-08-07T22:49:51+09:00" /><meta property="og:site_name" content="TIL the END" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "algorithm",
+        "name": "2022년도 현대모비스 코딩 테스트 유사 문제",
+        "headline": "2022년도 현대모비스 코딩 테스트 유사 문제",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Problem  설탕 배달 평균 네 수 단어의 개수 회전 초밥  Table of Contents  설탕 배달 문제 설탕 배달 풀이 1 설탕 배달 풀이 2 평균 문제 평균 문제 풀이 네 수 문제 네 수 문제 풀이 단어의 개수 문제 단어의 개수 문제 풀이 회전 초밥 문제 회전 초밥 문제 풀이 Review   설탕 배달 (BOJ 2839)  3kg, 5kg의 설탕 봉지가 있음 특정 무게의 봉지를 들고 갈 때, 봉지의 개수를 최소화하고 싶음 얼핏보면 Greedy Algorithm을 적용하면 되지 않나?
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/JacksonK9.github.io\/algorithm\/hyundai_mobis_similar_problem\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Jackson Kim"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Jackson Kim"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Jackson Kim"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Jackson Kim"
+        },
+        "copyrightYear" : "2022",
+        "dateCreated": "2022-08-07T22:49:51.00Z",
+        "datePublished": "2022-08-07T22:49:51.00Z",
+        "dateModified": "2022-08-07T22:49:51.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Jackson Kim",
+            "url": "https://JacksonK9.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/JacksonK9.github.io\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://JacksonK9.github.io/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/JacksonK9.github.io\/algorithm\/hyundai_mobis_similar_problem\/",
+        "wordCount" : "1061",
+        "genre" : [ ],
+        "keywords" : [ ]
+    }
+  </script>
+
+
+
+</head>
+<body
+    
+      class="body theme--light"
+
+    
+  >
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/K9.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">TIL the END</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>Wanna be Good SLAMer</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/JacksonK9/"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:k9632441@gmail.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Jackson Kim
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.a3fd0638ada4e3cec287e49a604b4a828cfef33a669afe60b96575761fff5cf3.js"
+    integrity="sha256-o/0GOK2k487Ch&#43;SaYEtKgoz&#43;8zpmmv5guWV1dh//XPM="
+    crossorigin="anonymous"
+  ></script><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-e/4/LvThKH1gwzXhdbY2AsjR3rm7LHWyhIG5C0jiRfn8AN2eTN5ILeztWw0H9jmN" crossorigin="anonymous"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+
+          <li class="nav__list-item">
+            <div class="optionswitch">
+              <input class="optionswitch__picker" type="checkbox" id="1" hidden />
+
+              
+              
+                
+
+
+              
+                
+
+
+              
+                
+
+
+              
+                
+
+
+              
+                
+
+
+              
+
+
+              <label class="optionswitch__label" for="1"
+                >Posts <i class="fa fa-angle-down" aria-hidden="true"></i
+              ></label>
+
+              <div class="optionswitch__triangle"></div>
+              <ul class="optionswitch__list">
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/algorithm/"
+                      
+                      title=""
+                      >Algorithm</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/programming/"
+                      
+                      title=""
+                      >Programming</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/cv/"
+                      
+                      title=""
+                      >Computer Vision</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/robotics/"
+                      
+                      title=""
+                      >Robotics</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/etc/"
+                      
+                      title=""
+                      >ETC</a
+                    >
+                  </li>
+
+                
+              </ul>
+            </div>
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/plans/"
+              
+              title=""
+              >Plans</a
+            >
+          </li>
+
+        
+
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+    <div class="post__content">
+      <h1>2022년도 현대모비스 코딩 테스트 유사 문제</h1>
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                
+                  2022/08/07
+
+
+                
+
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">5-minute read</span>
+          </li>
+        </ul>
+
+      <h3 id="problem">Problem</h3>
+<ul>
+<li><a href="https://www.acmicpc.net/problem/2839">설탕 배달</a></li>
+<li><a href="https://www.acmicpc.net/problem/1546">평균</a></li>
+<li><a href="https://www.acmicpc.net/problem/10824">네 수</a></li>
+<li><a href="https://www.acmicpc.net/problem/1152">단어의 개수</a></li>
+<li><a href="https://www.acmicpc.net/problem/2531">회전 초밥</a></li>
+</ul>
+<h3 id="table-of-contents">Table of Contents</h3>
+<ul>
+<li><a href="#%EC%84%A4%ED%83%95-%EB%B0%B0%EB%8B%AC-boj-2839">설탕 배달 문제</a></li>
+<li><a href="#%EC%84%A4%ED%83%95-%EB%B0%B0%EB%8B%AC-%ED%92%80%EC%9D%B4---greedy-algorithm">설탕 배달 풀이 1</a></li>
+<li><a href="#%EC%84%A4%ED%83%95-%EB%B0%B0%EB%8B%AC-%ED%92%80%EC%9D%B4---dynamic-programming">설탕 배달 풀이 2</a></li>
+<li><a href="#%ED%8F%89%EA%B7%A0-boj-1546">평균 문제</a></li>
+<li><a href="#%ED%8F%89%EA%B7%A0-%EB%AC%B8%EC%A0%9C-%ED%92%80%EC%9D%B4">평균 문제 풀이</a></li>
+<li><a href="#%EB%84%A4-%EC%88%98-boj-10824">네 수 문제</a></li>
+<li><a href="#%EB%84%A4-%EC%88%98-%ED%92%80%EC%9D%B4">네 수 문제 풀이</a></li>
+<li><a href="#%EB%8B%A8%EC%96%B4%EC%9D%98-%EA%B0%9C%EC%88%98-boj-1152">단어의 개수 문제</a></li>
+<li><a href="#%EB%8B%A8%EC%96%B4%EC%9D%98-%EA%B0%9C%EC%88%98-%ED%92%80%EC%9D%B4">단어의 개수 문제 풀이</a></li>
+<li><a href="#%ED%9A%8C%EC%A0%84-%EC%B4%88%EB%B0%A5-boj-2531">회전 초밥 문제</a></li>
+<li><a href="#%ED%9A%8C%EC%A0%84-%EC%B4%88%EB%B0%A5-%ED%92%80%EC%9D%B4">회전 초밥 문제 풀이</a></li>
+<li><a href="#review">Review</a></li>
+</ul>
+<hr>
+<h3 id="설탕-배달-boj-2839">설탕 배달 (BOJ 2839)</h3>
+<ul>
+<li>3kg, 5kg의 설탕 봉지가 있음</li>
+<li>특정 무게의 봉지를 들고 갈 때, 봉지의 개수를 최소화하고 싶음</li>
+<li>얼핏보면 <code>Greedy Algorithm</code>을 적용하면 되지 않나? 싶은 생각이 든다.</li>
+<li>실제로 3kg을 최소의 개수로 들면서, 5kg을 많이 가져갈 수록 봉지 수를 줄일 수 있으므로, 이와 같은 방법도 타당하다고 할 수 있다.</li>
+<li>다른 방법으로는 <code>Dynamic Programming</code>을 이용하여, 각 무게를 만들어낼 때, 몇 개의 봉지가 최소 봉지인지를 <code>Tabulation</code>하여 각 봉지의 개수를 확인하는 방법도 있다.</li>
+<li>따라서 입력된 무게를 운반하는 최소 봉지의 개수를 출력으로 내주면 되며, 만약 불가능한 무게라면 <code>-1</code>을 반환하면 된다.</li>
+</ul>
+<hr>
+<h3 id="설탕-배달-풀이---greedy-algorithm">설탕 배달 풀이 - Greedy Algorithm</h3>
+<ul>
+<li>우선 <code>Greedy Algorithm</code>을 적용한다면, 3kg을 최소로 들고 가면서, 5kg을 최대한 많이 드는 방법이 봉지의 개수를 줄이는 방법이다.</li>
+<li>그런데 일반적인 <code>Greedy Algorithm</code>을 적용하여, 5kg을 들 수 있는 만큼 최대한 들고, 3kg을 채운다면 아래와 같은 문제가 생길 수 있다.</li>
+<li>예를 들어, 9kg을 들어야 한다면, 5kg 1개를 우선 선택하고 나면 4kg이 남는데, 그런 경우 3kg으로는 만들어 낼 수 없으므로, <code>-1</code>을 반환하게 되지만, 실제로는 9kg을 3kg 3개로 만들어낼 수 있으므로, 답은 <code>3</code>이 되는 것을 볼 수 있다.</li>
+<li>이와 같은 상황을 고려한다면, 3kg을 최소한 적게 가져가기 위해, 3kg을 하나씩 줄여가면서, 5kg으로 나뉘어지는 지 확인하는 방법을 적용하면 된다는 것을 알 수 있다.</li>
+<li><code>Greedy Algorithm</code>의 경우 현재 상황의 최적의 선택 값이, 전체의 최적이 되는 경우에 적용이 되는데, 이 문제에서는 현재 상황에서 3kg 봉지를 가장 적게 가져가는 방법이, 전체 봉지의 개수를 가장 줄일 수 있는 방법이라고 볼 수 있다.</li>
+<li>코드는 다음과 같이 작성할 수 있다.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">N</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="n">N</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">result</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="n">N</span> <span class="o">-=</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">N</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">result</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">result</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">result</span> <span class="o">+=</span> <span class="n">N</span> <span class="o">//</span> <span class="mi">5</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</span></span></code></pre></div><hr>
+<h3 id="설탕-배달-풀이---dynamic-programming">설탕 배달 풀이 - Dynamic Programming</h3>
+<ul>
+<li>두 번째로 <code>Dynamic Programming</code>을 적용한다면, <code>Bottom-Up</code>방식을 적용하여 <code>Tabulation</code>을 사용하여 문제를 해결할 수 있다.</li>
+<li>시작하기 위한 값은 1, 2, 3, 4, 5kg을 만들어 낼 수 있는 최소 개수인 <code>DP[1] = -1</code>, <code>DP[2] = -1</code>, <code>DP[3] = 1</code>, <code>DP[4] = -1</code>, <code>DP[5] = 1</code>으로 설정하고 시작한다.</li>
+<li>그 이후, n kg을 만들어 내기 위해서는 DP[n-3]과 DP[n-5] 중 작은 값을 선택하면 최소 개수를 유지할 수 있다.</li>
+<li><code>DP[n] = min(DP[n - 3], DP[n - 5])</code>가 되는 것이다.</li>
+<li>코드는 다음과 같다.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">N</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">dp</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="mi">5001</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">dp</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="n">dp</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="n">dp</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="n">dp</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="n">dp</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="n">N</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">5</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">elif</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">5</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">elif</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">5</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">5</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">N</span><span class="p">])</span>
+</span></span></code></pre></div><hr>
+<h3 id="평균-boj-1546">평균 (BOJ 1546)</h3>
+<ul>
+<li>시험 성적 <code>N</code>개가 주어졌을 때, 이 중 최대 값을 <code>M</code>이라 하면, 모든 성적을 <code>점수 / M * 100</code>으로 변경</li>
+<li>모두 변경된 점수의 새로운 평균을 구하는 프로그램 작성</li>
+<li>일반적인 구현 문제</li>
+<li>입력을 잘 받고, <code>list</code>타입을 편하게 다룰 수 있다면 쉽게 해결할 수 있는 문제로 예상</li>
+</ul>
+<hr>
+<h3 id="평균-문제-풀이">평균 문제 풀이</h3>
+<ul>
+<li><code>N</code>을 입력 받고, 전체 성적을 받아서 수정한 후, 새로운 평균을 계산하는 과정은 다음과 같습니다.</li>
+</ul>
+<ol>
+<li><code>N</code>을 입력 받기</li>
+<li>전체 성적을 입력 받기</li>
+<li>전체 성적 중 최대 값을 찾기 (<code>M</code>)</li>
+<li>전체 성적을 <code>점수 / M * 100</code>으로 바꾸기</li>
+<li>새롭게 계산된 성적의 평균 계산하기</li>
+</ol>
+<ul>
+<li>코드는 다음과 같습니다.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">N</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="n">scores</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">max_score</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">scores</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">/</span> <span class="n">max_score</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="n">scores</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># for i in range(N):</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#     scores[i] = scores[i] / max_score * 100</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span> <span class="o">/</span> <span class="n">N</span><span class="p">)</span>
+</span></span></code></pre></div><hr>
+<h3 id="네-수-boj-10824">네 수 (BOJ 10824)</h3>
+<ul>
+<li>자연수 A, B, C, D가 주어졌을 때, A와 B를 붙인 수와 C와 D를 붙인 수의 합을 구하는 프로그램</li>
+<li>예를 들어 A = 20, B = 30이면, A와 B를 붙이면 2030이 된다.</li>
+<li>문자열을 붙이는 기능 및 이를 정수로 바꾸어서 계산하는 내용을 아는 지를 묻는 문제</li>
+<li>간단하게 해결할 수 있다.</li>
+</ul>
+<hr>
+<h3 id="네-수-풀이">네 수 풀이</h3>
+<ul>
+<li>A, B, C, D를 문자열로 입력을 받아서 일반적으로 정수로 바꾸는 작업을 하지만, 여기서는 그냥 붙여야하므로, 문자열 그대로 진행하는 것이 편하다.</li>
+<li>문자열은 서로 <code>+</code>할 경우, 뒤에 붙어진다는 점을 이용하면 쉽다.</li>
+<li>코드는 다음과 같다.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">D</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">AB</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">A</span> <span class="o">+</span> <span class="n">B</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">CD</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">C</span> <span class="o">+</span> <span class="n">D</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">AB</span> <span class="o">+</span> <span class="n">CD</span><span class="p">)</span>
+</span></span></code></pre></div><hr>
+<h3 id="단어의-개수-boj-1152">단어의 개수 (BOJ 1152)</h3>
+<ul>
+<li>영어 대소문자와 공백으로 이루어진 문자열이 입력</li>
+<li>해당 문자열의 단어의 개수를 구하는 프로그램</li>
+<li>단어는 공백을 기준으로 구분됨</li>
+<li>일반적인 문자열 처리 문제</li>
+<li>최종 단어의 개수를 출력</li>
+</ul>
+<hr>
+<h3 id="단어의-개수-풀이">단어의 개수 풀이</h3>
+<ul>
+<li>입력되는 내용을 보면 문자열 왼쪽, 오른쪽, 가운데 모두 공백이 있을 수 있음</li>
+<li>따라서, <code>strip()</code>함수를 적용하면, 문자열 좌, 우에 있는 공백은 제거할 수 있음</li>
+<li>문자열의 경우 <code>split()</code>함수를 적용하면 쉽게 공백을 기준으로 나누어줄 수 있음</li>
+<li>코드는 다음과 같습니다.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">input_str</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">input_str</span><span class="p">))</span>
+</span></span></code></pre></div><hr>
+<h3 id="회전-초밥-boj-2531">회전 초밥 (BOJ 2531)</h3>
+<ul>
+<li>회전 초밥 벨트에 놓인 접시의 수 <code>N</code>, 초밥의 가짓수 <code>d</code>, 연속해서 먹는 접시의 수 <code>k</code>, 쿠폰 번호 <code>c</code>가 주어짐</li>
+<li>N개의 줄에 벨트 위에 적힌 초밥의 종류가 입력</li>
+<li>입력된 벨트 위의 한 점에서 <code>k</code>개의 접시를 연속으로 먹으면 할인되며, 이 경우 <code>c</code>에 적힌 종류의 초밥을 하나 무료로 제공, <code>c</code> 종류 초밥은 벨트 위에 없어도 요리사가 만들어 줄 수 있음</li>
+<li>손님이 먹을 수 있는 초밥 가짓 수가 최대가 되도록 하는 프로그램을 작성</li>
+</ul>
+<hr>
+<h3 id="회전-초밥-풀이">회전 초밥 풀이</h3>
+<ul>
+<li>우선 <code>N</code>, <code>d</code>, <code>k</code>, <code>c</code>를 입력으로 받는다.</li>
+<li>나머지 <code>N</code>줄에 입력된 초밥의 종류를 확인한다.</li>
+<li>연속해서 <code>k</code>개를 먹을 때, 종류가 최대한 많은 경우를 확인한다.</li>
+<li>종류가 최대한 많은 경우가 여러가지 일 경우, 쿠폰 번호 <code>c</code>가 포함되지 않은 경우를 선택한다.</li>
+<li>최대 초밥의 가짓수를 정수로 출력한다.</li>
+<li><code>N</code>개의 정수로 이루어진 <code>list</code>의 일부에 해당하는 <code>list</code>가 중복이 적은 경우를 찾으면 된다.</li>
+<li>중복을 제거하기 위해 <code>list</code>를 <code>set</code>으로 변경하는 기술을 사용할 수 있다.</li>
+<li>또한 <code>set</code>에 <code>c</code>가 포함되어 있는지 아닌지 여부를 <code>in</code>을 통해 확인한다.</li>
+<li>코드는 다음과 같다.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">N</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="n">belt</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">belt</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">()))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">belt</span> <span class="o">=</span> <span class="n">belt</span> <span class="o">+</span> <span class="n">belt</span><span class="p">[</span><span class="mi">0</span> <span class="p">:</span> <span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">max_cnt</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">tmp_belt</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">belt</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">tmp_belt</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">tmp_max</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tmp_belt</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">tmp_max</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tmp_belt</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">tmp_max</span> <span class="o">&gt;</span> <span class="n">max_cnt</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">max_cnt</span> <span class="o">=</span> <span class="n">tmp_max</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">max_cnt</span><span class="p">)</span>
+</span></span></code></pre></div><hr>
+<h3 id="review">Review</h3>
+<ul>
+<li>수업들은 학생이 봤다는 현대 모비스 코테 문제</li>
+<li>1, 5번 문제를 제외하고는 너무 기초적인 문제였다.</li>
+<li>문제 난이도가 너무 오락가락 하는 느낌이 있는 듯?</li>
+<li>2, 3, 4는 그냥 주는 문제고, 1번, 5번을 맞추냐 못맞추냐의 문제 같기도&hellip;</li>
+<li>확실히 완전 컴퓨터 공학과 쪽에서 지원하는 쪽에서 진행하는 코테가 아니라면, <code>BFS&amp;DFS</code>, <code>시뮬레이션</code>, <code>DP</code> 등의 문제보다는 <code>Greedy</code>나 일반적인 구현 문제가 많이 나오는 것으로 보인다.</li>
+<li>나쁘지 않은 경험이었던 것 같다.</li>
+</ul>
+</div>
+    <div class="post__footer">
+      
+
+      
+    </div>
+
+    <div id="comment">
+          <h2>comments</h2>
+          <script
+  src="https://utteranc.es/client.js"
+  repo="JacksonK9/blog_comments"
+  issue-term="pathname"
+  theme="preferred-color-scheme"
+  
+  crossorigin="anonymous"
+  async
+></script>
+
+        </div>
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Jackson Kim
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.a3fd0638ada4e3cec287e49a604b4a828cfef33a669afe60b96575761fff5cf3.js"
+    integrity="sha256-o/0GOK2k487Ch&#43;SaYEtKgoz&#43;8zpmmv5guWV1dh//XPM="
+    crossorigin="anonymous"
+  ></script><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-e/4/LvThKH1gwzXhdbY2AsjR3rm7LHWyhIG5C0jiRfn8AN2eTN5ILeztWw0H9jmN" crossorigin="anonymous"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script></body>
+</html>
