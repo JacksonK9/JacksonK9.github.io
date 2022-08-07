@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://JacksonK9.github.io/algorithm/</loc>
+    <lastmod>2022-08-07T22:25:53+09:00</lastmod>
+  </url><url>
+    <loc>https://JacksonK9.github.io/algorithm/k_h_company_coding_test_review/</loc>
+    <lastmod>2022-08-07T22:25:53+09:00</lastmod>
+  </url><url>
     <loc>https://JacksonK9.github.io/programming/</loc>
     <lastmod>2022-06-20T23:17:20+09:00</lastmod>
   </url><url>
@@ -16,9 +22,6 @@
   </url><url>
     <loc>https://JacksonK9.github.io/etc/hugo_blog_customcss/</loc>
     <lastmod>2022-06-05T21:01:59+09:00</lastmod>
-  </url><url>
-    <loc>https://JacksonK9.github.io/algorithm/</loc>
-    <lastmod>2022-06-05T21:01:37+09:00</lastmod>
   </url><url>
     <loc>https://JacksonK9.github.io/algorithm/lowest_common_ancestor_algorithm/</loc>
     <lastmod>2022-06-05T21:01:37+09:00</lastmod>
