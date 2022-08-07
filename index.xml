@@ -8,6 +8,17 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 18 Mar 2022 20:12:20 +0900</lastBuildDate><atom:link href="https://JacksonK9.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Python *, zip, join</title>
+      <link>https://JacksonK9.github.io/algorithm/python_algorithm_tip_1/</link>
+      <pubDate>Mon, 08 Aug 2022 00:05:38 +0900</pubDate>
+      
+      <guid>https://JacksonK9.github.io/algorithm/python_algorithm_tip_1/</guid>
+      
+        <description>참고 원본 - 파이썬의 Asterisk(*) 이해하기 참고 원본 - Python zip 참고 원본 - Python join Table of Contents  Python * Python zip Python join Review   Python * 연산자  * 연산자는 C 또는 C++에서는 Pointer를 나타낼 때 사용하거나 곱하기를 계산할 때 사용하는 경우가 일반적이다.</description>
+      
+    </item>
+    
+    <item>
       <title>2022년도 현대모비스 코딩 테스트 유사 문제</title>
       <link>https://JacksonK9.github.io/algorithm/hyundai_mobis_similar_problem/</link>
       <pubDate>Sun, 07 Aug 2022 22:49:51 +0900</pubDate>
@@ -26,17 +37,6 @@
       <guid>https://JacksonK9.github.io/algorithm/k_h_company_coding_test_review/</guid>
       
         <description>Table of Contents  카카오 모빌리티 리뷰 우아한형제들 Review   카카오모빌리티 코딩테스트 리뷰  카카오 모빌리티 자율주행 S/W 엔지니어 (R &amp;amp; D)로 지원 2시간 15분 / 3문제 C, C++, Python 중 선택해서 진행 가능 Codility에서 테스트를 진행하며, 영어, 한글 모두 선택이 가능 문제는 일반적인 구현, 반례 찾기 문제가 출제 난이도는 2시간 15분 기준, 문제 풀이에는 약 1시간 정도, 30분 정도는 테스트를 할 정도의 난이도 특징으로는 문제의 시간 복잡도나 공간 복잡도를 고려하기 보다는, 정답이 맞냐 틀리냐에 초점을 맞춰서 풀면 된다는 점   우아한형제들 코딩테스트 리뷰  우아한형제들의 경우 로보틱스LAB팀 로봇 소프트웨어 엔지니어로 지원 3시간 / 4문제 마찬가지로 Codility에서 테스트 진행하였지만, 영어만 사용 가능 C, C++, Python, Java 등 더 다양한 언어를 지원 문제는 일반적인 구현, 반례 찾기, 코드 디버깅 문제가 출제 난이도는 3시간 기준, 문제 풀이에는 1시간 30분 정도, 30분 정도는 테스트를 할 정도의 난이도 문제의 시간 복잡도를 함께 고려하여 문제를 맞춰야하며, 효율을 따지는 편   Review  코딩테스트를 보는 플랫폼이 동일해서 그런지, 문제 스타일이 비슷했던 것으로 보임 카모에 비해 우형의 경우 문제 효율을 함께 따져야해서 조금 더 까다롭다는 느낌을 받음 우형의 경우 실제 사례에 조금 더 근접한 일반 공학을 아는 정도면 쉽게 구현할 수 있는 정도의 문제도 출제됨 아직 결과가 나오지 않아서, 문제를 맞추었는지 틀렸는지도 모르겠지만&amp;hellip; 느낌은 그렇습니다.</description>
-      
-    </item>
-    
-    <item>
-      <title>Python 기반의 TDD</title>
-      <link>https://JacksonK9.github.io/programming/python_tdd/</link>
-      <pubDate>Mon, 20 Jun 2022 23:17:20 +0900</pubDate>
-      
-      <guid>https://JacksonK9.github.io/programming/python_tdd/</guid>
-      
-        <description>참고자료 - Testing, Documentation, and Design 참고자료 - TDD(파이썬): 테스트 잘하고 계신가요?</description>
       
     </item>
     
@@ -205,17 +205,6 @@
       <guid>https://JacksonK9.github.io/algorithm/what_is_coding_interview_and_python_syntax/</guid>
       
         <description>참고 원본 - 코딩 테스트 출제 경향 분석 및 파이썬 문법 부수기 Table of Contents  코딩 테스트  코딩 테스트 ?</description>
-      
-    </item>
-    
-    <item>
-      <title>Coursera AI for everyone 1주차 정리</title>
-      <link>https://JacksonK9.github.io/cv/ai_for_everyone/</link>
-      <pubDate>Tue, 10 May 2022 22:02:06 +0900</pubDate>
-      
-      <guid>https://JacksonK9.github.io/cv/ai_for_everyone/</guid>
-      
-        <description>Table of Contents  Machine Learning   Machine Learning  Supervised Learning   A &amp;ndash;&amp;gt; B 와 같은 입력 &amp;ndash;&amp;gt; 출력 사이의 연관 관계를 학습하는 것</description>
       
     </item>
     

@@ -2,20 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://JacksonK9.github.io/algorithm/hyundai_mobis_similar_problem/</loc>
-    <lastmod>2022-08-07T22:49:51+09:00</lastmod>
-  </url><url>
     <loc>https://JacksonK9.github.io/algorithm/</loc>
+    <lastmod>2022-08-08T00:05:38+09:00</lastmod>
+  </url><url>
+    <loc>https://JacksonK9.github.io/algorithm/python_algorithm_tip_1/</loc>
+    <lastmod>2022-08-08T00:05:38+09:00</lastmod>
+  </url><url>
+    <loc>https://JacksonK9.github.io/algorithm/hyundai_mobis_similar_problem/</loc>
     <lastmod>2022-08-07T22:49:51+09:00</lastmod>
   </url><url>
     <loc>https://JacksonK9.github.io/algorithm/k_h_company_coding_test_review/</loc>
     <lastmod>2022-08-07T22:25:53+09:00</lastmod>
-  </url><url>
-    <loc>https://JacksonK9.github.io/programming/</loc>
-    <lastmod>2022-06-20T23:17:20+09:00</lastmod>
-  </url><url>
-    <loc>https://JacksonK9.github.io/programming/python_tdd/</loc>
-    <lastmod>2022-06-20T23:17:20+09:00</lastmod>
   </url><url>
     <loc>https://JacksonK9.github.io/etc/</loc>
     <lastmod>2022-06-05T23:19:58+09:00</lastmod>
@@ -68,16 +65,13 @@
     <loc>https://JacksonK9.github.io/algorithm/what_is_coding_interview_and_python_syntax/</loc>
     <lastmod>2022-05-15T13:26:57+09:00</lastmod>
   </url><url>
-    <loc>https://JacksonK9.github.io/cv/ai_for_everyone/</loc>
-    <lastmod>2022-05-10T22:02:06+09:00</lastmod>
-  </url><url>
-    <loc>https://JacksonK9.github.io/cv/</loc>
-    <lastmod>2022-05-10T22:02:06+09:00</lastmod>
-  </url><url>
     <loc>https://JacksonK9.github.io/etc/woohyung_code_review/</loc>
     <lastmod>2022-05-05T22:36:41+09:00</lastmod>
   </url><url>
     <loc>https://JacksonK9.github.io/programming/clang_atoi/</loc>
+    <lastmod>2022-04-02T11:38:58+09:00</lastmod>
+  </url><url>
+    <loc>https://JacksonK9.github.io/programming/</loc>
     <lastmod>2022-04-02T11:38:58+09:00</lastmod>
   </url><url>
     <loc>https://JacksonK9.github.io/robotics/rospy_multithreading/</loc>

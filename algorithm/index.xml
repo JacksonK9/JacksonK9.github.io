@@ -6,7 +6,18 @@
     <description>Recent content in Algorithms on TIL the END</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Aug 2022 22:49:51 +0900</lastBuildDate><atom:link href="https://JacksonK9.github.io/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Aug 2022 00:05:38 +0900</lastBuildDate><atom:link href="https://JacksonK9.github.io/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python *, zip, join</title>
+      <link>https://JacksonK9.github.io/algorithm/python_algorithm_tip_1/</link>
+      <pubDate>Mon, 08 Aug 2022 00:05:38 +0900</pubDate>
+      
+      <guid>https://JacksonK9.github.io/algorithm/python_algorithm_tip_1/</guid>
+      
+        <description>참고 원본 - 파이썬의 Asterisk(*) 이해하기 참고 원본 - Python zip 참고 원본 - Python join Table of Contents  Python * Python zip Python join Review   Python * 연산자  * 연산자는 C 또는 C++에서는 Pointer를 나타낼 때 사용하거나 곱하기를 계산할 때 사용하는 경우가 일반적이다.</description>
+      
+    </item>
+    
     <item>
       <title>2022년도 현대모비스 코딩 테스트 유사 문제</title>
       <link>https://JacksonK9.github.io/algorithm/hyundai_mobis_similar_problem/</link>

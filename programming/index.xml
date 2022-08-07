@@ -6,18 +6,7 @@
     <description>Recent content in Programmings on TIL the END</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jun 2022 23:17:20 +0900</lastBuildDate><atom:link href="https://JacksonK9.github.io/programming/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Python 기반의 TDD</title>
-      <link>https://JacksonK9.github.io/programming/python_tdd/</link>
-      <pubDate>Mon, 20 Jun 2022 23:17:20 +0900</pubDate>
-      
-      <guid>https://JacksonK9.github.io/programming/python_tdd/</guid>
-      
-        <description>참고자료 - Testing, Documentation, and Design 참고자료 - TDD(파이썬): 테스트 잘하고 계신가요?</description>
-      
-    </item>
-    
+    <lastBuildDate>Sat, 02 Apr 2022 11:38:58 +0900</lastBuildDate><atom:link href="https://JacksonK9.github.io/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Clang_atoi 함수</title>
       <link>https://JacksonK9.github.io/programming/clang_atoi/</link>
