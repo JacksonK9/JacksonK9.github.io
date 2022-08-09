@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://JacksonK9.github.io/robotics/</loc>
+    <lastmod>2022-08-09T23:18:38+09:00</lastmod>
+  </url><url>
+    <loc>https://JacksonK9.github.io/robotics/cartographer_review/</loc>
+    <lastmod>2022-08-09T23:18:38+09:00</lastmod>
+  </url><url>
     <loc>https://JacksonK9.github.io/algorithm/</loc>
     <lastmod>2022-08-08T00:05:38+09:00</lastmod>
   </url><url>
@@ -49,9 +55,6 @@
   </url><url>
     <loc>https://JacksonK9.github.io/etc/personal_branding_woohyung/</loc>
     <lastmod>2022-05-15T21:12:40+09:00</lastmod>
-  </url><url>
-    <loc>https://JacksonK9.github.io/robotics/</loc>
-    <lastmod>2022-05-15T19:28:25+09:00</lastmod>
   </url><url>
     <loc>https://JacksonK9.github.io/robotics/dilly_woohyung/</loc>
     <lastmod>2022-05-15T19:28:25+09:00</lastmod>

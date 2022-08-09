@@ -8,6 +8,17 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 18 Mar 2022 20:12:20 +0900</lastBuildDate><atom:link href="https://JacksonK9.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>SLAMDUNK Cartographer Review</title>
+      <link>https://JacksonK9.github.io/robotics/cartographer_review/</link>
+      <pubDate>Tue, 09 Aug 2022 23:18:38 +0900</pubDate>
+      
+      <guid>https://JacksonK9.github.io/robotics/cartographer_review/</guid>
+      
+        <description>참고 원본 - SLAMDUNK Cartographer 참고 원본 - 오로카 Cartographer Table of Contents  Contribution Graph SLAM  Local SLAM Global SLAM   Branch &amp;amp; Bound Beyond the Paper Review   Abstract 및 Contribution  We present the approach used in our backpack mapping platform which achieves real-time mapping and loop closure at 5cm resolution 본 논문에서는 5cm의 해상도를 가지는 지도를 실시간으로 Mapping 및 Loop 탐지를 할 수 있는 알고리즘을 제안하고 있습니다.</description>
+      
+    </item>
+    
+    <item>
       <title>Python *, zip, join</title>
       <link>https://JacksonK9.github.io/algorithm/python_algorithm_tip_1/</link>
       <pubDate>Mon, 08 Aug 2022 00:05:38 +0900</pubDate>
