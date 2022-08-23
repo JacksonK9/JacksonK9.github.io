@@ -6,7 +6,18 @@
     <description>Recent content in Programmings on TIL the END</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Apr 2022 11:38:58 +0900</lastBuildDate><atom:link href="https://JacksonK9.github.io/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Aug 2022 22:00:09 +0900</lastBuildDate><atom:link href="https://JacksonK9.github.io/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>모두코드 C언어 #1</title>
+      <link>https://JacksonK9.github.io/programming/clang_with_modoocode/</link>
+      <pubDate>Tue, 23 Aug 2022 22:00:09 +0900</pubDate>
+      
+      <guid>https://JacksonK9.github.io/programming/clang_with_modoocode/</guid>
+      
+        <description>원본 링크 - 씹어먹는 C언어 시작하기 Table of Contents  공부 수칙 C언어를 배우기 전에&amp;hellip; 컴퓨터는 뭘까?</description>
+      
+    </item>
+    
     <item>
       <title>Clang_atoi 함수</title>
       <link>https://JacksonK9.github.io/programming/clang_atoi/</link>
