@@ -8,6 +8,17 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 18 Mar 2022 20:12:20 +0900</lastBuildDate><atom:link href="https://JacksonK9.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>소프티어 4차 인증평가 문제 풀이</title>
+      <link>https://JacksonK9.github.io/algorithm/softeer_4th_certification_test/</link>
+      <pubDate>Sun, 25 Sep 2022 20:37:32 +0900</pubDate>
+      
+      <guid>https://JacksonK9.github.io/algorithm/softeer_4th_certification_test/</guid>
+      
+        <description>Problem 슈퍼컴퓨터 클러스터 통근버스 출발 순서 검증하기 참고 자료 - 알골 선생 Table of Contents 슈퍼컴퓨터 클러스터 설명 슈퍼컴퓨터 클러스터 풀이 통근버스 출발 순서 검증하기 설명 통근버스 출발 순서 검증하기 풀이 Review 슈퍼컴퓨터 클러스터 설명 문제가 꽤 깁니다&amp;hellip;만 아무튼 요약하자면 다음과 같습니다.</description>
+      
+    </item>
+    
+    <item>
       <title>모두코드 C언어 #1</title>
       <link>https://JacksonK9.github.io/programming/clang_with_modoocode/</link>
       <pubDate>Tue, 23 Aug 2022 22:00:09 +0900</pubDate>
