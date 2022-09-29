@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  class="html"
+><head>
+  <title>
+    
+      
+        2022 현대 모비스 알고리즘 경진 대회 예선 문제 리뷰 |
+
+      
+      Jackson Kim
+
+
+    
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.104.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Jackson Kim" />
+  <meta
+    name="description"
+    content="
+      Wanna be Good SLAMer
+
+
+    "
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.b2e0cb07595e3519ab1193bb421914e06c0e26b0cc561fef23b3c6131d4d2ffa.css"
+      integrity="sha256-suDLB1leNRmrEZO7QhkU4GwOJrDMVh/vI7PGEx1NL/o="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+    <link rel="stylesheet" href="https://JacksonK9.github.io/css/table.css"/>
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.7d272de35b410fb165377550cdf9c4d3a80fbbcc961e111914e4d5c0eaf5729f.css"
+    integrity="sha256-fSct41tBD7FlN3VQzfnE06gPu8yWHhEZFOTVwOr1cp8="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.55d8333481b07a08e07cf6f37319753a2b47e99f4c395394c5747b48b495aa9b.css"
+    integrity="sha256-VdgzNIGwegjgfPbzcxl1OitH6Z9MOVOUxXR7SLSVqps="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.9ed75a5d670c953fe4df935937674b4646f92674367e9e66eb995bb04e821647.css"
+    integrity="sha256-ntdaXWcMlT/k35NZN2dLRkb5JnQ2fp5m65lbsE6CFkc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://JacksonK9.github.io/algorithm/hyundai_mobis_algorithm_contest_2022_preliminary/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.738c0e3a493854876aeab9e2316fd43f1936aeeac4cc6b3e60bb26456dba72ad.js"
+      integrity="sha256-c4wOOkk4VIdq6rniMW/UPxk2rurEzGs&#43;YLsmRW26cq0="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://JacksonK9.github.io/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="2022 현대 모비스 알고리즘 경진 대회 예선 문제 리뷰"/>
+<meta name="twitter:description" content="Problem 예선 문제 Dead or Arrive 주차 시스템 ADAS 시스템 생산공정 도로망 설계 Table of Contents 공통 사항 Dead or Arrive 설명 Dead or Arrive 풀이 공통 사항 Python3 기준, 수행시간은 10초 이에 따라, 계산 가능한 최대 횟수는 약 2억번 Dead or Arrive 설명 각 차량은 v의 속도와 w의 내구도를 가짐 속도가 다른 차량은 모두 결승선 통과 속도가 같은 경우, 내구도가 가장 높은 차량만 결승선을 통과 속도와 내구도가 모두 같은 경우, 차량 번호가 가장 큰 차량만 결승선 통과 첫 번째 줄에 차량의 숫자 N이 입력 두 번째 줄부터 N줄만큼 각 차량의 v, w가 주어진다."/>
+
+
+
+  
+  <meta property="og:title" content="2022 현대 모비스 알고리즘 경진 대회 예선 문제 리뷰" />
+<meta property="og:description" content="Problem 예선 문제 Dead or Arrive 주차 시스템 ADAS 시스템 생산공정 도로망 설계 Table of Contents 공통 사항 Dead or Arrive 설명 Dead or Arrive 풀이 공통 사항 Python3 기준, 수행시간은 10초 이에 따라, 계산 가능한 최대 횟수는 약 2억번 Dead or Arrive 설명 각 차량은 v의 속도와 w의 내구도를 가짐 속도가 다른 차량은 모두 결승선 통과 속도가 같은 경우, 내구도가 가장 높은 차량만 결승선을 통과 속도와 내구도가 모두 같은 경우, 차량 번호가 가장 큰 차량만 결승선 통과 첫 번째 줄에 차량의 숫자 N이 입력 두 번째 줄부터 N줄만큼 각 차량의 v, w가 주어진다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://JacksonK9.github.io/algorithm/hyundai_mobis_algorithm_contest_2022_preliminary/" /><meta property="og:image" content="https://JacksonK9.github.io/images/site-feature-image.png"/><meta property="article:section" content="algorithm" />
+<meta property="article:published_time" content="2022-09-26T20:44:24+09:00" />
+<meta property="article:modified_time" content="2022-09-26T20:44:24+09:00" /><meta property="og:site_name" content="TIL the END" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "algorithm",
+        "name": "2022 현대 모비스 알고리즘 경진 대회 예선 문제 리뷰",
+        "headline": "2022 현대 모비스 알고리즘 경진 대회 예선 문제 리뷰",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Problem 예선 문제 Dead or Arrive 주차 시스템 ADAS 시스템 생산공정 도로망 설계 Table of Contents 공통 사항 Dead or Arrive 설명 Dead or Arrive 풀이 공통 사항 Python3 기준, 수행시간은 10초 이에 따라, 계산 가능한 최대 횟수는 약 2억번 Dead or Arrive 설명 각 차량은 v의 속도와 w의 내구도를 가짐 속도가 다른 차량은 모두 결승선 통과 속도가 같은 경우, 내구도가 가장 높은 차량만 결승선을 통과 속도와 내구도가 모두 같은 경우, 차량 번호가 가장 큰 차량만 결승선 통과 첫 번째 줄에 차량의 숫자 N이 입력 두 번째 줄부터 N줄만큼 각 차량의 v, w가 주어진다.
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/JacksonK9.github.io\/algorithm\/hyundai_mobis_algorithm_contest_2022_preliminary\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Jackson Kim"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Jackson Kim"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Jackson Kim"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Jackson Kim"
+        },
+        "copyrightYear" : "2022",
+        "dateCreated": "2022-09-26T20:44:24.00Z",
+        "datePublished": "2022-09-26T20:44:24.00Z",
+        "dateModified": "2022-09-26T20:44:24.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Jackson Kim",
+            "url": "https://JacksonK9.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/JacksonK9.github.io\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://JacksonK9.github.io/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/JacksonK9.github.io\/algorithm\/hyundai_mobis_algorithm_contest_2022_preliminary\/",
+        "wordCount" : "417",
+        "genre" : [ ],
+        "keywords" : [ ]
+    }
+  </script>
+
+
+
+</head>
+<body
+    
+      class="body theme--light"
+
+    
+  >
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/K9.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">TIL the END</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>Wanna be Good SLAMer</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/JacksonK9/"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:k9632441@gmail.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Jackson Kim
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-e/4/LvThKH1gwzXhdbY2AsjR3rm7LHWyhIG5C0jiRfn8AN2eTN5ILeztWw0H9jmN" crossorigin="anonymous"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+
+          <li class="nav__list-item">
+            <div class="optionswitch">
+              <input class="optionswitch__picker" type="checkbox" id="1" hidden />
+
+              
+              
+                
+
+
+              
+                
+
+
+              
+                
+
+
+              
+                
+
+
+              
+                
+
+
+              
+
+
+              <label class="optionswitch__label" for="1"
+                >Posts <i class="fa fa-angle-down" aria-hidden="true"></i
+              ></label>
+
+              <div class="optionswitch__triangle"></div>
+              <ul class="optionswitch__list">
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/algorithm/"
+                      
+                      title=""
+                      >Algorithm</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/programming/"
+                      
+                      title=""
+                      >Programming</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/cv/"
+                      
+                      title=""
+                      >Computer Vision</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/robotics/"
+                      
+                      title=""
+                      >Robotics</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/etc/"
+                      
+                      title=""
+                      >ETC</a
+                    >
+                  </li>
+
+                
+              </ul>
+            </div>
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/plans/"
+              
+              title=""
+              >Plans</a
+            >
+          </li>
+
+        
+
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+    <div class="post__content">
+      <h1>2022 현대 모비스 알고리즘 경진 대회 예선 문제 리뷰</h1>
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                
+                  2022/09/26
+
+
+                
+
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">2-minute read</span>
+          </li>
+        </ul>
+
+      <h3 id="problem">Problem</h3>
+<ul>
+<li><a href="https://blog.goorm.io/hyundaimobis_preliminary/">예선 문제</a></li>
+<li><a href="https://blog.goorm.io/hyundaimobis_preliminary/2/">Dead or Arrive</a></li>
+<li><a href="https://blog.goorm.io/hyundaimobis_preliminary/3/">주차 시스템</a></li>
+<li><a href="https://blog.goorm.io/hyundaimobis_preliminary/4/">ADAS 시스템</a></li>
+<li><a href="https://blog.goorm.io/hyundaimobis_preliminary/5/">생산공정</a></li>
+<li><a href="https://blog.goorm.io/hyundaimobis_preliminary/6/">도로망 설계</a></li>
+</ul>
+<hr>
+<h3 id="table-of-contents">Table of Contents</h3>
+<ul>
+<li><a href="#%EA%B3%B5%ED%86%B5-%EC%82%AC%ED%95%AD">공통 사항</a></li>
+<li><a href="#dead-or-arrive-%EC%84%A4%EB%AA%85">Dead or Arrive 설명</a></li>
+<li><a href="#dead-or-arrive-%ED%92%80%EC%9D%B4">Dead or Arrive 풀이</a></li>
+</ul>
+<hr>
+<h3 id="공통-사항">공통 사항</h3>
+<ul>
+<li><code>Python3</code> 기준, 수행시간은 <code>10초</code></li>
+<li>이에 따라, 계산 가능한 최대 횟수는 약 <code>2억번</code></li>
+</ul>
+<hr>
+<h3 id="dead-or-arrive-설명">Dead or Arrive 설명</h3>
+<ul>
+<li>각 차량은 <code>v</code>의 속도와 <code>w</code>의 내구도를 가짐</li>
+<li>속도가 다른 차량은 모두 결승선 통과</li>
+<li>속도가 같은 경우, 내구도가 가장 높은 차량만 결승선을 통과</li>
+<li>속도와 내구도가 모두 같은 경우, 차량 번호가 가장 큰 차량만 결승선 통과</li>
+<li>첫 번째 줄에 차량의 숫자 <code>N</code>이 입력</li>
+<li>두 번째 줄부터 <code>N</code>줄만큼 각 차량의 <code>v</code>, <code>w</code>가 주어진다.</li>
+<li><code>N</code>은 최대 <code>2,000,000</code>까지 주어지며, <code>v</code>는 최대 <code>1,000</code>, <code>w</code>는 최대 <code>1,000,000,000</code>까지 주어진다.</li>
+<li>Mars Killaz의 차량 중 결승선에 들어온 차량의 번호의 합을 출력하시오.</li>
+</ul>
+<hr>
+<h3 id="dead-or-arrive-풀이">Dead or Arrive 풀이</h3>
+<ul>
+<li>일반적인 구현 문제로 보인다.</li>
+<li>우선 순위가 1차가 속도, 2차가 내구도, 3차가 차량 번호로 지정되도록 뽑으면 되는 문제</li>
+<li>처음에 한참, 같은 속도의 차량을 뽑아내서, 그 다음에 같은 내구도의 차량을 뽑은 다음&hellip; 이런 식으로 진행하려고 했더니, 정신아 아득해졌다..</li>
+<li>어찌됐든, 속도 중복이 없는 내구도가 가장 높거나 번호가 가장 높은 차량을 뽑는 것이므로, <code>Dictionary</code>를 이용하면 좋을 것 같았다.</li>
+<li>현재 입력된 속도가 <code>Dictionary</code>에 존재하는 지 확인한 후, 없다면, 단순 추가</li>
+<li>있다면, 기존 값과 비교를 통해 w가 높으면 교체, w도 같다면, 차량 숫자를 비교하여 높으면 교체와 같은 형식으로 진행하였다.</li>
+<li>코드는 다음과 같다.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># -*- coding: utf-8 -*-</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Dead or Arrive 문제</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
+</span></span><span class="line"><span class="cl"><span class="nb">input</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">readline</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">N</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">vehicles</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">v</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vehicles</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">v</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"><span class="n">s_vehicles</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">vehicles</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">speed_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">v</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">s_vehicles</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="ow">not</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">speed_dict</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">speed_dict</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">elif</span> <span class="n">w</span> <span class="o">&gt;</span> <span class="n">speed_dict</span><span class="p">[</span><span class="n">v</span><span class="p">][</span><span class="mi">0</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">speed_dict</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">elif</span> <span class="n">w</span> <span class="o">==</span> <span class="n">speed_dict</span><span class="p">[</span><span class="n">v</span><span class="p">][</span><span class="mi">0</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="n">speed_dict</span><span class="p">[</span><span class="n">v</span><span class="p">][</span><span class="mi">1</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">speed_dict</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"><span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>        
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="ow">in</span> <span class="n">speed_dict</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">     <span class="n">result</span> <span class="o">+=</span> <span class="n">i</span>
+</span></span><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</span></span></code></pre></div><hr>
+<h3 id="주차-시스템-설명">주차 시스템 설명</h3>
+<ul>
+<li>현대 백화점 주차장의 특별 주차 시스템</li>
+<li>주차장은 0, 1, 2로 구분</li>
+<li>0은 자동차가 없음</li>
+<li>1은 자동차가 있음</li>
+<li>2는 자동차는 없지만, 장애인 전용 주차 공간</li>
+<li>주차장이 주어지면, 1로 나누어진 곳을 기준으로, 여러 개의 구역이 나누어진다.</li>
+<li>나누어진 구역은 0인 칸의 개수만큼 <code>+1점</code>, 2인 칸의 개수만큼 <code>-2점</code>을 하여, 구역의 점수를 계산한다.</li>
+<li>여러 개의 구역 중 가장 높은 점수를 구하시오.</li>
+<li>첫 번째 줄에 주차장의 크기인 <code>N</code>, <code>M</code>이 주어짐.</li>
+<li>두 번째 줄부터 <code>N</code>줄에 걸쳐, <code>M</code>개의 숫자가 주어집니다. 각각의 값은 주차장의 상태를 나타냅니다.</li>
+</ul>
+<hr>
+<h3 id="주차-시스템-풀이">주차 시스템 풀이</h3>
+<ul>
+<li>결국 모든 주차 구역에 대해 <code>BFS</code> or <code>DFS</code>를 이용하여, 탐색하고, 탐색한 범위의 값들을 기준에 맞게 합산하여, 저장해두었다가, 모든 탐색이 끝난 후, 최대 값을 출력하면 된다.</li>
+<li><code>BFS</code> or <code>DFS</code>의 구현이 익숙하다면, 쉽게 해결할 수 있다.</li>
+<li>코드는 다음과 같다.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div></div>
+    <div class="post__footer">
+      
+
+      
+    </div>
+
+    <div id="comment">
+          <h2>comments</h2>
+          <script
+  src="https://utteranc.es/client.js"
+  repo="JacksonK9/blog_comments"
+  issue-term="pathname"
+  theme="preferred-color-scheme"
+  
+  crossorigin="anonymous"
+  async
+></script>
+
+        </div>
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Jackson Kim
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-e/4/LvThKH1gwzXhdbY2AsjR3rm7LHWyhIG5C0jiRfn8AN2eTN5ILeztWw0H9jmN" crossorigin="anonymous"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script></body>
+</html>

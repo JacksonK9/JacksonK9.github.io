@@ -8,6 +8,17 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 18 Mar 2022 20:12:20 +0900</lastBuildDate><atom:link href="https://JacksonK9.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>2022 현대 모비스 알고리즘 경진 대회 예선 문제 리뷰</title>
+      <link>https://JacksonK9.github.io/algorithm/hyundai_mobis_algorithm_contest_2022_preliminary/</link>
+      <pubDate>Mon, 26 Sep 2022 20:44:24 +0900</pubDate>
+      
+      <guid>https://JacksonK9.github.io/algorithm/hyundai_mobis_algorithm_contest_2022_preliminary/</guid>
+      
+        <description>Problem 예선 문제 Dead or Arrive 주차 시스템 ADAS 시스템 생산공정 도로망 설계 Table of Contents 공통 사항 Dead or Arrive 설명 Dead or Arrive 풀이 공통 사항 Python3 기준, 수행시간은 10초 이에 따라, 계산 가능한 최대 횟수는 약 2억번 Dead or Arrive 설명 각 차량은 v의 속도와 w의 내구도를 가짐 속도가 다른 차량은 모두 결승선 통과 속도가 같은 경우, 내구도가 가장 높은 차량만 결승선을 통과 속도와 내구도가 모두 같은 경우, 차량 번호가 가장 큰 차량만 결승선 통과 첫 번째 줄에 차량의 숫자 N이 입력 두 번째 줄부터 N줄만큼 각 차량의 v, w가 주어진다.</description>
+      
+    </item>
+    
+    <item>
       <title>소프티어 4차 인증평가 문제 풀이</title>
       <link>https://JacksonK9.github.io/algorithm/softeer_4th_certification_test/</link>
       <pubDate>Sun, 25 Sep 2022 20:37:32 +0900</pubDate>
@@ -282,7 +293,7 @@
       <guid>https://JacksonK9.github.io/plans/</guid>
       
         <description>꾸준히 노력해서 업데이트하기.
-Objectives C++ 를 Python 정도로 다룰 수 있게 공부하기 ROS1 2D SLAM 코드 주석 달기 1주에 1개 이상 꼭&amp;hellip; 올려보기!</description>
+Objectives 1주에 1개 이상 꼭&amp;hellip; 올려보기! 주차별 목표 사항 및 진행 사항 정리 C++ 를 Python 정도로 다룰 수 있게 공부하기 ROS1 2D SLAM 코드 주석 달기 파이썬 추월 코스 수업 듣기 인프런 따배씨, 따배씨++ 듣기 소프트웨어 엔지니어가 되는 방법 천천히 진행 Pro Git 책 보기 알고리즘 책 보면서 정리 Szeliski 책 천천히 보기 주차별 계획 및 진행 사항 2022 / 05 5월 2째주 목표 동빈나 강의 보고 리뷰 정리 (Algorithm Study) - 코딩 테스트 개요 및 파이썬 문법 우아한형제들 Youtube 보고 리뷰 정리 (기술부채, 개발자와 교육, 딜리와 흑마법, 개발자 Personal Branding) 추천 받은 자료구조 유튜브 보기 AI for everyone 1주차 진행 5월 3째주 목표 동빈나 강의 보고 리뷰 정리 (Algorithm Study) - 개발형 코딩테스트 AI for everyone 1주차 진행 동빈나 강의 보고 리뷰 정리 (Algorithm-Study) - BFS &amp;amp; DFS 5월 4째주 목표 동빈나 강의 보고 리뷰 정리 (Algorithm Study) - 개발형 코딩테스트 동빈나 강의 보고 리뷰 정리 (Algorithm Study) - 기타 그래프 이론 동빈나 강의 보고 리뷰 정리 (Algorithm Study) - 벨만포드 알고리즘 AI for everyone 1주차 진행 2022 / 06 6월 1째주 목표 동빈나 강의 보고 리뷰 정리 (Algorithm Study) - 벨만포드 알고리즘 AI for everyone 1주차 진행 A* Algorithm 정리 Git 강의 보고 정리 6월 2째주 목표 AI for everyone 1주차 진행 TDD 내용 보고 Review BOJ 기초 단계 문제 풀기 $\rightarrow$ CodeUp부터 푸는 것으로 결정 BOJ 문제 풀면서, 기초 알고리즘 문제 정리하기 $\rightarrow$ CodeUp 단계별로 풀어보기 진행으로 변경 6월 3째주 목표 TDD 내용 보고 Review BOJ 기초 단계 문제 풀기 $\rightarrow$ CodeUp부터 푸는 것으로 결정 BOJ 문제 풀면서, 기초 알고리즘 문제 정리하기 $\rightarrow$ CodeUp 단계별로 풀어보기 진행으로 변경 AI for everyone 1주차 리뷰 AI for everyone 2주차 진행 및 리뷰 6월 4째주 목표 TDD 내용 보고 Review AI for everyone 1주차 리뷰 AI for everyone 2주차 진행 및 리뷰 6월 5째주 목표 TDD 내용 보고 Review AI for everyone 1주차 리뷰 AI for everyone 2주차 진행 및 리뷰 현대 모비스 코테 유사한 문제 리뷰 (BOJ 2839, 1546, 10824, 1152, 2531) 2022 / 07 7월 1째주 목표 TDD 내용 보고 Review AI for everyone 1주차 리뷰 AI for everyone 2주차 진행 및 리뷰 현대 모비스 코테 유사한 문제 리뷰 (BOJ 2839, 1546, 10824, 1152, 2531) 7월 2째주 목표 TDD 내용 보고 Review AI for everyone 1주차 리뷰 AI for everyone 2주차 진행 및 리뷰 현대 모비스 코테 유사한 문제 리뷰 (BOJ 2839, 1546, 10824, 1152, 2531) 7월 3째주 목표 TDD 내용 보고 Review AI for everyone 1주차 리뷰 AI for everyone 2주차 진행 및 리뷰 현대 모비스 코테 유사한 문제 리뷰 (BOJ 2839, 1546, 10824, 1152, 2531) 7월 4째주 목표 TDD 내용 보고 Review AI for everyone 1주차 리뷰 AI for everyone 2주차 진행 및 리뷰 현대 모비스 코테 유사한 문제 리뷰 (BOJ 2839, 1546, 10824, 1152, 2531) Python * 연산자, ZIP, join 메서드 관련 내용 업데이트 (예시 및 적용 상황 등) 2022 / 08 반성문 상기 본인은 나태하여, 7월 한달 간 기술 블로그 업데이트를 전혀 하지 않았음을 반성합니다.</description>
       
     </item>
     
