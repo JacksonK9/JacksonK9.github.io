@@ -14,7 +14,7 @@
       
       <guid>https://JacksonK9.github.io/algorithm/hyundai_mobis_algorithm_contest_2022_preliminary/</guid>
       
-        <description>Problem 예선 문제 Dead or Arrive 주차 시스템 ADAS 시스템 생산공정 도로망 설계 Table of Contents 공통 사항 Dead or Arrive 설명 Dead or Arrive 풀이 주차 시스템 설명 주차 시스템 풀이 ADAS 시스템 설명 ADAS 시스템 풀이 Review 공통 사항 Python3 기준, 수행시간은 10초 이에 따라, 계산 가능한 최대 횟수는 약 2억번 Dead or Arrive 설명 각 차량은 v의 속도와 w의 내구도를 가짐 속도가 다른 차량은 모두 결승선 통과 속도가 같은 경우, 내구도가 가장 높은 차량만 결승선을 통과 속도와 내구도가 모두 같은 경우, 차량 번호가 가장 큰 차량만 결승선 통과 첫 번째 줄에 차량의 숫자 N이 입력 두 번째 줄부터 N줄만큼 각 차량의 v, w가 주어진다.</description>
+        <description>Problem  예선 문제 Dead or Arrive 주차 시스템 ADAS 시스템 생산공정 도로망 설계   Table of Contents  공통 사항 Dead or Arrive 설명 Dead or Arrive 풀이 주차 시스템 설명 주차 시스템 풀이 ADAS 시스템 설명 ADAS 시스템 풀이 Review   공통 사항  Python3 기준, 수행시간은 10초 이에 따라, 계산 가능한 최대 횟수는 약 2억번   Dead or Arrive 설명  각 차량은 v의 속도와 w의 내구도를 가짐 속도가 다른 차량은 모두 결승선 통과 속도가 같은 경우, 내구도가 가장 높은 차량만 결승선을 통과 속도와 내구도가 모두 같은 경우, 차량 번호가 가장 큰 차량만 결승선 통과 첫 번째 줄에 차량의 숫자 N이 입력 두 번째 줄부터 N줄만큼 각 차량의 v, w가 주어진다.</description>
       
     </item>
     
@@ -25,7 +25,7 @@
       
       <guid>https://JacksonK9.github.io/algorithm/softeer_4th_certification_test/</guid>
       
-        <description>Problem 슈퍼컴퓨터 클러스터 통근버스 출발 순서 검증하기 참고 자료 - 알골 선생 Table of Contents 슈퍼컴퓨터 클러스터 설명 슈퍼컴퓨터 클러스터 풀이 통근버스 출발 순서 검증하기 설명 통근버스 출발 순서 검증하기 풀이 Review 슈퍼컴퓨터 클러스터 설명 문제가 꽤 깁니다&amp;hellip;만 아무튼 요약하자면 다음과 같습니다.</description>
+        <description>Problem  슈퍼컴퓨터 클러스터 통근버스 출발 순서 검증하기 참고 자료 - 알골 선생  Table of Contents  슈퍼컴퓨터 클러스터 설명 슈퍼컴퓨터 클러스터 풀이 통근버스 출발 순서 검증하기 설명 통근버스 출발 순서 검증하기 풀이 Review   슈퍼컴퓨터 클러스터 설명  문제가 꽤 깁니다&amp;hellip;만 아무튼 요약하자면 다음과 같습니다.</description>
       
     </item>
     
@@ -36,7 +36,7 @@
       
       <guid>https://JacksonK9.github.io/programming/clang_with_modoocode/</guid>
       
-        <description>원본 링크 - 씹어먹는 C언어 시작하기 Table of Contents 공부 수칙 C언어를 배우기 전에&amp;hellip; 컴퓨터는 뭘까?</description>
+        <description>원본 링크 - 씹어먹는 C언어 시작하기 Table of Contents  공부 수칙 C언어를 배우기 전에&amp;hellip; 컴퓨터는 뭘까?</description>
       
     </item>
     
@@ -47,7 +47,7 @@
       
       <guid>https://JacksonK9.github.io/robotics/cartographer_review/</guid>
       
-        <description>참고 원본 - SLAMDUNK Cartographer 참고 원본 - 오로카 Cartographer Table of Contents Contribution Graph SLAM Local SLAM Global SLAM Branch &amp;amp; Bound Beyond the Paper Review Abstract 및 Contribution We present the approach used in our backpack mapping platform which achieves real-time mapping and loop closure at 5cm resolution 본 논문에서는 5cm의 해상도를 가지는 지도를 실시간으로 Mapping 및 Loop 탐지를 할 수 있는 알고리즘을 제안하고 있습니다.</description>
+        <description>참고 원본 - SLAMDUNK Cartographer 참고 원본 - 오로카 Cartographer Table of Contents  Contribution Graph SLAM  Local SLAM Global SLAM   Branch &amp;amp; Bound Beyond the Paper Review   Abstract 및 Contribution  We present the approach used in our backpack mapping platform which achieves real-time mapping and loop closure at 5cm resolution 본 논문에서는 5cm의 해상도를 가지는 지도를 실시간으로 Mapping 및 Loop 탐지를 할 수 있는 알고리즘을 제안하고 있습니다.</description>
       
     </item>
     
@@ -58,7 +58,7 @@
       
       <guid>https://JacksonK9.github.io/algorithm/python_algorithm_tip_1/</guid>
       
-        <description>참고 원본 - 파이썬의 Asterisk(*) 이해하기 참고 원본 - Python zip 참고 원본 - Python join Table of Contents Python * Python zip Python join Review Python * 연산자 * 연산자는 C 또는 C++에서는 Pointer를 나타낼 때 사용하거나 곱하기를 계산할 때 사용하는 경우가 일반적이다.</description>
+        <description>참고 원본 - 파이썬의 Asterisk(*) 이해하기 참고 원본 - Python zip 참고 원본 - Python join Table of Contents  Python * Python zip Python join Review   Python * 연산자  * 연산자는 C 또는 C++에서는 Pointer를 나타낼 때 사용하거나 곱하기를 계산할 때 사용하는 경우가 일반적이다.</description>
       
     </item>
     
@@ -69,7 +69,7 @@
       
       <guid>https://JacksonK9.github.io/algorithm/hyundai_mobis_similar_problem/</guid>
       
-        <description>Problem 설탕 배달 평균 네 수 단어의 개수 회전 초밥 Table of Contents 설탕 배달 문제 설탕 배달 풀이 1 설탕 배달 풀이 2 평균 문제 평균 문제 풀이 네 수 문제 네 수 문제 풀이 단어의 개수 문제 단어의 개수 문제 풀이 회전 초밥 문제 회전 초밥 문제 풀이 Review 설탕 배달 (BOJ 2839) 3kg, 5kg의 설탕 봉지가 있음 특정 무게의 봉지를 들고 갈 때, 봉지의 개수를 최소화하고 싶음 얼핏보면 Greedy Algorithm을 적용하면 되지 않나?</description>
+        <description>Problem  설탕 배달 평균 네 수 단어의 개수 회전 초밥  Table of Contents  설탕 배달 문제 설탕 배달 풀이 1 설탕 배달 풀이 2 평균 문제 평균 문제 풀이 네 수 문제 네 수 문제 풀이 단어의 개수 문제 단어의 개수 문제 풀이 회전 초밥 문제 회전 초밥 문제 풀이 Review   설탕 배달 (BOJ 2839)  3kg, 5kg의 설탕 봉지가 있음 특정 무게의 봉지를 들고 갈 때, 봉지의 개수를 최소화하고 싶음 얼핏보면 Greedy Algorithm을 적용하면 되지 않나?</description>
       
     </item>
     
@@ -80,7 +80,7 @@
       
       <guid>https://JacksonK9.github.io/algorithm/k_h_company_coding_test_review/</guid>
       
-        <description>Table of Contents 카카오 모빌리티 리뷰 우아한형제들 Review 카카오모빌리티 코딩테스트 리뷰 카카오 모빌리티 자율주행 S/W 엔지니어 (R &amp;amp; D)로 지원 2시간 15분 / 3문제 C, C++, Python 중 선택해서 진행 가능 Codility에서 테스트를 진행하며, 영어, 한글 모두 선택이 가능 문제는 일반적인 구현, 반례 찾기 문제가 출제 난이도는 2시간 15분 기준, 문제 풀이에는 약 1시간 정도, 30분 정도는 테스트를 할 정도의 난이도 특징으로는 문제의 시간 복잡도나 공간 복잡도를 고려하기 보다는, 정답이 맞냐 틀리냐에 초점을 맞춰서 풀면 된다는 점 우아한형제들 코딩테스트 리뷰 우아한형제들의 경우 로보틱스LAB팀 로봇 소프트웨어 엔지니어로 지원 3시간 / 4문제 마찬가지로 Codility에서 테스트 진행하였지만, 영어만 사용 가능 C, C++, Python, Java 등 더 다양한 언어를 지원 문제는 일반적인 구현, 반례 찾기, 코드 디버깅 문제가 출제 난이도는 3시간 기준, 문제 풀이에는 1시간 30분 정도, 30분 정도는 테스트를 할 정도의 난이도 문제의 시간 복잡도를 함께 고려하여 문제를 맞춰야하며, 효율을 따지는 편 Review 코딩테스트를 보는 플랫폼이 동일해서 그런지, 문제 스타일이 비슷했던 것으로 보임 카모에 비해 우형의 경우 문제 효율을 함께 따져야해서 조금 더 까다롭다는 느낌을 받음 우형의 경우 실제 사례에 조금 더 근접한 일반 공학을 아는 정도면 쉽게 구현할 수 있는 정도의 문제도 출제됨 아직 결과가 나오지 않아서, 문제를 맞추었는지 틀렸는지도 모르겠지만&amp;hellip; 느낌은 그렇습니다.</description>
+        <description>Table of Contents  카카오 모빌리티 리뷰 우아한형제들 Review   카카오모빌리티 코딩테스트 리뷰  카카오 모빌리티 자율주행 S/W 엔지니어 (R &amp;amp; D)로 지원 2시간 15분 / 3문제 C, C++, Python 중 선택해서 진행 가능 Codility에서 테스트를 진행하며, 영어, 한글 모두 선택이 가능 문제는 일반적인 구현, 반례 찾기 문제가 출제 난이도는 2시간 15분 기준, 문제 풀이에는 약 1시간 정도, 30분 정도는 테스트를 할 정도의 난이도 특징으로는 문제의 시간 복잡도나 공간 복잡도를 고려하기 보다는, 정답이 맞냐 틀리냐에 초점을 맞춰서 풀면 된다는 점   우아한형제들 코딩테스트 리뷰  우아한형제들의 경우 로보틱스LAB팀 로봇 소프트웨어 엔지니어로 지원 3시간 / 4문제 마찬가지로 Codility에서 테스트 진행하였지만, 영어만 사용 가능 C, C++, Python, Java 등 더 다양한 언어를 지원 문제는 일반적인 구현, 반례 찾기, 코드 디버깅 문제가 출제 난이도는 3시간 기준, 문제 풀이에는 1시간 30분 정도, 30분 정도는 테스트를 할 정도의 난이도 문제의 시간 복잡도를 함께 고려하여 문제를 맞춰야하며, 효율을 따지는 편   Review  코딩테스트를 보는 플랫폼이 동일해서 그런지, 문제 스타일이 비슷했던 것으로 보임 카모에 비해 우형의 경우 문제 효율을 함께 따져야해서 조금 더 까다롭다는 느낌을 받음 우형의 경우 실제 사례에 조금 더 근접한 일반 공학을 아는 정도면 쉽게 구현할 수 있는 정도의 문제도 출제됨 아직 결과가 나오지 않아서, 문제를 맞추었는지 틀렸는지도 모르겠지만&amp;hellip; 느낌은 그렇습니다.</description>
       
     </item>
     
@@ -91,7 +91,7 @@
       
       <guid>https://JacksonK9.github.io/etc/git_legend_recipe_udemy_maker_jun/</guid>
       
-        <description>원본 영상 - Git으로 만드는 전설의 레시피 - Udemy Table of Contents Git?</description>
+        <description>원본 영상 - Git으로 만드는 전설의 레시피 - Udemy Table of Contents  Git?</description>
       
     </item>
     
@@ -102,7 +102,7 @@
       
       <guid>https://JacksonK9.github.io/etc/hugo_blog_customcss/</guid>
       
-        <description>참고 사이트 - Add Custom CSS or JavaScript to Your Hugo Site Table of Contents 문제 정의 과정 해결 방법 추가 사항 Review 문제 정의 과정 이 내용을 찾아보려고 한 것은, 내가 사용하는 anatole 테마가 Markdown의 Table을 지원하지 않는 문제 때문이었다.</description>
+        <description>참고 사이트 - Add Custom CSS or JavaScript to Your Hugo Site Table of Contents  문제 정의 과정 해결 방법 추가 사항 Review   문제 정의 과정  이 내용을 찾아보려고 한 것은, 내가 사용하는 anatole 테마가 Markdown의 Table을 지원하지 않는 문제 때문이었다.</description>
       
     </item>
     
@@ -113,7 +113,7 @@
       
       <guid>https://JacksonK9.github.io/algorithm/lowest_common_ancestor_algorithm/</guid>
       
-        <description>참고 원본 - 최소 공통 조상 알고리즘 10분 정복 BOJ 11437 LCA 문제 BOJ 11438 LCA 2 문제 Table of Contents 최소 공통 조상 문제 기본 최소 공통 조상 알고리즘 심화 최소 공통 조상 알고리즘 Review 최소 공통 조상 문제 Lowest Common Ancestor의 줄임말로 LCA문제라고도 한다.</description>
+        <description>참고 원본 - 최소 공통 조상 알고리즘 10분 정복 BOJ 11437 LCA 문제 BOJ 11438 LCA 2 문제 Table of Contents  최소 공통 조상 문제 기본 최소 공통 조상 알고리즘 심화 최소 공통 조상 알고리즘 Review   최소 공통 조상 문제  Lowest Common Ancestor의 줄임말로 LCA문제라고도 한다.</description>
       
     </item>
     
@@ -124,7 +124,7 @@
       
       <guid>https://JacksonK9.github.io/algorithm/interval_sum/</guid>
       
-        <description>참고 원본 - 바이너리 인덱스 트리 10분 정복 BOJ 2042 구간 합 구하기 문제 Table of Contents 구간 합 문제 풀이1.</description>
+        <description>참고 원본 - 바이너리 인덱스 트리 10분 정복 BOJ 2042 구간 합 구하기 문제 Table of Contents  구간 합 문제 풀이1.</description>
       
     </item>
     
@@ -135,7 +135,7 @@
       
       <guid>https://JacksonK9.github.io/algorithm/a_star_algorithm/</guid>
       
-        <description>원본 링크 - Introduction to the A* Algorithm Table of Contents 개요 지도 표현하기 Graph 탐색 알고리즘 BFS Early Exit Dijkstra Greedy Best First Search A* Algorithm 결론 Review Appendix A - Map to Graph Appendix B - 구현 개요 길 찾기 알고리즘은 꽤나 많은 영역에서 사용됩니다.</description>
+        <description>원본 링크 - Introduction to the A* Algorithm Table of Contents  개요 지도 표현하기 Graph 탐색 알고리즘 BFS Early Exit Dijkstra Greedy Best First Search A* Algorithm 결론 Review Appendix A - Map to Graph Appendix B - 구현   개요  길 찾기 알고리즘은 꽤나 많은 영역에서 사용됩니다.</description>
       
     </item>
     
@@ -146,7 +146,7 @@
       
       <guid>https://JacksonK9.github.io/algorithm/2022_saffy_similar_problem/</guid>
       
-        <description>Problem 홀짝 칵테일 선수 과목(Prerequisite) Table of Contents 홀짝 칵테일 문제 설명 홀짝 칵테일 풀이 선수과목 문제 설명 선수과목 풀이 Review 홀짝 칵테일 (BOJ 21312) 문제 내용이 꽤 길다&amp;hellip; 결과적으로 보면 내용은 다음과 같았다 칵테일은 고유 번호의 곱을 의미한다 칵테일(곱셈의 결과)이 짝수보다는 홀수가 맛있다 (홀수 &amp;gt; 짝수) 홀수끼리 또는 짝수끼리는 숫자가 크면 더 맛있다 (큰 수) 정리해보면, 3개의 숫자의 조합된 값의 곱을 이용하여, 홀수 중 제일 큰수, 불가능하면 짝수 중 제일 큰 수를 출력하면 되는 문제 홀짝 칵테일 풀이 홀수 $\times$ 홀수 $=$ 홀수 홀수 $\times$ 짝수 $=$ 짝수 짝수 $\times$ 짝수 $=$ 짝수 위 세 가지 내용을 알고 있는 상태라면 문제가 쉽게 풀린다 3개의 숫자를 받고, 각 값이 홀수인지 짝수인지 확인한다.</description>
+        <description>Problem  홀짝 칵테일 선수 과목(Prerequisite)  Table of Contents  홀짝 칵테일 문제 설명 홀짝 칵테일 풀이 선수과목 문제 설명 선수과목 풀이 Review   홀짝 칵테일 (BOJ 21312)  문제 내용이 꽤 길다&amp;hellip; 결과적으로 보면 내용은 다음과 같았다 칵테일은 고유 번호의 곱을 의미한다 칵테일(곱셈의 결과)이 짝수보다는 홀수가 맛있다 (홀수 &amp;gt; 짝수) 홀수끼리 또는 짝수끼리는 숫자가 크면 더 맛있다 (큰 수) 정리해보면, 3개의 숫자의 조합된 값의 곱을 이용하여, 홀수 중 제일 큰수, 불가능하면 짝수 중 제일 큰 수를 출력하면 되는 문제  홀짝 칵테일 풀이  홀수 $\times$ 홀수 $=$ 홀수 홀수 $\times$ 짝수 $=$ 짝수 짝수 $\times$ 짝수 $=$ 짝수 위 세 가지 내용을 알고 있는 상태라면 문제가 쉽게 풀린다   3개의 숫자를 받고, 각 값이 홀수인지 짝수인지 확인한다.</description>
       
     </item>
     
@@ -157,7 +157,7 @@
       
       <guid>https://JacksonK9.github.io/algorithm/bellman-ford-algorithm/</guid>
       
-        <description>참고 원본 - 벨만포드 알고리즘 7분 요약 BOJ 11657 타임머신 문제 Table of Contents 최단 거리 문제 다익스트라 알고리즘 음수 간선 벨만포드 알고리즘 다익스트라 vs 벨만포드 Review 최단 거리 문제 그래프에서 최단 거리를 찾는 문제 일반적으로 최단 거리 문제에서 자주 사용하는 알고리즘은 다익스트라 알고리즘 다익스트라 알고리즘 다익스트라 알고리즘 다이나믹 프로그래밍을 활용하는 알고리즘 특정한 하나의 Node에서 다른 모든 Node로의 최단 거리를 계산하는 알고리즘 각 Node 사이의 Edge가 양수일 때 사용할 수 있음 현실 세계와 잘 맞아 떨어지므로, 현실 세계에 사용하기 적합한 알고리즘 Negative Edge?</description>
+        <description>참고 원본 - 벨만포드 알고리즘 7분 요약 BOJ 11657 타임머신 문제 Table of Contents  최단 거리 문제 다익스트라 알고리즘 음수 간선 벨만포드 알고리즘 다익스트라 vs 벨만포드 Review   최단 거리 문제  그래프에서 최단 거리를 찾는 문제 일반적으로 최단 거리 문제에서 자주 사용하는 알고리즘은 다익스트라 알고리즘    다익스트라 알고리즘  다익스트라 알고리즘 다이나믹 프로그래밍을 활용하는 알고리즘 특정한 하나의 Node에서 다른 모든 Node로의 최단 거리를 계산하는 알고리즘 각 Node 사이의 Edge가 양수일 때 사용할 수 있음 현실 세계와 잘 맞아 떨어지므로, 현실 세계에 사용하기 적합한 알고리즘   Negative Edge?</description>
       
     </item>
     
@@ -168,7 +168,7 @@
       
       <guid>https://JacksonK9.github.io/algorithm/developing_coding_test/</guid>
       
-        <description>참고 원본 - 개발형 코딩 테스트 Table of Contents 개발형 코딩 테스트 REST API JSON REST API 연습용 서비스 리뷰 개발형 코딩 테스트?</description>
+        <description>참고 원본 - 개발형 코딩 테스트 Table of Contents  개발형 코딩 테스트 REST API JSON REST API 연습용 서비스 리뷰   개발형 코딩 테스트?</description>
       
     </item>
     
@@ -179,7 +179,7 @@
       
       <guid>https://JacksonK9.github.io/algorithm/graph_theory/</guid>
       
-        <description>참고 원본 - 기타 그래프 이론 Table of Contents 서로소 집합 서로소 집합의 특징 서로소 집합의 구현 서로소 집합의 활용 최소 신장 트리 최소 신장 트리의 특징 크루스칼 알고리즘 위상 정렬 리뷰 서로소 집합 서로소 집합 $\rightarrow$ 공통 원소가 없는 두 집합을 의미 ({1, 2}, {3, 4} 두 집합은 공통 원소가 없으므로, 서로소 집합) 서로소 집합 자료 구조란?</description>
+        <description>참고 원본 - 기타 그래프 이론 Table of Contents  서로소 집합  서로소 집합의 특징 서로소 집합의 구현 서로소 집합의 활용   최소 신장 트리  최소 신장 트리의 특징 크루스칼 알고리즘   위상 정렬 리뷰  서로소 집합  서로소 집합 $\rightarrow$ 공통 원소가 없는 두 집합을 의미 ({1, 2}, {3, 4} 두 집합은 공통 원소가 없으므로, 서로소 집합)  서로소 집합 자료 구조란?</description>
       
     </item>
     
@@ -190,7 +190,7 @@
       
       <guid>https://JacksonK9.github.io/algorithm/dfs_bfs/</guid>
       
-        <description>참고 원본 - DFS &amp;amp; BFS Table of Contents 탐색 알고리즘이란 스택과 큐 Python의 스택과 큐 C++의 스택과 큐 재귀함수이란 DFS BFS 음료수 얼려먹기 문제 미로 탈출 문제 리뷰 탐색 ?</description>
+        <description>참고 원본 - DFS &amp;amp; BFS Table of Contents  탐색 알고리즘이란 스택과 큐 Python의 스택과 큐 C++의 스택과 큐 재귀함수이란 DFS BFS 음료수 얼려먹기 문제 미로 탈출 문제 리뷰   탐색 ?</description>
       
     </item>
     
@@ -202,7 +202,7 @@
       <guid>https://JacksonK9.github.io/etc/personal_branding_woohyung/</guid>
       
         <description>개발자 퍼스널 브랜딩, 그런데 이제 리크루터 활용을 곁들인!
-리크루터? 조직에 필요한 사람을 찾아서 공급하는 역할 적합한 사람을 찾아서, 적합한 자리에 배치하는 역할 리크루팅 방법 채용을 원하는 조직의 요청 사항을 받고, 인재 서칭 찾았다면, 지원자로 만들기 위한 설득 이력서 검토 및 보완, 채용 프로세스를 코칭 성공적인 이직 Tip 이력서 쓰는 법 프로젝트의 이름 및 기간만 표현된 것은 별로 좋지 않다 프로젝트 정보가 필요 프로젝트 명, 기간, 간단한 소개 프로젝트 별 기술 스택 Java, Spring F/W, MySQL, React 등&amp;hellip; 본인이 기여한 부분 ROS 개발 (X) ROS 기반으로 영상 스트리밍하는 기능을 개발 (O) 성과 및 개선한 점 어떤 성과가 났으며, 정량적인 평가가 필요 정량적인 평가가 힘들다면, 정성적인 평가도 괜찮습니다.</description>
+리크루터?  조직에 필요한 사람을 찾아서 공급하는 역할 적합한 사람을 찾아서, 적합한 자리에 배치하는 역할 리크루팅 방법  채용을 원하는 조직의 요청 사항을 받고, 인재 서칭 찾았다면, 지원자로 만들기 위한 설득 이력서 검토 및 보완, 채용 프로세스를 코칭    성공적인 이직 Tip  이력서 쓰는 법  프로젝트의 이름 및 기간만 표현된 것은 별로 좋지 않다 프로젝트 정보가 필요  프로젝트 명, 기간, 간단한 소개   프로젝트 별 기술 스택  Java, Spring F/W, MySQL, React 등&amp;hellip;   본인이 기여한 부분  ROS 개발 (X) ROS 기반으로 영상 스트리밍하는 기능을 개발 (O)   성과 및 개선한 점  어떤 성과가 났으며, 정량적인 평가가 필요 정량적인 평가가 힘들다면, 정성적인 평가도 괜찮습니다.</description>
       
     </item>
     
@@ -214,7 +214,7 @@
       <guid>https://JacksonK9.github.io/robotics/dilly_woohyung/</guid>
       
         <description>배달로봇 딜리를 조종하는 흑마술
-흑마술? 마법 같은 건 없음 ^^, 이것은 지식입니다.</description>
+흑마술?  마법 같은 건 없음 ^^, 이것은 지식입니다.</description>
       
     </item>
     
@@ -226,7 +226,7 @@
       <guid>https://JacksonK9.github.io/etc/why_should_teach_woohyung/</guid>
       
         <description>개발자가 교육자의 길을 걸어야 하는 이유는?
-우아한 테크코스? 프로그래머의 길을 도전하는 취준생에게 현장과 가까운 교육을 진행하기 위한 10개월짜리 교육 프로그램 현장성을 매우 중요하게 여김 2 ~ 5년 정도의 현장 경험이 있는 개발자를 교육자로 채용 교육의 장점?</description>
+우아한 테크코스?  프로그래머의 길을 도전하는 취준생에게 현장과 가까운 교육을 진행하기 위한 10개월짜리 교육 프로그램 현장성을 매우 중요하게 여김 2 ~ 5년 정도의 현장 경험이 있는 개발자를 교육자로 채용  교육의 장점?</description>
       
     </item>
     
@@ -237,7 +237,7 @@
       
       <guid>https://JacksonK9.github.io/etc/technical_debt_woohyung/</guid>
       
-        <description>기술 부채 Youtube 기술 부채 기술 부채는 대출과 유사 기술 부채가 자산?</description>
+        <description>기술 부채 Youtube 기술 부채  기술 부채는 대출과 유사 기술 부채가 자산?</description>
       
     </item>
     
@@ -248,7 +248,7 @@
       
       <guid>https://JacksonK9.github.io/algorithm/what_is_coding_interview_and_python_syntax/</guid>
       
-        <description>참고 원본 - 코딩 테스트 출제 경향 분석 및 파이썬 문법 부수기 Table of Contents 코딩 테스트 코딩 테스트 ?</description>
+        <description>참고 원본 - 코딩 테스트 출제 경향 분석 및 파이썬 문법 부수기 Table of Contents  코딩 테스트  코딩 테스트 ?</description>
       
     </item>
     
@@ -293,7 +293,7 @@
       <guid>https://JacksonK9.github.io/plans/</guid>
       
         <description>꾸준히 노력해서 업데이트하기.
-Objectives 1주에 1개 이상 꼭&amp;hellip; 올려보기! 주차별 목표 사항 및 진행 사항 정리 C++ 를 Python 정도로 다룰 수 있게 공부하기 ROS1 2D SLAM 코드 주석 달기 파이썬 추월 코스 수업 듣기 인프런 따배씨, 따배씨++ 듣기 소프트웨어 엔지니어가 되는 방법 천천히 진행 Pro Git 책 보기 알고리즘 책 보면서 정리 Szeliski 책 천천히 보기 주차별 계획 및 진행 사항 2022 / 05 5월 2째주 목표 동빈나 강의 보고 리뷰 정리 (Algorithm Study) - 코딩 테스트 개요 및 파이썬 문법 우아한형제들 Youtube 보고 리뷰 정리 (기술부채, 개발자와 교육, 딜리와 흑마법, 개발자 Personal Branding) 추천 받은 자료구조 유튜브 보기 AI for everyone 1주차 진행 5월 3째주 목표 동빈나 강의 보고 리뷰 정리 (Algorithm Study) - 개발형 코딩테스트 AI for everyone 1주차 진행 동빈나 강의 보고 리뷰 정리 (Algorithm-Study) - BFS &amp;amp; DFS 5월 4째주 목표 동빈나 강의 보고 리뷰 정리 (Algorithm Study) - 개발형 코딩테스트 동빈나 강의 보고 리뷰 정리 (Algorithm Study) - 기타 그래프 이론 동빈나 강의 보고 리뷰 정리 (Algorithm Study) - 벨만포드 알고리즘 AI for everyone 1주차 진행 2022 / 06 6월 1째주 목표 동빈나 강의 보고 리뷰 정리 (Algorithm Study) - 벨만포드 알고리즘 AI for everyone 1주차 진행 A* Algorithm 정리 Git 강의 보고 정리 6월 2째주 목표 AI for everyone 1주차 진행 TDD 내용 보고 Review BOJ 기초 단계 문제 풀기 $\rightarrow$ CodeUp부터 푸는 것으로 결정 BOJ 문제 풀면서, 기초 알고리즘 문제 정리하기 $\rightarrow$ CodeUp 단계별로 풀어보기 진행으로 변경 6월 3째주 목표 TDD 내용 보고 Review BOJ 기초 단계 문제 풀기 $\rightarrow$ CodeUp부터 푸는 것으로 결정 BOJ 문제 풀면서, 기초 알고리즘 문제 정리하기 $\rightarrow$ CodeUp 단계별로 풀어보기 진행으로 변경 AI for everyone 1주차 리뷰 AI for everyone 2주차 진행 및 리뷰 6월 4째주 목표 TDD 내용 보고 Review AI for everyone 1주차 리뷰 AI for everyone 2주차 진행 및 리뷰 6월 5째주 목표 TDD 내용 보고 Review AI for everyone 1주차 리뷰 AI for everyone 2주차 진행 및 리뷰 현대 모비스 코테 유사한 문제 리뷰 (BOJ 2839, 1546, 10824, 1152, 2531) 2022 / 07 7월 1째주 목표 TDD 내용 보고 Review AI for everyone 1주차 리뷰 AI for everyone 2주차 진행 및 리뷰 현대 모비스 코테 유사한 문제 리뷰 (BOJ 2839, 1546, 10824, 1152, 2531) 7월 2째주 목표 TDD 내용 보고 Review AI for everyone 1주차 리뷰 AI for everyone 2주차 진행 및 리뷰 현대 모비스 코테 유사한 문제 리뷰 (BOJ 2839, 1546, 10824, 1152, 2531) 7월 3째주 목표 TDD 내용 보고 Review AI for everyone 1주차 리뷰 AI for everyone 2주차 진행 및 리뷰 현대 모비스 코테 유사한 문제 리뷰 (BOJ 2839, 1546, 10824, 1152, 2531) 7월 4째주 목표 TDD 내용 보고 Review AI for everyone 1주차 리뷰 AI for everyone 2주차 진행 및 리뷰 현대 모비스 코테 유사한 문제 리뷰 (BOJ 2839, 1546, 10824, 1152, 2531) Python * 연산자, ZIP, join 메서드 관련 내용 업데이트 (예시 및 적용 상황 등) 2022 / 08 반성문 상기 본인은 나태하여, 7월 한달 간 기술 블로그 업데이트를 전혀 하지 않았음을 반성합니다.</description>
+Objectives  1주에 1개 이상 꼭&amp;hellip; 올려보기! 주차별 목표 사항 및 진행 사항 정리 C++ 를 Python 정도로 다룰 수 있게 공부하기 ROS1 2D SLAM 코드 주석 달기    파이썬 추월 코스 수업 듣기 인프런 따배씨, 따배씨++ 듣기 소프트웨어 엔지니어가 되는 방법 천천히 진행 Pro Git 책 보기 알고리즘 책 보면서 정리 Szeliski 책 천천히 보기   주차별 계획 및 진행 사항    2022 / 05  5월 2째주 목표  동빈나 강의 보고 리뷰 정리 (Algorithm Study) - 코딩 테스트 개요 및 파이썬 문법 우아한형제들 Youtube 보고 리뷰 정리 (기술부채, 개발자와 교육, 딜리와 흑마법, 개발자 Personal Branding) 추천 받은 자료구조 유튜브 보기 AI for everyone 1주차 진행   5월 3째주 목표  동빈나 강의 보고 리뷰 정리 (Algorithm Study) - 개발형 코딩테스트 AI for everyone 1주차 진행 동빈나 강의 보고 리뷰 정리 (Algorithm-Study) - BFS &amp;amp; DFS   5월 4째주 목표  동빈나 강의 보고 리뷰 정리 (Algorithm Study) - 개발형 코딩테스트 동빈나 강의 보고 리뷰 정리 (Algorithm Study) - 기타 그래프 이론 동빈나 강의 보고 리뷰 정리 (Algorithm Study) - 벨만포드 알고리즘 AI for everyone 1주차 진행      2022 / 06  6월 1째주 목표  동빈나 강의 보고 리뷰 정리 (Algorithm Study) - 벨만포드 알고리즘 AI for everyone 1주차 진행 A* Algorithm 정리 Git 강의 보고 정리   6월 2째주 목표  AI for everyone 1주차 진행 TDD 내용 보고 Review BOJ 기초 단계 문제 풀기 $\rightarrow$ CodeUp부터 푸는 것으로 결정 BOJ 문제 풀면서, 기초 알고리즘 문제 정리하기 $\rightarrow$ CodeUp 단계별로 풀어보기 진행으로 변경   6월 3째주 목표  TDD 내용 보고 Review BOJ 기초 단계 문제 풀기 $\rightarrow$ CodeUp부터 푸는 것으로 결정 BOJ 문제 풀면서, 기초 알고리즘 문제 정리하기 $\rightarrow$ CodeUp 단계별로 풀어보기 진행으로 변경 AI for everyone 1주차 리뷰 AI for everyone 2주차 진행 및 리뷰   6월 4째주 목표  TDD 내용 보고 Review AI for everyone 1주차 리뷰 AI for everyone 2주차 진행 및 리뷰   6월 5째주 목표  TDD 내용 보고 Review AI for everyone 1주차 리뷰 AI for everyone 2주차 진행 및 리뷰 현대 모비스 코테 유사한 문제 리뷰 (BOJ 2839, 1546, 10824, 1152, 2531)      2022 / 07  7월 1째주 목표  TDD 내용 보고 Review AI for everyone 1주차 리뷰 AI for everyone 2주차 진행 및 리뷰 현대 모비스 코테 유사한 문제 리뷰 (BOJ 2839, 1546, 10824, 1152, 2531)   7월 2째주 목표  TDD 내용 보고 Review AI for everyone 1주차 리뷰 AI for everyone 2주차 진행 및 리뷰 현대 모비스 코테 유사한 문제 리뷰 (BOJ 2839, 1546, 10824, 1152, 2531)   7월 3째주 목표  TDD 내용 보고 Review AI for everyone 1주차 리뷰 AI for everyone 2주차 진행 및 리뷰 현대 모비스 코테 유사한 문제 리뷰 (BOJ 2839, 1546, 10824, 1152, 2531)   7월 4째주 목표  TDD 내용 보고 Review AI for everyone 1주차 리뷰 AI for everyone 2주차 진행 및 리뷰 현대 모비스 코테 유사한 문제 리뷰 (BOJ 2839, 1546, 10824, 1152, 2531) Python * 연산자, ZIP, join 메서드 관련 내용 업데이트 (예시 및 적용 상황 등)      2022 / 08  반성문  상기 본인은 나태하여, 7월 한달 간 기술 블로그 업데이트를 전혀 하지 않았음을 반성합니다.</description>
       
     </item>
     
