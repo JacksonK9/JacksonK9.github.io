@@ -8,6 +8,17 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 18 Mar 2022 20:12:20 +0900</lastBuildDate><atom:link href="https://JacksonK9.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>C&#43;&#43; Boost Function 및 Bind</title>
+      <link>https://JacksonK9.github.io/programming/boost_function_bind/</link>
+      <pubDate>Mon, 14 Nov 2022 19:54:22 +0900</pubDate>
+      
+      <guid>https://JacksonK9.github.io/programming/boost_function_bind/</guid>
+      
+        <description>Table of Contents  함수 포인터 함수 포인터를 쓰는 이유 Boost Function Boost Bind Review   함수 포인터  C++에는 다양한 종류의 포인터들이 존재한다.</description>
+      
+    </item>
+    
+    <item>
       <title>2022 현대 모비스 알고리즘 경진 대회 예선 문제 리뷰</title>
       <link>https://JacksonK9.github.io/algorithm/hyundai_mobis_algorithm_contest_2022_preliminary/</link>
       <pubDate>Mon, 26 Sep 2022 20:44:24 +0900</pubDate>

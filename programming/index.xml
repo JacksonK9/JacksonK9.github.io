@@ -6,7 +6,18 @@
     <description>Recent content in Programmings on TIL the END</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Aug 2022 22:00:09 +0900</lastBuildDate><atom:link href="https://JacksonK9.github.io/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Nov 2022 19:54:22 +0900</lastBuildDate><atom:link href="https://JacksonK9.github.io/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C&#43;&#43; Boost Function 및 Bind</title>
+      <link>https://JacksonK9.github.io/programming/boost_function_bind/</link>
+      <pubDate>Mon, 14 Nov 2022 19:54:22 +0900</pubDate>
+      
+      <guid>https://JacksonK9.github.io/programming/boost_function_bind/</guid>
+      
+        <description>Table of Contents  함수 포인터 함수 포인터를 쓰는 이유 Boost Function Boost Bind Review   함수 포인터  C++에는 다양한 종류의 포인터들이 존재한다.</description>
+      
+    </item>
+    
     <item>
       <title>모두코드 C언어 #1</title>
       <link>https://JacksonK9.github.io/programming/clang_with_modoocode/</link>

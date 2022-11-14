@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  class="html"
+><head>
+  <title>
+    
+      
+        C&#43;&#43; Boost Function 및 Bind |
+
+      
+      Jackson Kim
+
+
+    
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.68.3" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Jackson Kim" />
+  <meta
+    name="description"
+    content="
+      Wanna be Good SLAMer
+
+
+    "
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.f56f0970bc00d4c7ffdb126b93d067aa889f87a5604f2b2a77770478f3966a03.css"
+      integrity="sha256-9W8JcLwA1Mf/2xJrk9Bnqoifh6VgTysqd3cEePOWagM="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.793b323d7f2d9fbfd0b93f4d593fb5ad77b918716ed33eddea403fa87f770403.css"
+    integrity="sha256-eTsyPX8tn7/QuT9NWT&#43;1rXe5GHFu0z7d6kA/qH93BAM="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+    <link rel="stylesheet" href="https://JacksonK9.github.io/css/table.css"/>
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.7d272de35b410fb165377550cdf9c4d3a80fbbcc961e111914e4d5c0eaf5729f.css"
+    integrity="sha256-fSct41tBD7FlN3VQzfnE06gPu8yWHhEZFOTVwOr1cp8="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.55d8333481b07a08e07cf6f37319753a2b47e99f4c395394c5747b48b495aa9b.css"
+    integrity="sha256-VdgzNIGwegjgfPbzcxl1OitH6Z9MOVOUxXR7SLSVqps="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.9ed75a5d670c953fe4df935937674b4646f92674367e9e66eb995bb04e821647.css"
+    integrity="sha256-ntdaXWcMlT/k35NZN2dLRkb5JnQ2fp5m65lbsE6CFkc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://JacksonK9.github.io/programming/boost_function_bind/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.5c846cefa5ed21cceee981c70901aaf21b17b4e0b05bd777af840780918abea9.js"
+    integrity="sha256-XIRs76XtIczu6YHHCQGq8hsXtOCwW9d3r4QHgJGKvqk="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.245da778410d349aba672975fe9ff04e24e608155cc9102b5c1c70554c1539c0.js"
+      integrity="sha256-JF2neEENNJq6Zyl1/p/wTiTmCBVcyRArXBxwVUwVOcA="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://JacksonK9.github.io/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="C&#43;&#43; Boost Function 및 Bind"/>
+<meta name="twitter:description" content="Table of Contents  함수 포인터 함수 포인터를 쓰는 이유 Boost Function Boost Bind Review   함수 포인터  C&#43;&#43;에는 다양한 종류의 포인터들이 존재한다."/>
+
+
+
+  
+  <meta property="og:title" content="C&#43;&#43; Boost Function 및 Bind" />
+<meta property="og:description" content="Table of Contents  함수 포인터 함수 포인터를 쓰는 이유 Boost Function Boost Bind Review   함수 포인터  C&#43;&#43;에는 다양한 종류의 포인터들이 존재한다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://JacksonK9.github.io/programming/boost_function_bind/" />
+<meta property="og:image" content="https://JacksonK9.github.io/images/site-feature-image.png"/>
+<meta property="article:published_time" content="2022-11-14T19:54:22+09:00" />
+<meta property="article:modified_time" content="2022-11-14T19:54:22+09:00" /><meta property="og:site_name" content="TIL the END" />
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "programming",
+        "name": "C\x2b\x2b Boost Function 및 Bind",
+        "headline": "C\x2b\x2b Boost Function 및 Bind",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Table of Contents  함수 포인터 함수 포인터를 쓰는 이유 Boost Function Boost Bind Review   함수 포인터  C\x2b\x2b에는 다양한 종류의 포인터들이 존재한다.
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/JacksonK9.github.io\/programming\/boost_function_bind\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Jackson Kim"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Jackson Kim"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Jackson Kim"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Jackson Kim"
+        },
+        "copyrightYear" : "2022",
+        "dateCreated": "2022-11-14T19:54:22.00Z",
+        "datePublished": "2022-11-14T19:54:22.00Z",
+        "dateModified": "2022-11-14T19:54:22.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Jackson Kim",
+            "url": "https://JacksonK9.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/JacksonK9.github.io\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://JacksonK9.github.io/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/JacksonK9.github.io\/programming\/boost_function_bind\/",
+        "wordCount" : "1260",
+        "genre" : [ ],
+        "keywords" : [ ]
+    }
+  </script>
+
+
+
+</head>
+<body
+    
+      class="body theme--light"
+
+    
+  >
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/K9.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">TIL the END</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>Wanna be Good SLAMer</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/JacksonK9/"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:k9632441@gmail.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Jackson Kim
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.7d3bf3472b73d9ba107b3de37d0df8fa736593a3c6638c95eaed42006bfc0193.js"
+    integrity="sha256-fTvzRytz2boQez3jfQ34&#43;nNlk6PGY4yV6u1CAGv8AZM="
+    crossorigin="anonymous"
+  ></script><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-e/4/LvThKH1gwzXhdbY2AsjR3rm7LHWyhIG5C0jiRfn8AN2eTN5ILeztWw0H9jmN" crossorigin="anonymous"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+
+          <li class="nav__list-item">
+            <div class="optionswitch">
+              <input class="optionswitch__picker" type="checkbox" id="1" hidden />
+
+              
+              
+                
+
+
+              
+                
+
+
+              
+                
+
+
+              
+                
+
+
+              
+                
+
+
+              
+
+
+              <label class="optionswitch__label" for="1"
+                >Posts <i class="fa fa-angle-down" aria-hidden="true"></i
+              ></label>
+
+              <div class="optionswitch__triangle"></div>
+              <ul class="optionswitch__list">
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/algorithm/"
+                      
+                      title=""
+                      >Algorithm</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/programming/"
+                      
+                      title=""
+                      >Programming</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/cv/"
+                      
+                      title=""
+                      >Computer Vision</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/robotics/"
+                      
+                      title=""
+                      >Robotics</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/etc/"
+                      
+                      title=""
+                      >ETC</a
+                    >
+                  </li>
+
+                
+              </ul>
+            </div>
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/plans/"
+              
+              title=""
+              >Plans</a
+            >
+          </li>
+
+        
+
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+    <div class="post__content">
+      <h1>C&#43;&#43; Boost Function 및 Bind</h1>
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                
+                  2022/11/14
+
+
+                
+
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">6-minute read</span>
+          </li>
+        </ul>
+
+      <h3 id="table-of-contents">Table of Contents</h3>
+<ul>
+<li><a href="#%ED%95%A8%EC%88%98-%ED%8F%AC%EC%9D%B8%ED%84%B0">함수 포인터</a></li>
+<li><a href="#%ED%95%A8%EC%88%98-%ED%8F%AC%EC%9D%B8%ED%84%B0%EB%A5%BC-%EC%93%B0%EB%8A%94-%EC%9D%B4%EC%9C%A0">함수 포인터를 쓰는 이유</a></li>
+<li><a href="#boost-function">Boost Function</a></li>
+<li><a href="#boost-bind">Boost Bind</a></li>
+<li><a href="#review">Review</a></li>
+</ul>
+<hr>
+<h3 id="함수-포인터">함수 포인터</h3>
+<ul>
+<li><code>C++</code>에는 다양한 종류의 포인터들이 존재한다.</li>
+<li>포인터는 당연히, 특정한 메모리의 주소를 가리킬 수 있는 변수를 의미</li>
+<li>메모리의 주소를 가리킬 수 있으므로, 다른 변수, 다른 객체, 다른 배열 등을 모두 가리킬 수 있다.</li>
+<li>이에 추가적으로, 함수도 메모리에 위치한 값이므로, 함수 또한 가리킬 수 있다.</li>
+<li>함수 포인터는 <code>함수가 저장된 메모리를 가리키는 포인터</code>를 의미한다.</li>
+<li>일반적으로 변수 포인터들은 변수 타입 뒤에 <code>*</code>을 붙이는 방식으로 포인터를 정의한다.</li>
+<li><code>int* a;</code>, <code>double* b;</code>, <code>MyClass* c;</code>등의 형태로 선언할 수 있다.</li>
+<li>함수도 비슷하지만, 조금 선언이 까다롭다.</li>
+<li>잘 생각해본다면, 포인터가 가지고 있는 것은 주소뿐이다.</li>
+<li>타입이 필요한 것은 해당 주소부터 얼마나 데이터를 읽어올 지에 따라 달라진다.</li>
+<li>그 말인 즉슨, 실제 저장된 주소는 모두 동일하더라도, 읽어오는 형태가 달라질 수 있다는 것을 의미한다.</li>
+<li>그렇다면&hellip; 함수를 구분해주는 것은 무엇일까??</li>
+<li>쉽게 생각한다면 <code>Function Overloading</code>을 생각할 수 있을 것 같다.</li>
+<li><code>Function Overloading</code>을 할 때, 함수들을 구분지어주는 시그니처는 <code>함수명</code>, <code>함수 입력 파라미터의 개수</code>, <code>함수 입력 파라미터의 타입</code> 세 가지가 된다.</li>
+<li>그래서 비슷한 의미로 <code>함수 입력 파라미터의 개수 및 타입</code>을 사용하기는 하는데, 왜 <code>출력 타입</code>까지 사용하는 지는&hellip; 나도 잘 모르겠다. (아시는 분 댓글 달아주세요)</li>
+<li>아무튼 함수 포인터를 구분할 때는 <code>입력 파라미터의 개수</code>, <code>입력 파라미터의 타입</code>, <code>출력 타입</code>의 3가지로 구분할 수 있다.</li>
+<li>선언은 <code>int (*function_ptr) (int, int);</code>와 같은 식으로 선언할 수 있다.</li>
+<li>위의 선언의 출력 타입이 <code>int</code>, 입력 파라미터가 <code>int</code> 2개를 사용하는 함수 포인터를 의미한다.</li>
+<li>아래와 같이 코드를 작성한 후, 실행해보면 결과를 볼 수 있다.</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp"></span>
+<span class="kt">double</span> <span class="nf">sum</span><span class="p">(</span><span class="kt">double</span> <span class="n">a</span><span class="p">,</span> <span class="kt">double</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="p">(</span><span class="o">*</span><span class="n">function_ptr</span><span class="p">)</span> <span class="p">(</span><span class="kt">int</span><span class="p">);</span> <span class="c1">// 입력이 int 파라미터 1개, 출력이 int인 함수
+</span><span class="c1"></span>	<span class="kt">double</span> <span class="p">(</span><span class="o">*</span><span class="n">d_function_ptr</span><span class="p">)</span> <span class="p">(</span><span class="kt">double</span><span class="p">);</span> <span class="c1">// 입력이 double 파라미터 1개, 출력이 double인 함수
+</span><span class="c1"></span>	<span class="kt">double</span> <span class="p">(</span><span class="o">*</span><span class="n">dd_function_ptr</span><span class="p">)</span> <span class="p">(</span><span class="kt">double</span><span class="p">,</span> <span class="kt">double</span><span class="p">);</span> <span class="c1">// 입력이 double 파라미터 2개, 출력이 double인 함수
+</span><span class="c1"></span>	<span class="n">dd_function_ptr</span> <span class="o">=</span> <span class="n">sum</span><span class="p">;</span> <span class="c1">// 입력이 double 파라미터 2개, 출력이 double인 함수 sum을 저장
+</span><span class="c1"></span>	<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">function_ptr</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span> <span class="c1">// 함수 포인터도 마찬가지로 8바이트
+</span><span class="c1"></span>	<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">dd_function_ptr</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span> <span class="c1">// 이와 같은 형태로 호출 가능
+</span><span class="c1"></span>	
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div><hr>
+<h3 id="함수-포인터를-쓰는-이유">함수 포인터를 쓰는 이유</h3>
+<ul>
+<li>함수 포인터라는게 뭔지는 이해가 됐는데, 함수는 그냥 호출만 하면 되는 거 아닌가? 왜 굳이 포인터를 이용까지해야 하지? 라는 생각이 들 수 있습니다.</li>
+<li>하지만, 조금만 더 일반적인 경우를 생각한다면 Callback함수와 같은 형태로, 다른 함수의 파라미터로 전달할 수 있게 사용할 수 있다.</li>
+<li>저 같은 경우는 <code>ROS</code>에 관련된 내용을 하면서 Callback함수를 많이 다루게 되었고, 이에 따라 함수 포인터로 전달해주는 경우를 보면서 이를 정리하게 되었는데, 실상은 좀 다릅니다.</li>
+<li>사실 함수 포인터는&hellip; C언어에 있는 문법인데, 잘 사용하지 않는 것 같습니다.</li>
+<li>아니 아까 많이 쓴다며? 그게 사실 <code>Boost</code>가 많이 좋아지면서, 일반화된 함수 포인터를 다룰 수 있게 되었기 때문이죠.</li>
+</ul>
+<hr>
+<h3 id="boost-function">Boost Function</h3>
+<ul>
+<li>함수 포인터 얘기를 했는데, 일반화된(?) 함수 포인터란 뭘까요?</li>
+<li>이것은 사실 <code>C++</code>로 넘어오면서 생기는 문제인데, C언어에는 클래스가 없습니다.</li>
+<li>그렇기 때문에 일반 함수만 존재하며, 멤버 함수는 존재하지 않습니다.</li>
+<li>그렇다면 기존에 사용하던 함수 포인터를 이용하면 멤버 함수도 가리킬 수 있을까요?</li>
+<li>물론 있습니다. 다음과 같은 방법을 이용한다면 가능합니다.</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp"></span>
+<span class="k">class</span> <span class="nc">TestClassA</span>
+<span class="p">{</span>
+    <span class="k">public</span><span class="o">:</span>
+        <span class="n">TestClassA</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">,</span> <span class="kt">int</span> <span class="n">c</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">this</span><span class="o">-&gt;</span><span class="n">a_</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+            <span class="k">this</span><span class="o">-&gt;</span><span class="n">b_</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+            <span class="k">this</span><span class="o">-&gt;</span><span class="n">c_</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="kt">void</span> <span class="nf">printStatus</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;a, b, c = &#34;</span> <span class="o">&lt;&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">a_</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;, &#34;</span> <span class="o">&lt;&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">b_</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;, &#34;</span> <span class="o">&lt;&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">c_</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+        <span class="p">}</span>
+
+    <span class="k">private</span><span class="o">:</span>
+        <span class="kt">int</span> <span class="n">a_</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">b_</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">c_</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">class</span> <span class="nc">TestClassB</span>
+<span class="p">{</span>
+    <span class="k">public</span><span class="o">:</span>
+        <span class="n">TestClassB</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">,</span> <span class="kt">int</span> <span class="n">c</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">this</span><span class="o">-&gt;</span><span class="n">a_</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+            <span class="k">this</span><span class="o">-&gt;</span><span class="n">b_</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+            <span class="k">this</span><span class="o">-&gt;</span><span class="n">c_</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="kt">void</span> <span class="nf">printStatus</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;a, b, c = &#34;</span> <span class="o">&lt;&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">a_</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;, &#34;</span> <span class="o">&lt;&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">b_</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;, &#34;</span> <span class="o">&lt;&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">c_</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+        <span class="p">}</span>
+
+    <span class="k">private</span><span class="o">:</span>
+        <span class="kt">int</span> <span class="n">a_</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">b_</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">c_</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">TestClassA</span> <span class="n">A</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+    <span class="n">TestClassB</span> <span class="n">B</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">);</span>
+
+    <span class="kt">void</span> <span class="p">(</span><span class="n">TestClassA</span><span class="o">::*</span><span class="n">function_ptr</span><span class="p">)</span> <span class="p">()</span> <span class="o">=</span> <span class="n">TestClassA</span><span class="o">::</span><span class="n">printStatus</span><span class="p">;</span>
+    <span class="kt">void</span> <span class="p">(</span><span class="n">TestClassA</span><span class="o">::*</span><span class="n">function_ptr</span><span class="p">)</span> <span class="p">()</span> <span class="o">=</span> <span class="n">TestClassB</span><span class="o">::</span><span class="n">printStatus</span><span class="p">;</span>
+
+    <span class="n">A</span><span class="p">.</span><span class="n">printStatus</span><span class="p">();</span>
+    <span class="n">B</span><span class="p">.</span><span class="n">printStatus</span><span class="p">();</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><ul>
+<li>대충 보시면 아시겠지만, 클래스에 포함된 멤버 함수의 경우, 해당 클래스의 함수 포인터를 적용해야합니다.</li>
+<li>그러므로, 49번 줄의 <code>void (TestClassA::*function_ptr) () = TestClassB::printStatus();</code>는 컴파일 오류가 발생합니다.</li>
+<li><code>TestClassA</code>의 함수 포인터로 <code>TestClassB</code>의 함수를 가리켰기 때문이죠.</li>
+<li>내부 구현이나, 동작도 동일하고, 입력, 출력 타입도 동일한 것 같은데 안되는 게 이상하긴 합니다만, 아무튼 안됩니다.</li>
+<li>저는 사실 몰랐는데, <code>C++</code>도 <code>Python</code>과 마찬가지로, 멤버 함수들의 경우는 자동으로 첫 번째 파라미터로 <code>this</code> 포인터가 전달이 된다고 합니다. <code>Python</code>의 <code>self</code>와 마찬가지입니다만, <code>C++</code>은 암시적으로 전달되며, <code>Python</code>은 명시적으로 전달해줘야하죠.</li>
+<li>그래서 이러한 차이 때문에 입력되는 타입이 맞지 않아서 컴파일 오류가 발생한다고 보시면 될 것 같습니다.</li>
+<li>여기까지가 기존 사용하던 함수 포인터입니다.</li>
+<li>그렇다면 <code>일반화된 함수 포인터</code>는 어떨까요?</li>
+<li><code>일반화된 함수 포인터</code>는 <code>boost::function</code>을 통해서 사용할 수 있습니다.</li>
+<li><code>boost::function</code>은 입력 파라미터의 개수 및 타입, 출력 타입만 맞다면 모두 적용할 수 있죠.</li>
+<li>즉, 다음과 같이 사용할 수 있다는 뜻입니다.</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;boost/bind.hpp&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;boost/function.hpp&gt;</span><span class="cp">
+</span><span class="cp"></span>
+<span class="k">class</span> <span class="nc">TestClassA</span>
+<span class="p">{</span>
+    <span class="k">public</span><span class="o">:</span>
+        <span class="n">TestClassA</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">,</span> <span class="kt">int</span> <span class="n">c</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">this</span><span class="o">-&gt;</span><span class="n">a_</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+            <span class="k">this</span><span class="o">-&gt;</span><span class="n">b_</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+            <span class="k">this</span><span class="o">-&gt;</span><span class="n">c_</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="kt">void</span> <span class="nf">printStatus</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;a, b, c = &#34;</span> <span class="o">&lt;&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">a_</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;, &#34;</span> <span class="o">&lt;&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">b_</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;, &#34;</span> <span class="o">&lt;&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">c_</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+        <span class="p">}</span>
+
+    <span class="k">private</span><span class="o">:</span>
+        <span class="kt">int</span> <span class="n">a_</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">b_</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">c_</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">class</span> <span class="nc">TestClassB</span>
+<span class="p">{</span>
+    <span class="k">public</span><span class="o">:</span>
+        <span class="n">TestClassB</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">,</span> <span class="kt">int</span> <span class="n">c</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">this</span><span class="o">-&gt;</span><span class="n">a_</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+            <span class="k">this</span><span class="o">-&gt;</span><span class="n">b_</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+            <span class="k">this</span><span class="o">-&gt;</span><span class="n">c_</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="kt">void</span> <span class="nf">printStatus</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;a, b, c = &#34;</span> <span class="o">&lt;&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">a_</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;, &#34;</span> <span class="o">&lt;&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">b_</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;, &#34;</span> <span class="o">&lt;&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">c_</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+        <span class="p">}</span>
+
+    <span class="k">private</span><span class="o">:</span>
+        <span class="kt">int</span> <span class="n">a_</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">b_</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">c_</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">TestClassA</span> <span class="n">A</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+    <span class="n">TestClassB</span> <span class="n">B</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">);</span>
+
+    <span class="c1">// void (TestClassA::*function_ptr) () = TestClassA::printStatus;
+</span><span class="c1"></span>    <span class="c1">// void (TestClassA::*function_ptr) () = TestClassB::printStatus;
+</span><span class="c1"></span>    <span class="n">boost</span><span class="o">::</span><span class="n">function</span> <span class="o">&lt;</span><span class="kt">void</span> <span class="p">()</span><span class="o">&gt;</span> <span class="n">function_ptr</span><span class="p">;</span>
+    <span class="n">function_ptr</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">TestClassA</span><span class="o">::</span><span class="n">printStatus</span><span class="p">,</span> <span class="n">A</span><span class="p">);</span>
+    <span class="n">function_ptr</span><span class="p">();</span>
+    
+    <span class="n">function_ptr</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">TestClassB</span><span class="o">::</span><span class="n">printStatus</span><span class="p">,</span> <span class="n">B</span><span class="p">);</span>
+    <span class="n">function_ptr</span><span class="p">();</span>
+    <span class="c1">// A.printStatus();
+</span><span class="c1"></span>    <span class="c1">// B.printStatus();
+</span><span class="c1"></span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><ul>
+<li>위와 같이 코드를 작성하면 오류 없이, 동일한 함수 포인터 1개로 두 종류의 클래스에 있는 멤버 함수를 모두 가리켜서 사용할 수 있습니다.</li>
+<li>근데 그 중간에 보면 잘 모르는 <code>boost::bind()</code>라는 놈이 있습니다. 이건 뭘까요?</li>
+</ul>
+<hr>
+<h3 id="boost-bind">Boost Bind</h3>
+<ul>
+<li><code>Boost Bind</code>는 쉽게 설명하면 함수를 우리가 원하는 형태로 변경할 수 있는 기능을 제공한다고 보면 됩니다.</li>
+<li>이전에 말씀드린대로, 멤버 함수는 기본적으로 <code>this</code> 포인터를 암시적으로 입력받고 있습니다.</li>
+<li>그렇다면 사실 <code>TestClassB::printStatus()</code>라는 함수는 입력 파라미터가 1개인 셈이죠, <code>TestClassB</code> 타입의 파라미터 1개를 받고 있습니다.</li>
+<li>그렇지만 실제 사용 시에는 암시적으로 전달되는 <code>this</code> 없이 사용하므로, 1개를 미리 <code>bind</code> 해줘야하는 것입니다.</li>
+<li>이에 따라 <code>boost::bind</code>를 통해, 특정 멤버 함수를 먼저 <code>bind</code>하고, 그 첫 번째 파라미터인 <code>this</code>에 해당하는 인스턴스를 넘겨주면 되는 것이죠.</li>
+<li>이 외의 사용 방법도 많이 있는데, 예를 들어 3개의 입력이 있는 함수를 1개만 입력해서 호출하고 싶다면 그럴 때도 <code>boost::bind</code>를 사용할 수 있습니다.</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;boost/bind.hpp&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;boost/function.hpp&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="kt">void</span> <span class="nf">printData</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">,</span> <span class="kt">int</span> <span class="n">c</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;a = &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;, b = &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">b</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;, c = &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">c</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">boost</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">custom_print</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">printData</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">boost</span><span class="o">::</span><span class="n">placeholders</span><span class="o">::</span><span class="n">_1</span><span class="p">);</span>
+    <span class="n">custom_print</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+    <span class="n">custom_print</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">printData</span><span class="p">,</span> <span class="n">boost</span><span class="o">::</span><span class="n">placeholders</span><span class="o">::</span><span class="n">_1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+    <span class="n">custom_print</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><ul>
+<li>위의 코드를 보면 입력이 3개의 <code>int</code>를 받으며, 출력값은 없는 함수가 있다.</li>
+<li>이를 상황에 따라 다르게 사용하기 위해 <code>boost::bind</code>를 사용할 수 있다.</li>
+<li><code>boost::bind</code>를 통해 함수를 <code>bind</code>하고, 그 다음 입력으로 들어가는 값을 미리 지정할 수 있다.</li>
+<li>위의 방법은 입력으로 들어가는 a에 2를, b에 3을, 그리고 c에는 입력으로 들어오는 첫 번째 파라미터를 넘겨주겠다는 의미이다. (<code>boost::placeholders::_1</code>은 자리 지시자로, 첫 번째 파라미터를 의미한다.)</li>
+<li>아래의 방법은 입력으로 들어가는 a에 첫 번째 파라미터를, b에 2, c에 3을 <code>bind</code>하는 것을 의미한다.</li>
+<li>결과를 살펴보면 <code>a = 2, b = 3, c = 10</code>이 먼저 출력되고 <code>a = 10, b = 2, c = 3</code>이 나중에 출력된다.</li>
+<li>따라서, <code>boost::bind</code>와 <code>boost::placeholders::_1</code> 등을 적절히 활용하면, 굳이 여러 개의 함수를 생성하지 않고 동일한 함수로 여러 가지 동작을 할 수 있다는 의미가 된다.</li>
+<li>이에 추가적인 장점으로 호환되는 시그니처를 사용하는 경우, 담을 수 있다는 장점도 있다. (int 대신 short 타입을 사용한다거나 하는 경우, 기존의 함수 포인터는 불가능)</li>
+</ul>
+<hr>
+<h3 id="review">Review</h3>
+<ul>
+<li><code>C++</code>을 쓰기 전부터 <code>Boost</code>가 유용하다, <code>Boost</code>를 써본 사람보다 안써본 사람을 찾는게 더 어렵다는 얘기 등등&hellip; 많이 들었지만, 유용하긴 아주아주 유용하다.</li>
+<li>그리고 현재는 <code>Boost</code>에만 있는 기능이 아니라, <code>STL</code>로 많이 넘어왔기 때문에, <code>C++11</code> 이상에서는 <code>#include functional</code>을 선언한 후, <code>std::function</code>, <code>std::bind</code>, <code>std::placeholders::_1</code>을 사용할 수도 있다.</li>
+<li>아무튼 <code>ROS</code>관련에서 Callback함수 사용 시에 아주 많이 사용하는 <code>Boost::bind</code>를 알아보았다.</li>
+</ul>
+</div>
+    <div class="post__footer">
+      
+
+      
+    </div>
+
+    <div id="comment">
+          <h2>comments</h2>
+          <script
+  src="https://utteranc.es/client.js"
+  repo="JacksonK9/blog_comments"
+  issue-term="pathname"
+  theme="preferred-color-scheme"
+  
+  crossorigin="anonymous"
+  async
+></script>
+
+        </div>
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Jackson Kim
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.7d3bf3472b73d9ba107b3de37d0df8fa736593a3c6638c95eaed42006bfc0193.js"
+    integrity="sha256-fTvzRytz2boQez3jfQ34&#43;nNlk6PGY4yV6u1CAGv8AZM="
+    crossorigin="anonymous"
+  ></script><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-e/4/LvThKH1gwzXhdbY2AsjR3rm7LHWyhIG5C0jiRfn8AN2eTN5ILeztWw0H9jmN" crossorigin="anonymous"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script></body>
+</html>
